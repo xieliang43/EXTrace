@@ -288,6 +288,18 @@
 		E082146316639AD200F559F2 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = E082143D16639AD200F559F2 /* SBJsonBase.m */; };
 		E082146416639AD200F559F2 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E082143F16639AD200F559F2 /* SBJsonParser.m */; };
 		E082146516639AD200F559F2 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E082144116639AD200F559F2 /* SBJsonWriter.m */; };
+		E082146716639B0800F559F2 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E082146616639B0800F559F2 /* libzbar.a */; };
+		E082146916639B2B00F559F2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E082146816639B2B00F559F2 /* CoreMedia.framework */; };
+		E082146B16639B3300F559F2 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E082146A16639B3300F559F2 /* CoreVideo.framework */; };
+		E082146E16639B4800F559F2 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E082146C16639B4800F559F2 /* libiconv.dylib */; };
+		E082146F16639B4800F559F2 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E082146D16639B4800F559F2 /* libicucore.dylib */; };
+		E082147116639B5300F559F2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E082147016639B5300F559F2 /* CFNetwork.framework */; };
+		E082147316639B5A00F559F2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E082147216639B5A00F559F2 /* SystemConfiguration.framework */; };
+		E082147516639B6500F559F2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E082147416639B6500F559F2 /* MobileCoreServices.framework */; };
+		E082147716639B7000F559F2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E082147616639B7000F559F2 /* QuartzCore.framework */; };
+		E082147916639B7800F559F2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E082147816639B7800F559F2 /* libz.dylib */; };
+		E082147B16639B8100F559F2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E082147A16639B8100F559F2 /* AVFoundation.framework */; };
+		E082148116639D2D00F559F2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E082148016639D2D00F559F2 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -615,6 +627,20 @@
 		E082145516639AD200F559F2 /* ZBarReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderViewController.h; sourceTree = "<group>"; };
 		E082145616639AD200F559F2 /* ZBarSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSDK.h; sourceTree = "<group>"; };
 		E082145716639AD200F559F2 /* ZBarSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSymbol.h; sourceTree = "<group>"; };
+		E082146616639B0800F559F2 /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzbar.a; sourceTree = "<group>"; };
+		E082146816639B2B00F559F2 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		E082146A16639B3300F559F2 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		E082146C16639B4800F559F2 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		E082146D16639B4800F559F2 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		E082147016639B5300F559F2 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E082147216639B5A00F559F2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E082147416639B6500F559F2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E082147616639B7000F559F2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E082147816639B7800F559F2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		E082147A16639B8100F559F2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E082147C16639BD400F559F2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		E082147F16639D2D00F559F2 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		E082148016639D2D00F559F2 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -622,9 +648,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E082147B16639B8100F559F2 /* AVFoundation.framework in Frameworks */,
+				E082147916639B7800F559F2 /* libz.dylib in Frameworks */,
+				E082147716639B7000F559F2 /* QuartzCore.framework in Frameworks */,
+				E082147516639B6500F559F2 /* MobileCoreServices.framework in Frameworks */,
+				E082147316639B5A00F559F2 /* SystemConfiguration.framework in Frameworks */,
+				E082147116639B5300F559F2 /* CFNetwork.framework in Frameworks */,
+				E082146E16639B4800F559F2 /* libiconv.dylib in Frameworks */,
+				E082146F16639B4800F559F2 /* libicucore.dylib in Frameworks */,
+				E082146B16639B3300F559F2 /* CoreVideo.framework in Frameworks */,
+				E082146916639B2B00F559F2 /* CoreMedia.framework in Frameworks */,
 				E08211F21663981F00F559F2 /* UIKit.framework in Frameworks */,
 				E08211F41663981F00F559F2 /* Foundation.framework in Frameworks */,
 				E08211F61663981F00F559F2 /* CoreGraphics.framework in Frameworks */,
+				E082146716639B0800F559F2 /* libzbar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +688,17 @@
 		E08211F01663981F00F559F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E082147A16639B8100F559F2 /* AVFoundation.framework */,
+				E082147816639B7800F559F2 /* libz.dylib */,
+				E082147616639B7000F559F2 /* QuartzCore.framework */,
+				E082147416639B6500F559F2 /* MobileCoreServices.framework */,
+				E082147216639B5A00F559F2 /* SystemConfiguration.framework */,
+				E082147016639B5300F559F2 /* CFNetwork.framework */,
+				E082146C16639B4800F559F2 /* libiconv.dylib */,
+				E082146D16639B4800F559F2 /* libicucore.dylib */,
+				E082146A16639B3300F559F2 /* CoreVideo.framework */,
+				E082146816639B2B00F559F2 /* CoreMedia.framework */,
+				E082146616639B0800F559F2 /* libzbar.a */,
 				E08211F11663981F00F559F2 /* UIKit.framework */,
 				E08211F31663981F00F559F2 /* Foundation.framework */,
 				E08211F51663981F00F559F2 /* CoreGraphics.framework */,
@@ -661,6 +709,7 @@
 		E08211F71663981F00F559F2 /* EXTrace */ = {
 			isa = PBXGroup;
 			children = (
+				E082147D16639BEF00F559F2 /* controller */,
 				E08212001663981F00F559F2 /* XLAppDelegate.h */,
 				E08212011663981F00F559F2 /* XLAppDelegate.m */,
 				E082141E16639AD200F559F2 /* thirdpart */,
@@ -960,6 +1009,7 @@
 		E082141E16639AD200F559F2 /* thirdpart */ = {
 			isa = PBXGroup;
 			children = (
+				E082147E16639D2D00F559F2 /* MBProgressHUD */,
 				E082141F16639AD200F559F2 /* asihttp */,
 				E082143616639AD200F559F2 /* sbjson */,
 				E082144216639AD200F559F2 /* ZBarSDK */,
@@ -1049,6 +1099,22 @@
 			path = zbar;
 			sourceTree = "<group>";
 		};
+		E082147D16639BEF00F559F2 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		E082147E16639D2D00F559F2 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				E082147F16639D2D00F559F2 /* MBProgressHUD.h */,
+				E082148016639D2D00F559F2 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1085,6 +1151,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
 			);
 			mainGroup = E08211E21663981F00F559F2;
 			productRefGroup = E08211EE1663981F00F559F2 /* Products */;
@@ -1389,6 +1456,7 @@
 				E082146316639AD200F559F2 /* SBJsonBase.m in Sources */,
 				E082146416639AD200F559F2 /* SBJsonParser.m in Sources */,
 				E082146516639AD200F559F2 /* SBJsonWriter.m in Sources */,
+				E082148116639D2D00F559F2 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1399,6 +1467,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E08211FB1663981F00F559F2 /* en */,
+				E082147C16639BD400F559F2 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1459,6 +1528,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EXTrace/EXTrace-Prefix.pch";
 				INFOPLIST_FILE = "EXTrace/EXTrace-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1470,6 +1543,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EXTrace/EXTrace-Prefix.pch";
 				INFOPLIST_FILE = "EXTrace/EXTrace-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
