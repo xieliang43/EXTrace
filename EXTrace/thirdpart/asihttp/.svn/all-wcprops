@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/ProductCode/!svn/ver/11465/iOS/Naryou-merchant/Naryou-merchant/thirdpart/asihttp
+END
+ASIHTTPRequest.m
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/ProductCode/!svn/ver/11328/iOS/Naryou-merchant/Naryou-merchant/thirdpart/asihttp/ASIHTTPRequest.m
+END
+ASICacheDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/ProductCode/!svn/ver/11328/iOS/Naryou-merchant/Naryou-merchant/thirdpart/asihttp/ASICacheDelegate.h
+END
+ASINetworkQueue.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/ProductCode/!svn/ver/11328/iOS/Naryou-merchant/Naryou-merchant/thirdpart/asihttp/ASINetworkQueue.h
+END
+ASIDataDecompressor.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/ProductCode/!svn/ver/11328/iOS/Naryou-merchant/Naryou-merchant/thirdpart/asihttp/ASIDataDecompressor.h
+END
+ASIAuthenticationDialog.h
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/ProductCode/!svn/ver/11328/iOS/Naryou-merchant/Naryou-merchant/thirdpart/asihttp/ASIAuthenticationDialog.h
+END
+ASIProgressDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/ProductCode/!svn/ver/11328/iOS/Naryou-merchant/Naryou-merchant/thirdpart/asihttp/ASIProgressDelegate.h
+END
+ASIDownloadCache.m
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/ProductCode/!svn/ver/11328/iOS/Naryou-merchant/Naryou-merchant/thirdpart/asihttp/ASIDownloadCache.m
+END
+ASINetworkQueue.m
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/ProductCode/!svn/ver/11328/iOS/Naryou-merchant/Naryou-merchant/thirdpart/asihttp/ASINetworkQueue.m
+END
+Reachability.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/ProductCode/!svn/ver/11328/iOS/Naryou-merchant/Naryou-merchant/thirdpart/asihttp/Reachability.h
+END
+ASIDataDecompressor.m
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/ProductCode/!svn/ver/11465/iOS/Naryou-merchant/Naryou-merchant/thirdpart/asihttp/ASIDataDecompressor.m
+END
+ASIAuthenticationDialog.m
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/ProductCode/!svn/ver/11328/iOS/Naryou-merchant/Naryou-merchant/thirdpart/asihttp/ASIAuthenticationDialog.m
+END
+ASIFormDataRequest.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/ProductCode/!svn/ver/11328/iOS/Naryou-merchant/Naryou-merchant/thirdpart/asihttp/ASIFormDataRequest.h
+END
+Reachability.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/ProductCode/!svn/ver/11328/iOS/Naryou-merchant/Naryou-merchant/thirdpart/asihttp/Reachability.m
+END
+ASIFormDataRequest.m
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/ProductCode/!svn/ver/11328/iOS/Naryou-merchant/Naryou-merchant/thirdpart/asihttp/ASIFormDataRequest.m
+END
+ASIInputStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/ProductCode/!svn/ver/11328/iOS/Naryou-merchant/Naryou-merchant/thirdpart/asihttp/ASIInputStream.h
+END
+ASIHTTPRequestConfig.h
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/ProductCode/!svn/ver/11328/iOS/Naryou-merchant/Naryou-merchant/thirdpart/asihttp/ASIHTTPRequestConfig.h
+END
+ASIInputStream.m
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/ProductCode/!svn/ver/11328/iOS/Naryou-merchant/Naryou-merchant/thirdpart/asihttp/ASIInputStream.m
+END
+ASIHTTPRequestDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/ProductCode/!svn/ver/11328/iOS/Naryou-merchant/Naryou-merchant/thirdpart/asihttp/ASIHTTPRequestDelegate.h
+END
+ASIDataCompressor.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/ProductCode/!svn/ver/11328/iOS/Naryou-merchant/Naryou-merchant/thirdpart/asihttp/ASIDataCompressor.h
+END
+ASIHTTPRequest.h
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/ProductCode/!svn/ver/11328/iOS/Naryou-merchant/Naryou-merchant/thirdpart/asihttp/ASIHTTPRequest.h
+END
+ASIDownloadCache.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/ProductCode/!svn/ver/11328/iOS/Naryou-merchant/Naryou-merchant/thirdpart/asihttp/ASIDownloadCache.h
+END
+ASIDataCompressor.m
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/ProductCode/!svn/ver/11465/iOS/Naryou-merchant/Naryou-merchant/thirdpart/asihttp/ASIDataCompressor.m
+END
