@@ -7,7 +7,7 @@
 //
 
 #import "XLAppDelegate.h"
-#import "ASIFormDataRequest.h"
+#import "XLFormDataRequest.h"
 
 @implementation XLAppDelegate
 
@@ -24,14 +24,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    ASIFormDataRequest *req = [ASIFormDataRequest requestWithURL:[NSURL URLWithString:@"http://api.kuaidi100.com/api"]];
-    req.requestMethod = @"POST";
+    XLFormDataRequest *req = [XLFormDataRequest requestWithURL:API_URL];
     [req addPostValue:@"yunda" forKey:@"com"];
     [req addPostValue:@"1200638491147" forKey:@"nu"];
-    [req addPostValue:@"4c1f60126fbb2f59" forKey:@"id"];
-    [req addPostValue:@"1" forKey:@"muti"];
-    [req addPostValue:@"desc" forKey:@"order"];
-    [req addPostValue:@"0" forKey:@"show"];
     
     [req startSynchronous];
     NSLog(@"%@",req.responseString);
