@@ -12,7 +12,7 @@
 
 + (id)requestWithURL:(NSURL *)newURL
 {
-	XLFormDataRequest *req = [[[self alloc] initWithURL:newURL] autorelease];
+	XLFormDataRequest *req = [[self alloc] initWithURL:newURL];
     if (req) {
         req.requestMethod = @"POST";
         [req addPostValue:@"4c1f60126fbb2f59" forKey:@"id"];

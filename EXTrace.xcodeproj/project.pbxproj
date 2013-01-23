@@ -275,20 +275,20 @@
 		E082141616639A2000F559F2 /* zhongyouwuliu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E082133A16639A1F00F559F2 /* zhongyouwuliu@2x.png */; };
 		E082141716639A2000F559F2 /* zhongyouwuliu_s.png in Resources */ = {isa = PBXBuildFile; fileRef = E082133B16639A1F00F559F2 /* zhongyouwuliu_s.png */; };
 		E082141816639A2000F559F2 /* zhongyouwuliu_s@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E082133C16639A1F00F559F2 /* zhongyouwuliu_s@2x.png */; };
-		E082145816639AD200F559F2 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = E082142116639AD200F559F2 /* ASIAuthenticationDialog.m */; };
-		E082145916639AD200F559F2 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = E082142416639AD200F559F2 /* ASIDataCompressor.m */; };
-		E082145A16639AD200F559F2 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = E082142616639AD200F559F2 /* ASIDataDecompressor.m */; };
-		E082145B16639AD200F559F2 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E082142816639AD200F559F2 /* ASIDownloadCache.m */; };
-		E082145C16639AD200F559F2 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E082142A16639AD200F559F2 /* ASIFormDataRequest.m */; };
-		E082145D16639AD200F559F2 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E082142C16639AD200F559F2 /* ASIHTTPRequest.m */; };
-		E082145E16639AD200F559F2 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = E082143016639AD200F559F2 /* ASIInputStream.m */; };
-		E082145F16639AD200F559F2 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E082143216639AD200F559F2 /* ASINetworkQueue.m */; };
-		E082146016639AD200F559F2 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E082143516639AD200F559F2 /* Reachability.m */; };
-		E082146116639AD200F559F2 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = E082143916639AD200F559F2 /* NSObject+SBJSON.m */; };
-		E082146216639AD200F559F2 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = E082143B16639AD200F559F2 /* NSString+SBJSON.m */; };
-		E082146316639AD200F559F2 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = E082143D16639AD200F559F2 /* SBJsonBase.m */; };
-		E082146416639AD200F559F2 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E082143F16639AD200F559F2 /* SBJsonParser.m */; };
-		E082146516639AD200F559F2 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E082144116639AD200F559F2 /* SBJsonWriter.m */; };
+		E082145816639AD200F559F2 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = E082142116639AD200F559F2 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E082145916639AD200F559F2 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = E082142416639AD200F559F2 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E082145A16639AD200F559F2 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = E082142616639AD200F559F2 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E082145B16639AD200F559F2 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E082142816639AD200F559F2 /* ASIDownloadCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E082145C16639AD200F559F2 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E082142A16639AD200F559F2 /* ASIFormDataRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E082145D16639AD200F559F2 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E082142C16639AD200F559F2 /* ASIHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E082145E16639AD200F559F2 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = E082143016639AD200F559F2 /* ASIInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E082145F16639AD200F559F2 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E082143216639AD200F559F2 /* ASINetworkQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E082146016639AD200F559F2 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E082143516639AD200F559F2 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E082146116639AD200F559F2 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = E082143916639AD200F559F2 /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E082146216639AD200F559F2 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = E082143B16639AD200F559F2 /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E082146316639AD200F559F2 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = E082143D16639AD200F559F2 /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E082146416639AD200F559F2 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E082143F16639AD200F559F2 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E082146516639AD200F559F2 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E082144116639AD200F559F2 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E082146716639B0800F559F2 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E082146616639B0800F559F2 /* libzbar.a */; };
 		E082146916639B2B00F559F2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E082146816639B2B00F559F2 /* CoreMedia.framework */; };
 		E082146B16639B3300F559F2 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E082146A16639B3300F559F2 /* CoreVideo.framework */; };
@@ -1559,6 +1559,10 @@
 		E082120C1663982000F559F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: fu xunrong (2N75ALLRC5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: fu xunrong (2N75ALLRC5)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EXTrace/EXTrace-Prefix.pch";
 				INFOPLIST_FILE = "EXTrace/EXTrace-Info.plist";
@@ -1568,6 +1572,8 @@
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "04CF53C2-4EE0-452C-83FE-42B456C64CFA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "04CF53C2-4EE0-452C-83FE-42B456C64CFA";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1575,6 +1581,10 @@
 		E082120D1663982000F559F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: fu xunrong (2N75ALLRC5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: fu xunrong (2N75ALLRC5)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EXTrace/EXTrace-Prefix.pch";
 				INFOPLIST_FILE = "EXTrace/EXTrace-Info.plist";
@@ -1584,6 +1594,8 @@
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "04CF53C2-4EE0-452C-83FE-42B456C64CFA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "04CF53C2-4EE0-452C-83FE-42B456C64CFA";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
