@@ -14,6 +14,7 @@
     #import "XLTools.h"
 #endif
 
+#define UMENG_KEY @"5136cf87527015716d000009"
 #define API_URL [NSURL URLWithString:@"http://api.kuaidi100.com/api"]
 
 #define _DEBUG
