@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MobClick.h"
+#import "XLTabBarController.h"
 
 @interface XLAppDelegate : UIResponder <UIApplicationDelegate>
 

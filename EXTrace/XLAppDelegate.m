@@ -17,16 +17,20 @@
     [MobClick startWithAppkey:UMENG_KEY reportPolicy:BATCH channelId:nil];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    
+    XLTabBarController *tabControler = [[XLTabBarController alloc] init];
+    
+    self.window.rootViewController = tabControler;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    XLFormDataRequest *req = [XLFormDataRequest requestWithURL:API_URL];
-    [req addPostValue:@"yunda" forKey:@"com"];
-    [req addPostValue:@"1200638491147" forKey:@"nu"];
-    
-    [req startSynchronous];
-    NSLog(@"%@",req.responseString);
+//    XLFormDataRequest *req = [XLFormDataRequest requestWithURL:API_URL];
+//    [req addPostValue:@"yunda" forKey:@"com"];
+//    [req addPostValue:@"1200638491147" forKey:@"nu"];
+//    
+//    [req startSynchronous];
+//    NSLog(@"%@",req.responseString);
     return YES;
 }
 
