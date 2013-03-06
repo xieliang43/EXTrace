@@ -1,29 +1,25 @@
 //
-//  XLViewController.m
+//  XLAboutController.m
 //  EXTrace
 //
-//  Created by liang xie on 11/26/12.
-//  Copyright (c) 2012 xieliang. All rights reserved.
+//  Created by xie liang on 3/6/13.
+//  Copyright (c) 2013 xieliang. All rights reserved.
 //
 
-#import "XLViewController.h"
+#import "XLAboutController.h"
 
-@interface XLViewController ()
+@interface XLAboutController ()
 
 @end
 
-@implementation XLViewController
+@implementation XLAboutController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    if (!iPhone5) {
-        nibNameOrNil = [NSString stringWithFormat:@"%@_4",nibNameOrNil];
-    }
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
-        
+        self.title = @"about";
     }
     return self;
 }
@@ -32,6 +28,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    Debug(@"adafdf");
 }
 
 - (void)didReceiveMemoryWarning

@@ -8,6 +8,8 @@
 
 #import "XLAppDelegate.h"
 #import "XLFormDataRequest.h"
+#import "XLMyExpressController.h"
+#import "XLAboutController.h"
 
 @implementation XLAppDelegate
 
@@ -18,7 +20,19 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    XLMyExpressController *myExpressCon = [[XLMyExpressController alloc] initWithNibName:@"XLMyExpressController" bundle:nil];
+    UINavigationController *navCon = [[UINavigationController alloc] initWithRootViewController:myExpressCon];
+    [navCon.navigationBar setBackgroundImage:[UIImage imageNamed:@"top.png"] forBarMetrics:UIBarMetricsDefault];
+    
+    XLAboutController *aboutCon = [[XLAboutController alloc] initWithNibName:@"XLAboutController" bundle:nil];
+    UINavigationController *navCon1 = [[UINavigationController alloc] initWithRootViewController:aboutCon];
+    [navCon1.navigationBar setBackgroundImage:[UIImage imageNamed:@"top.png"] forBarMetrics:UIBarMetricsDefault];
+    
+    NSArray *array = [NSArray arrayWithObjects:navCon,navCon1,navCon1,navCon1,navCon1,nil];
+    
     XLTabBarController *tabControler = [[XLTabBarController alloc] init];
+    
+    tabControler.controllers = array;
     
     self.window.rootViewController = tabControler;
     

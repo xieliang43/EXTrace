@@ -37,10 +37,11 @@
     
     _tabBarView = [[UIView alloc] initWithFrame:CGRectMake(0, height - 64, 320, 64)];
     
-    _contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, height - 64)];
+    _contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, height - 43)];
+    _contentView.clipsToBounds = YES;
     
-    [self.view addSubview:_tabBarView];
     [self.view addSubview:_contentView];
+    [self.view addSubview:_tabBarView];
     
     [self createTabBar];
     [self setSelectIndex:_selectIndex];
@@ -56,7 +57,12 @@
 {
     _selectIndex = index;
     UIButton *btn = (UIButton *)[_tabBarView viewWithTag:_selectIndex+100];
+    UIViewController *con = [_controllers objectAtIndex:_selectIndex];
+    
     btn.selected = YES;
+    
+    con.view.frame = _contentView.bounds;
+    [_contentView addSubview:con.view];
 }
 
 - (void)createTabBar
@@ -105,10 +111,22 @@
 
 - (void)selectTab:(UIButton*)sender
 {
+    if (sender.tag - 100 == _selectIndex) {
+        return;
+    }
     UIButton *btn = (UIButton *)[_tabBarView viewWithTag:_selectIndex+100];
     btn.selected = NO;
+    
+    UIViewController *con = [_controllers objectAtIndex:_selectIndex];
+    [con.view removeFromSuperview];
+    
     sender.selected = YES;
     _selectIndex = sender.tag-100;
+    
+    con = [_controllers objectAtIndex:_selectIndex];
+    con.view.frame = _contentView.bounds;
+    [_contentView addSubview:con.view];
+    
 }
 
 @end
