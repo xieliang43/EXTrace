@@ -16,6 +16,9 @@
 		E00BBA8D16E6F12F006B2BBC /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BBA8716E6F12F006B2BBC /* FMDatabaseQueue.m */; };
 		E00BBA8E16E6F12F006B2BBC /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BBA8916E6F12F006B2BBC /* FMResultSet.m */; };
 		E00BBA9216E6F239006B2BBC /* XLExpressCompanyDao.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BBA9116E6F239006B2BBC /* XLExpressCompanyDao.m */; };
+		E00BBA9516E6FE8A006B2BBC /* XLExpress.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BBA9416E6FE8A006B2BBC /* XLExpress.m */; };
+		E00BBA9816E6FFF8006B2BBC /* XLExpressDao.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BBA9716E6FFF8006B2BBC /* XLExpressDao.m */; };
+		E00BBA9A16E70126006B2BBC /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E00BBA9916E70126006B2BBC /* libsqlite3.dylib */; };
 		E024C7141663C81B007DFB0D /* XLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E024C7121663C81B007DFB0D /* XLViewController.m */; };
 		E08211F21663981F00F559F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08211F11663981F00F559F2 /* UIKit.framework */; };
 		E08211F41663981F00F559F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08211F31663981F00F559F2 /* Foundation.framework */; };
@@ -332,6 +335,11 @@
 		E00BBA8916E6F12F006B2BBC /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		E00BBA9016E6F239006B2BBC /* XLExpressCompanyDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLExpressCompanyDao.h; sourceTree = "<group>"; };
 		E00BBA9116E6F239006B2BBC /* XLExpressCompanyDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLExpressCompanyDao.m; sourceTree = "<group>"; };
+		E00BBA9316E6FE8A006B2BBC /* XLExpress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLExpress.h; sourceTree = "<group>"; };
+		E00BBA9416E6FE8A006B2BBC /* XLExpress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLExpress.m; sourceTree = "<group>"; };
+		E00BBA9616E6FFF8006B2BBC /* XLExpressDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLExpressDao.h; sourceTree = "<group>"; };
+		E00BBA9716E6FFF8006B2BBC /* XLExpressDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLExpressDao.m; sourceTree = "<group>"; };
+		E00BBA9916E70126006B2BBC /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E024C7111663C81B007DFB0D /* XLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLViewController.h; sourceTree = "<group>"; };
 		E024C7121663C81B007DFB0D /* XLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLViewController.m; sourceTree = "<group>"; };
 		E08211ED1663981F00F559F2 /* EXTrace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EXTrace.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -683,6 +691,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E00BBA9A16E70126006B2BBC /* libsqlite3.dylib in Frameworks */,
 				E082147B16639B8100F559F2 /* AVFoundation.framework in Frameworks */,
 				E082147916639B7800F559F2 /* libz.dylib in Frameworks */,
 				E082147716639B7000F559F2 /* QuartzCore.framework in Frameworks */,
@@ -732,6 +741,8 @@
 			children = (
 				E00BBA7916E6EF89006B2BBC /* XLExpressCompany.h */,
 				E00BBA7A16E6EF89006B2BBC /* XLExpressCompany.m */,
+				E00BBA9316E6FE8A006B2BBC /* XLExpress.h */,
+				E00BBA9416E6FE8A006B2BBC /* XLExpress.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -758,6 +769,8 @@
 			children = (
 				E00BBA9016E6F239006B2BBC /* XLExpressCompanyDao.h */,
 				E00BBA9116E6F239006B2BBC /* XLExpressCompanyDao.m */,
+				E00BBA9616E6FFF8006B2BBC /* XLExpressDao.h */,
+				E00BBA9716E6FFF8006B2BBC /* XLExpressDao.m */,
 			);
 			name = XLExpressCompany;
 			sourceTree = "<group>";
@@ -782,6 +795,7 @@
 		E08211F01663981F00F559F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E00BBA9916E70126006B2BBC /* libsqlite3.dylib */,
 				E082147A16639B8100F559F2 /* AVFoundation.framework */,
 				E082147816639B7800F559F2 /* libz.dylib */,
 				E082147616639B7000F559F2 /* QuartzCore.framework */,
@@ -1591,6 +1605,8 @@
 				E00BBA8D16E6F12F006B2BBC /* FMDatabaseQueue.m in Sources */,
 				E00BBA8E16E6F12F006B2BBC /* FMResultSet.m in Sources */,
 				E00BBA9216E6F239006B2BBC /* XLExpressCompanyDao.m in Sources */,
+				E00BBA9516E6FE8A006B2BBC /* XLExpress.m in Sources */,
+				E00BBA9816E6FFF8006B2BBC /* XLExpressDao.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

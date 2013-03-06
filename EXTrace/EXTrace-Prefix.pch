@@ -15,3 +15,10 @@
 #endif
 
 #define API_URL [NSURL URLWithString:@"http://api.kuaidi100.com/api"]
+
+#define _DEBUG
+#ifdef _DEBUG
+#define Debug(format, ...) NSLog(format, ##__VA_ARGS__)
+#else
+#define Debug(format, ...)
+#endif
