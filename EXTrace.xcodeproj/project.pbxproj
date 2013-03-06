@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E00BBA7816E6EE95006B2BBC /* express.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = E00BBA7716E6EE95006B2BBC /* express.sqlite */; };
+		E00BBA7B16E6EF89006B2BBC /* XLExpressCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BBA7A16E6EF89006B2BBC /* XLExpressCompany.m */; };
+		E00BBA7E16E6F0D8006B2BBC /* XLDao.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BBA7D16E6F0D8006B2BBC /* XLDao.m */; };
+		E00BBA8A16E6F12F006B2BBC /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BBA8116E6F12F006B2BBC /* FMDatabase.m */; };
+		E00BBA8B16E6F12F006B2BBC /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BBA8316E6F12F006B2BBC /* FMDatabaseAdditions.m */; };
+		E00BBA8C16E6F12F006B2BBC /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BBA8516E6F12F006B2BBC /* FMDatabasePool.m */; };
+		E00BBA8D16E6F12F006B2BBC /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BBA8716E6F12F006B2BBC /* FMDatabaseQueue.m */; };
+		E00BBA8E16E6F12F006B2BBC /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BBA8916E6F12F006B2BBC /* FMResultSet.m */; };
+		E00BBA9216E6F239006B2BBC /* XLExpressCompanyDao.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BBA9116E6F239006B2BBC /* XLExpressCompanyDao.m */; };
 		E024C7141663C81B007DFB0D /* XLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E024C7121663C81B007DFB0D /* XLViewController.m */; };
 		E08211F21663981F00F559F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08211F11663981F00F559F2 /* UIKit.framework */; };
 		E08211F41663981F00F559F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08211F31663981F00F559F2 /* Foundation.framework */; };
@@ -306,6 +315,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E00BBA7716E6EE95006B2BBC /* express.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = express.sqlite; sourceTree = "<group>"; };
+		E00BBA7916E6EF89006B2BBC /* XLExpressCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLExpressCompany.h; sourceTree = "<group>"; };
+		E00BBA7A16E6EF89006B2BBC /* XLExpressCompany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLExpressCompany.m; sourceTree = "<group>"; };
+		E00BBA7C16E6F0D8006B2BBC /* XLDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLDao.h; sourceTree = "<group>"; };
+		E00BBA7D16E6F0D8006B2BBC /* XLDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLDao.m; sourceTree = "<group>"; };
+		E00BBA8016E6F12F006B2BBC /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		E00BBA8116E6F12F006B2BBC /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		E00BBA8216E6F12F006B2BBC /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		E00BBA8316E6F12F006B2BBC /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		E00BBA8416E6F12F006B2BBC /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		E00BBA8516E6F12F006B2BBC /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		E00BBA8616E6F12F006B2BBC /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		E00BBA8716E6F12F006B2BBC /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		E00BBA8816E6F12F006B2BBC /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		E00BBA8916E6F12F006B2BBC /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		E00BBA9016E6F239006B2BBC /* XLExpressCompanyDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLExpressCompanyDao.h; sourceTree = "<group>"; };
+		E00BBA9116E6F239006B2BBC /* XLExpressCompanyDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLExpressCompanyDao.m; sourceTree = "<group>"; };
 		E024C7111663C81B007DFB0D /* XLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLViewController.h; sourceTree = "<group>"; };
 		E024C7121663C81B007DFB0D /* XLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLViewController.m; sourceTree = "<group>"; };
 		E08211ED1663981F00F559F2 /* EXTrace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EXTrace.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -694,6 +720,9 @@
 		E00BBA7516E6EAF1006B2BBC /* dao */ = {
 			isa = PBXGroup;
 			children = (
+				E00BBA8F16E6F20C006B2BBC /* XLExpressCompany */,
+				E00BBA7C16E6F0D8006B2BBC /* XLDao.h */,
+				E00BBA7D16E6F0D8006B2BBC /* XLDao.m */,
 			);
 			name = dao;
 			sourceTree = "<group>";
@@ -701,8 +730,36 @@
 		E00BBA7616E6EAF7006B2BBC /* model */ = {
 			isa = PBXGroup;
 			children = (
+				E00BBA7916E6EF89006B2BBC /* XLExpressCompany.h */,
+				E00BBA7A16E6EF89006B2BBC /* XLExpressCompany.m */,
 			);
 			name = model;
+			sourceTree = "<group>";
+		};
+		E00BBA7F16E6F12F006B2BBC /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				E00BBA8016E6F12F006B2BBC /* FMDatabase.h */,
+				E00BBA8116E6F12F006B2BBC /* FMDatabase.m */,
+				E00BBA8216E6F12F006B2BBC /* FMDatabaseAdditions.h */,
+				E00BBA8316E6F12F006B2BBC /* FMDatabaseAdditions.m */,
+				E00BBA8416E6F12F006B2BBC /* FMDatabasePool.h */,
+				E00BBA8516E6F12F006B2BBC /* FMDatabasePool.m */,
+				E00BBA8616E6F12F006B2BBC /* FMDatabaseQueue.h */,
+				E00BBA8716E6F12F006B2BBC /* FMDatabaseQueue.m */,
+				E00BBA8816E6F12F006B2BBC /* FMResultSet.h */,
+				E00BBA8916E6F12F006B2BBC /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		E00BBA8F16E6F20C006B2BBC /* XLExpressCompany */ = {
+			isa = PBXGroup;
+			children = (
+				E00BBA9016E6F239006B2BBC /* XLExpressCompanyDao.h */,
+				E00BBA9116E6F239006B2BBC /* XLExpressCompanyDao.m */,
+			);
+			name = XLExpressCompany;
 			sourceTree = "<group>";
 		};
 		E08211E21663981F00F559F2 = {
@@ -770,6 +827,7 @@
 				E08211F91663981F00F559F2 /* EXTrace-Info.plist */,
 				E08211FD1663981F00F559F2 /* main.m */,
 				E08211FF1663981F00F559F2 /* EXTrace-Prefix.pch */,
+				E00BBA7716E6EE95006B2BBC /* express.sqlite */,
 				E08212031663981F00F559F2 /* Default.png */,
 				E08212051663982000F559F2 /* Default@2x.png */,
 				E08212071663982000F559F2 /* Default-568h@2x.png */,
@@ -1052,6 +1110,7 @@
 		E082141E16639AD200F559F2 /* thirdpart */ = {
 			isa = PBXGroup;
 			children = (
+				E00BBA7F16E6F12F006B2BBC /* fmdb */,
 				E082147E16639D2D00F559F2 /* MBProgressHUD */,
 				E082141F16639AD200F559F2 /* asihttp */,
 				E082143616639AD200F559F2 /* sbjson */,
@@ -1493,6 +1552,7 @@
 				E082141616639A2000F559F2 /* zhongyouwuliu@2x.png in Resources */,
 				E082141716639A2000F559F2 /* zhongyouwuliu_s.png in Resources */,
 				E082141816639A2000F559F2 /* zhongyouwuliu_s@2x.png in Resources */,
+				E00BBA7816E6EE95006B2BBC /* express.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1523,6 +1583,14 @@
 				E0DD9D0E1663C5F500D5C849 /* XLTools.m in Sources */,
 				E0DD9D111663C63700D5C849 /* XLFormDataRequest.m in Sources */,
 				E024C7141663C81B007DFB0D /* XLViewController.m in Sources */,
+				E00BBA7B16E6EF89006B2BBC /* XLExpressCompany.m in Sources */,
+				E00BBA7E16E6F0D8006B2BBC /* XLDao.m in Sources */,
+				E00BBA8A16E6F12F006B2BBC /* FMDatabase.m in Sources */,
+				E00BBA8B16E6F12F006B2BBC /* FMDatabaseAdditions.m in Sources */,
+				E00BBA8C16E6F12F006B2BBC /* FMDatabasePool.m in Sources */,
+				E00BBA8D16E6F12F006B2BBC /* FMDatabaseQueue.m in Sources */,
+				E00BBA8E16E6F12F006B2BBC /* FMResultSet.m in Sources */,
+				E00BBA9216E6F239006B2BBC /* XLExpressCompanyDao.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,4 +10,9 @@
 
 @implementation XLTools
 
++ (NSString *)dbPath
+{
+    return [[NSBundle mainBundle] pathForResource:@"express" ofType:@"sqlite"];
+}
+
 @end

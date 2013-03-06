@@ -10,4 +10,6 @@
 
 @interface XLTools : NSObject
 
++ (NSString *)dbPath;
+
 @end
