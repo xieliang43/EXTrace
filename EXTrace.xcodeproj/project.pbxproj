@@ -50,6 +50,8 @@
 		E00BBAEF16E73435006B2BBC /* XLSiteController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E00BBAED16E73435006B2BBC /* XLSiteController.xib */; };
 		E00BBAF116E73450006B2BBC /* XLSiteController_4.xib in Resources */ = {isa = PBXBuildFile; fileRef = E00BBAF016E73450006B2BBC /* XLSiteController_4.xib */; };
 		E00BBAF316E7408B006B2BBC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E00BBAF216E7408B006B2BBC /* InfoPlist.strings */; };
+		E00BBAF616E74275006B2BBC /* add_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E00BBAF416E74275006B2BBC /* add_btn@2x.png */; };
+		E00BBAF716E74275006B2BBC /* add_sel_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E00BBAF516E74275006B2BBC /* add_sel_btn@2x.png */; };
 		E024C7141663C81B007DFB0D /* XLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E024C7121663C81B007DFB0D /* XLViewController.m */; };
 		E08211F21663981F00F559F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08211F11663981F00F559F2 /* UIKit.framework */; };
 		E08211F41663981F00F559F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08211F31663981F00F559F2 /* Foundation.framework */; };
@@ -415,6 +417,8 @@
 		E00BBAED16E73435006B2BBC /* XLSiteController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XLSiteController.xib; sourceTree = "<group>"; };
 		E00BBAF016E73450006B2BBC /* XLSiteController_4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XLSiteController_4.xib; sourceTree = "<group>"; };
 		E00BBAF216E7408B006B2BBC /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		E00BBAF416E74275006B2BBC /* add_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_btn@2x.png"; sourceTree = "<group>"; };
+		E00BBAF516E74275006B2BBC /* add_sel_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_sel_btn@2x.png"; sourceTree = "<group>"; };
 		E024C7111663C81B007DFB0D /* XLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLViewController.h; sourceTree = "<group>"; };
 		E024C7121663C81B007DFB0D /* XLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLViewController.m; sourceTree = "<group>"; };
 		E08211ED1663981F00F559F2 /* EXTrace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EXTrace.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -894,6 +898,8 @@
 		E00BBAAE16E710A7006B2BBC /* newimage */ = {
 			isa = PBXGroup;
 			children = (
+				E00BBAF416E74275006B2BBC /* add_btn@2x.png */,
+				E00BBAF516E74275006B2BBC /* add_sel_btn@2x.png */,
 				E00BBAD816E72AAD006B2BBC /* top@2x.png */,
 				E00BBAD216E71A56006B2BBC /* bg@2x.png */,
 				E00BBAAF16E710B9006B2BBC /* bottom_about_nor@2x.png */,
@@ -1780,6 +1786,8 @@
 				E00BBAEF16E73435006B2BBC /* XLSiteController.xib in Resources */,
 				E00BBAF116E73450006B2BBC /* XLSiteController_4.xib in Resources */,
 				E00BBAF316E7408B006B2BBC /* InfoPlist.strings in Resources */,
+				E00BBAF616E74275006B2BBC /* add_btn@2x.png in Resources */,
+				E00BBAF716E74275006B2BBC /* add_sel_btn@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

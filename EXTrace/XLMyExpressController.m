@@ -20,6 +20,8 @@
     if (self) {
         // Custom initialization
         self.title = @"myexpress";
+        
+        UIButton *addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     }
     return self;
 }
