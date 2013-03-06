@@ -8,7 +8,10 @@
 
 #import "XLAppDelegate.h"
 #import "XLFormDataRequest.h"
+#import "XLPopExpressController.h"
+#import "XLAllExpressController.h"
 #import "XLMyExpressController.h"
+#import "XLSiteController.h"
 #import "XLAboutController.h"
 
 @implementation XLAppDelegate
@@ -20,15 +23,27 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    XLMyExpressController *myExpressCon = [[XLMyExpressController alloc] initWithNibName:@"XLMyExpressController" bundle:nil];
-    UINavigationController *navCon = [[UINavigationController alloc] initWithRootViewController:myExpressCon];
+    XLPopExpressController *popExpressCon = [[XLPopExpressController alloc] initWithNibName:@"XLPopExpressController" bundle:nil];
+    UINavigationController *navCon = [[UINavigationController alloc] initWithRootViewController:popExpressCon];
     [navCon.navigationBar setBackgroundImage:[UIImage imageNamed:@"top.png"] forBarMetrics:UIBarMetricsDefault];
     
-    XLAboutController *aboutCon = [[XLAboutController alloc] initWithNibName:@"XLAboutController" bundle:nil];
-    UINavigationController *navCon1 = [[UINavigationController alloc] initWithRootViewController:aboutCon];
+    XLAllExpressController *allExpressCon = [[XLAllExpressController alloc] initWithNibName:@"XLAllExpressController" bundle:nil];
+    UINavigationController *navCon1 = [[UINavigationController alloc] initWithRootViewController:allExpressCon];
     [navCon1.navigationBar setBackgroundImage:[UIImage imageNamed:@"top.png"] forBarMetrics:UIBarMetricsDefault];
     
-    NSArray *array = [NSArray arrayWithObjects:navCon,navCon1,navCon1,navCon1,navCon1,nil];
+    XLMyExpressController *myExpressCon = [[XLMyExpressController alloc] initWithNibName:@"XLMyExpressController" bundle:nil];
+    UINavigationController *navCon2 = [[UINavigationController alloc] initWithRootViewController:myExpressCon];
+    [navCon2.navigationBar setBackgroundImage:[UIImage imageNamed:@"top.png"] forBarMetrics:UIBarMetricsDefault];
+    
+    XLSiteController *siteCon = [[XLSiteController alloc] initWithNibName:@"XLSiteController" bundle:nil];
+    UINavigationController *navCon3 = [[UINavigationController alloc] initWithRootViewController:siteCon];
+    [navCon3.navigationBar setBackgroundImage:[UIImage imageNamed:@"top.png"] forBarMetrics:UIBarMetricsDefault];
+    
+    XLAboutController *aboutCon = [[XLAboutController alloc] initWithNibName:@"XLAboutController" bundle:nil];
+    UINavigationController *navCon4 = [[UINavigationController alloc] initWithRootViewController:aboutCon];
+    [navCon4.navigationBar setBackgroundImage:[UIImage imageNamed:@"top.png"] forBarMetrics:UIBarMetricsDefault];
+    
+    NSArray *array = [NSArray arrayWithObjects:navCon,navCon1,navCon2,navCon3,navCon4,nil];
     
     XLTabBarController *tabControler = [[XLTabBarController alloc] init];
     
