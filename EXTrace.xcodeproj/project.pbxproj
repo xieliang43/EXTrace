@@ -677,6 +677,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E00BBA7316E6EAE1006B2BBC /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		E00BBA7416E6EAE9006B2BBC /* service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = service;
+			sourceTree = "<group>";
+		};
+		E00BBA7516E6EAF1006B2BBC /* dao */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = dao;
+			sourceTree = "<group>";
+		};
+		E00BBA7616E6EAF7006B2BBC /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		E08211E21663981F00F559F2 = {
 			isa = PBXGroup;
 			children = (
@@ -718,12 +746,16 @@
 		E08211F71663981F00F559F2 /* EXTrace */ = {
 			isa = PBXGroup;
 			children = (
+				E00BBA7616E6EAF7006B2BBC /* model */,
+				E00BBA7516E6EAF1006B2BBC /* dao */,
+				E00BBA7416E6EAE9006B2BBC /* service */,
+				E00BBA7316E6EAE1006B2BBC /* view */,
 				E0DD9D0B1663C5DB00D5C849 /* com */,
 				E0DD9D091663C5CA00D5C849 /* base */,
 				E082147D16639BEF00F559F2 /* controller */,
+				E082141E16639AD200F559F2 /* thirdpart */,
 				E08212001663981F00F559F2 /* XLAppDelegate.h */,
 				E08212011663981F00F559F2 /* XLAppDelegate.m */,
-				E082141E16639AD200F559F2 /* thirdpart */,
 				E08211F81663981F00F559F2 /* Supporting Files */,
 			);
 			path = EXTrace;
@@ -1113,6 +1145,8 @@
 		E082147D16639BEF00F559F2 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				E024C7111663C81B007DFB0D /* XLViewController.h */,
+				E024C7121663C81B007DFB0D /* XLViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -1131,8 +1165,6 @@
 			children = (
 				E0DD9D0F1663C63700D5C849 /* XLFormDataRequest.h */,
 				E0DD9D101663C63700D5C849 /* XLFormDataRequest.m */,
-				E024C7111663C81B007DFB0D /* XLViewController.h */,
-				E024C7121663C81B007DFB0D /* XLViewController.m */,
 			);
 			name = base;
 			sourceTree = "<group>";
@@ -1566,7 +1598,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EXTrace/EXTrace-Prefix.pch";
 				INFOPLIST_FILE = "EXTrace/EXTrace-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -1588,7 +1620,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EXTrace/EXTrace-Prefix.pch";
 				INFOPLIST_FILE = "EXTrace/EXTrace-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
