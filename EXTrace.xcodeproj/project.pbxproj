@@ -62,6 +62,9 @@
 		E01E95F116E860CC00CCA143 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E01E95F016E860CC00CCA143 /* MessageUI.framework */; };
 		E01E95F316E860E000CCA143 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E01E95F216E860E000CCA143 /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E01E95F516E860EF00CCA143 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E01E95F416E860EF00CCA143 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E01E95F716E8862700CCA143 /* frame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E01E95F616E8862700CCA143 /* frame@2x.png */; };
+		E01E95F916E8862E00CCA143 /* line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E01E95F816E8862E00CCA143 /* line@2x.png */; };
+		E01E95FB16E8863B00CCA143 /* twodimensional@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E01E95FA16E8863B00CCA143 /* twodimensional@2x.png */; };
 		E024C7141663C81B007DFB0D /* XLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E024C7121663C81B007DFB0D /* XLViewController.m */; };
 		E08211F21663981F00F559F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08211F11663981F00F559F2 /* UIKit.framework */; };
 		E08211F41663981F00F559F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08211F31663981F00F559F2 /* Foundation.framework */; };
@@ -440,6 +443,9 @@
 		E01E95F016E860CC00CCA143 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		E01E95F216E860E000CCA143 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		E01E95F416E860EF00CCA143 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		E01E95F616E8862700CCA143 /* frame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "frame@2x.png"; sourceTree = "<group>"; };
+		E01E95F816E8862E00CCA143 /* line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line@2x.png"; sourceTree = "<group>"; };
+		E01E95FA16E8863B00CCA143 /* twodimensional@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twodimensional@2x.png"; sourceTree = "<group>"; };
 		E024C7111663C81B007DFB0D /* XLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLViewController.h; sourceTree = "<group>"; };
 		E024C7121663C81B007DFB0D /* XLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLViewController.m; sourceTree = "<group>"; };
 		E08211ED1663981F00F559F2 /* EXTrace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EXTrace.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -926,6 +932,9 @@
 		E00BBAAE16E710A7006B2BBC /* newimage */ = {
 			isa = PBXGroup;
 			children = (
+				E01E95FA16E8863B00CCA143 /* twodimensional@2x.png */,
+				E01E95F816E8862E00CCA143 /* line@2x.png */,
+				E01E95F616E8862700CCA143 /* frame@2x.png */,
 				E00BBAF416E74275006B2BBC /* add_btn@2x.png */,
 				E00BBAF516E74275006B2BBC /* add_sel_btn@2x.png */,
 				E00BBAD816E72AAD006B2BBC /* top@2x.png */,
@@ -1006,13 +1015,6 @@
 		E08211E21663981F00F559F2 = {
 			isa = PBXGroup;
 			children = (
-				E01E95F416E860EF00CCA143 /* AdSupport.framework */,
-				E01E95F216E860E000CCA143 /* StoreKit.framework */,
-				E01E95F016E860CC00CCA143 /* MessageUI.framework */,
-				E01E95EE16E860C200CCA143 /* MapKit.framework */,
-				E01E95EC16E860BA00CCA143 /* ImageIO.framework */,
-				E01E95EA16E860AA00CCA143 /* CoreTelephony.framework */,
-				E01E95E816E860A200CCA143 /* CoreLocation.framework */,
 				E08211F71663981F00F559F2 /* EXTrace */,
 				E08211F01663981F00F559F2 /* Frameworks */,
 				E08211EE1663981F00F559F2 /* Products */,
@@ -1030,6 +1032,13 @@
 		E08211F01663981F00F559F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E01E95F416E860EF00CCA143 /* AdSupport.framework */,
+				E01E95F216E860E000CCA143 /* StoreKit.framework */,
+				E01E95F016E860CC00CCA143 /* MessageUI.framework */,
+				E01E95EE16E860C200CCA143 /* MapKit.framework */,
+				E01E95EC16E860BA00CCA143 /* ImageIO.framework */,
+				E01E95EA16E860AA00CCA143 /* CoreTelephony.framework */,
+				E01E95E816E860A200CCA143 /* CoreLocation.framework */,
 				E00BBA9916E70126006B2BBC /* libsqlite3.dylib */,
 				E082147A16639B8100F559F2 /* AVFoundation.framework */,
 				E082147816639B7800F559F2 /* libz.dylib */,
@@ -1829,6 +1838,9 @@
 				E00BBAF716E74275006B2BBC /* add_sel_btn@2x.png in Resources */,
 				E01E95E516E859D600CCA143 /* XLAddExpressController.xib in Resources */,
 				E01E95E716E859F300CCA143 /* XLAddExpressController_4.xib in Resources */,
+				E01E95F716E8862700CCA143 /* frame@2x.png in Resources */,
+				E01E95F916E8862E00CCA143 /* line@2x.png in Resources */,
+				E01E95FB16E8863B00CCA143 /* twodimensional@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

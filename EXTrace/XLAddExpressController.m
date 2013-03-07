@@ -21,7 +21,7 @@
         // Custom initialization
         self.title = @"添加快递";
         
-        UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(saveExpress:)];
+        UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(saveExpress:)];
         self.navigationItem.rightBarButtonItem = rightItem;
     }
     return self;
