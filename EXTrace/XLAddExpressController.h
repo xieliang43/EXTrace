@@ -7,7 +7,14 @@
 //
 
 #import "XLViewController.h"
+#import "XLScanController.h"
 
-@interface XLAddExpressController : XLViewController
+@interface XLAddExpressController : XLViewController<UITextFieldDelegate>
+
+@property (nonatomic,weak) IBOutlet UITextField *numberField;
+@property (nonatomic,weak) IBOutlet UITextField *companyField;
+@property (nonatomic,weak) IBOutlet UITextField *descField;
+
+- (IBAction)scanBarcode:(id)sender;
 
 @end

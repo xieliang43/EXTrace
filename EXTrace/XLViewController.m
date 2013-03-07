@@ -16,9 +16,12 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    if (!iPhone5) {
-        nibNameOrNil = [NSString stringWithFormat:@"%@_4",nibNameOrNil];
+    if (nibBundleOrNil) {
+        if (!iPhone5) {
+            nibNameOrNil = [NSString stringWithFormat:@"%@_4",nibNameOrNil];
+        }
     }
+    
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization

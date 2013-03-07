@@ -14,6 +14,10 @@
 
 @implementation XLAddExpressController
 
+@synthesize numberField = _numberField;
+@synthesize companyField = _companyField;
+@synthesize descField = _descField;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -31,6 +35,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self.numberField becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,6 +48,19 @@
 - (void)saveExpress:(id)sender
 {
     
+}
+
+- (IBAction)scanBarcode:(id)sender
+{
+    XLScanController *con = [[XLScanController alloc] init];
+    [self.navigationController pushViewController:con animated:YES];
+}
+
+#pragma mark - UITextFieldDelegate
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    
+    return NO;
 }
 
 @end
