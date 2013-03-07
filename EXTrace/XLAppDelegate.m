@@ -25,23 +25,23 @@
     
     XLPopExpressController *popExpressCon = [[XLPopExpressController alloc] initWithNibName:@"XLPopExpressController" bundle:nil];
     UINavigationController *navCon = [[UINavigationController alloc] initWithRootViewController:popExpressCon];
-    [navCon.navigationBar setBackgroundImage:[UIImage imageNamed:@"top.png"] forBarMetrics:UIBarMetricsDefault];
+    navCon.navigationBar.tintColor = NAVI_COLOR;
     
     XLAllExpressController *allExpressCon = [[XLAllExpressController alloc] initWithNibName:@"XLAllExpressController" bundle:nil];
     UINavigationController *navCon1 = [[UINavigationController alloc] initWithRootViewController:allExpressCon];
-    [navCon1.navigationBar setBackgroundImage:[UIImage imageNamed:@"top.png"] forBarMetrics:UIBarMetricsDefault];
+    navCon1.navigationBar.tintColor = NAVI_COLOR;
     
     XLMyExpressController *myExpressCon = [[XLMyExpressController alloc] initWithNibName:@"XLMyExpressController" bundle:nil];
     UINavigationController *navCon2 = [[UINavigationController alloc] initWithRootViewController:myExpressCon];
-    [navCon2.navigationBar setBackgroundImage:[UIImage imageNamed:@"top.png"] forBarMetrics:UIBarMetricsDefault];
+    navCon2.navigationBar.tintColor = NAVI_COLOR;
     
     XLSiteController *siteCon = [[XLSiteController alloc] initWithNibName:@"XLSiteController" bundle:nil];
     UINavigationController *navCon3 = [[UINavigationController alloc] initWithRootViewController:siteCon];
-    [navCon3.navigationBar setBackgroundImage:[UIImage imageNamed:@"top.png"] forBarMetrics:UIBarMetricsDefault];
+    navCon3.navigationBar.tintColor = NAVI_COLOR;
     
     XLAboutController *aboutCon = [[XLAboutController alloc] initWithNibName:@"XLAboutController" bundle:nil];
     UINavigationController *navCon4 = [[UINavigationController alloc] initWithRootViewController:aboutCon];
-    [navCon4.navigationBar setBackgroundImage:[UIImage imageNamed:@"top.png"] forBarMetrics:UIBarMetricsDefault];
+    navCon4.navigationBar.tintColor = NAVI_COLOR;
     
     NSArray *array = [NSArray arrayWithObjects:navCon,navCon1,navCon2,navCon3,navCon4,nil];
     

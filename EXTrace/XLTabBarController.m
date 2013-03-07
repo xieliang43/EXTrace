@@ -35,9 +35,9 @@
 	// Do any additional setup after loading the view.
     float height = self.view.bounds.size.height;
     
-    _tabBarView = [[UIView alloc] initWithFrame:CGRectMake(0, height - 64, 320, 64)];
+    _tabBarView = [[UIView alloc] initWithFrame:CGRectMake(0, height - 67, 320, 67)];
     
-    _contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, height - 43)];
+    _contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, height - 46)];
     _contentView.clipsToBounds = YES;
     
     [self.view addSubview:_contentView];
@@ -69,7 +69,7 @@
 {
     UIButton *btn0 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn0.tag = 100;
-    btn0.frame = CGRectMake(0, 21, 64, 43);
+    btn0.frame = CGRectMake(0, 21, 64, 46);
     [btn0 setImage:[UIImage imageNamed:@"bottom_used_nor.png"] forState:UIControlStateNormal];
     [btn0 setImage:[UIImage imageNamed:@"bottom_used_sel.png"] forState:UIControlStateSelected];
     [btn0 addTarget:self action:@selector(selectTab:) forControlEvents:UIControlEventTouchUpInside];
@@ -77,7 +77,7 @@
     
     UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn1.tag = 101;
-    btn1.frame = CGRectMake(64, 21, 64, 43);
+    btn1.frame = CGRectMake(64, 21, 64, 46);
     [btn1 setImage:[UIImage imageNamed:@"bottom_all_nor.png"] forState:UIControlStateNormal];
     [btn1 setImage:[UIImage imageNamed:@"bottom_all_sel.png"] forState:UIControlStateSelected];
     [btn1 addTarget:self action:@selector(selectTab:) forControlEvents:UIControlEventTouchUpInside];
@@ -85,7 +85,7 @@
     
     UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn2.tag = 102;
-    btn2.frame = CGRectMake(128, 0, 64, 64);
+    btn2.frame = CGRectMake(128, 0, 64, 71);
     [btn2 setImage:[UIImage imageNamed:@"bottom_oneself_nor.png"] forState:UIControlStateNormal];
     [btn2 setImage:[UIImage imageNamed:@"bottom_oneself_sel.png"] forState:UIControlStateSelected];
     [btn2 addTarget:self action:@selector(selectTab:) forControlEvents:UIControlEventTouchUpInside];
@@ -93,7 +93,7 @@
     
     UIButton *btn3 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn3.tag = 103;
-    btn3.frame = CGRectMake(192, 21, 64, 43);
+    btn3.frame = CGRectMake(192, 21, 64, 46);
     [btn3 setImage:[UIImage imageNamed:@"bottom_number_nor.png"] forState:UIControlStateNormal];
     [btn3 setImage:[UIImage imageNamed:@"bottom_number_sel.png"] forState:UIControlStateSelected];
     [btn3 addTarget:self action:@selector(selectTab:) forControlEvents:UIControlEventTouchUpInside];
@@ -101,7 +101,7 @@
     
     UIButton *btn4 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn4.tag = 104;
-    btn4.frame = CGRectMake(256, 21, 64, 43);
+    btn4.frame = CGRectMake(256, 21, 64, 46);
     [btn4 setImage:[UIImage imageNamed:@"bottom_about_nor.png"] forState:UIControlStateNormal];
     [btn4 setImage:[UIImage imageNamed:@"bottom_about_sel.png"] forState:UIControlStateSelected];
     [btn4 addTarget:self action:@selector(selectTab:) forControlEvents:UIControlEventTouchUpInside];

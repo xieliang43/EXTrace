@@ -7,7 +7,9 @@
 //
 
 #import "XLViewController.h"
+#import "XLAddExpressController.h"
+#import "YouMiView.h"
 
-@interface XLMyExpressController : XLViewController
+@interface XLMyExpressController : XLViewController<YouMiDelegate>
 
 @end

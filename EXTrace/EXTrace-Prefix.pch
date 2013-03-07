@@ -15,8 +15,8 @@
 #endif
 
 #define UMENG_KEY @"5136cf87527015716d000009"
-#define YOUMI_KEY @"656b2ef8a5ab50a6"
-#define YOUMI_SECRET @"d3dbb25ab29d59f5"
+#define YOUMI_KEY @"3d6249ce799aa752"
+#define YOUMI_SECRET @"172c44c201073efc"
 
 #define API_URL [NSURL URLWithString:@"http://api.kuaidi100.com/api"]
 
@@ -30,3 +30,7 @@
 #define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
 
 #define FREE_VERSION
+
+#define make_color(r,g,b,a) ([UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a])
+
+#define NAVI_COLOR make_color(207,107,60,1)
