@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E002960F16E8B2F4008D8D68 /* scanning@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E002960E16E8B2F4008D8D68 /* scanning@2x.png */; };
+		E002961116E8B44F008D8D68 /* beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = E002961016E8B44F008D8D68 /* beep.wav */; };
+		E002961316E8B570008D8D68 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E002961216E8B570008D8D68 /* AudioToolbox.framework */; };
 		E00BBA7816E6EE95006B2BBC /* express.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = E00BBA7716E6EE95006B2BBC /* express.sqlite */; };
 		E00BBA7B16E6EF89006B2BBC /* XLExpressCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BBA7A16E6EF89006B2BBC /* XLExpressCompany.m */; };
 		E00BBA7E16E6F0D8006B2BBC /* XLDao.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BBA7D16E6F0D8006B2BBC /* XLDao.m */; };
@@ -364,6 +367,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E002960E16E8B2F4008D8D68 /* scanning@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scanning@2x.png"; sourceTree = "<group>"; };
+		E002961016E8B44F008D8D68 /* beep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = beep.wav; sourceTree = "<group>"; };
+		E002961216E8B570008D8D68 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E00BBA7716E6EE95006B2BBC /* express.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = express.sqlite; sourceTree = "<group>"; };
 		E00BBA7916E6EF89006B2BBC /* XLExpressCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLExpressCompany.h; sourceTree = "<group>"; };
 		E00BBA7A16E6EF89006B2BBC /* XLExpressCompany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLExpressCompany.m; sourceTree = "<group>"; };
@@ -798,6 +804,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E002961316E8B570008D8D68 /* AudioToolbox.framework in Frameworks */,
 				E01E95F516E860EF00CCA143 /* AdSupport.framework in Frameworks */,
 				E01E95F316E860E000CCA143 /* StoreKit.framework in Frameworks */,
 				E01E95F116E860CC00CCA143 /* MessageUI.framework in Frameworks */,
@@ -935,6 +942,7 @@
 		E00BBAAE16E710A7006B2BBC /* newimage */ = {
 			isa = PBXGroup;
 			children = (
+				E002960E16E8B2F4008D8D68 /* scanning@2x.png */,
 				E01E95FA16E8863B00CCA143 /* twodimensional@2x.png */,
 				E01E95F816E8862E00CCA143 /* line@2x.png */,
 				E01E95F616E8862700CCA143 /* frame@2x.png */,
@@ -967,8 +975,6 @@
 				E01E95E216E859D600CCA143 /* XLAddExpressController.m */,
 				E01E95E316E859D600CCA143 /* XLAddExpressController.xib */,
 				E01E95E616E859F300CCA143 /* XLAddExpressController_4.xib */,
-				E01E961816E8A47400CCA143 /* XLScanController.h */,
-				E01E961916E8A47400CCA143 /* XLScanController.m */,
 			);
 			name = myexpress;
 			sourceTree = "<group>";
@@ -1072,6 +1078,7 @@
 		E08211F01663981F00F559F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E002961216E8B570008D8D68 /* AudioToolbox.framework */,
 				E01E95F416E860EF00CCA143 /* AdSupport.framework */,
 				E01E95F216E860E000CCA143 /* StoreKit.framework */,
 				E01E95F016E860CC00CCA143 /* MessageUI.framework */,
@@ -1119,6 +1126,7 @@
 		E08211F81663981F00F559F2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E002961016E8B44F008D8D68 /* beep.wav */,
 				E082121216639A1400F559F2 /* image */,
 				E082126016639A1F00F559F2 /* eximage */,
 				E08211F91663981F00F559F2 /* EXTrace-Info.plist */,
@@ -1497,6 +1505,8 @@
 				E0DD9D0D1663C5F500D5C849 /* XLTools.m */,
 				E00BBAAB16E70D2F006B2BBC /* XLTabBarController.h */,
 				E00BBAAC16E70D2F006B2BBC /* XLTabBarController.m */,
+				E01E961816E8A47400CCA143 /* XLScanController.h */,
+				E01E961916E8A47400CCA143 /* XLScanController.m */,
 			);
 			name = com;
 			sourceTree = "<group>";
@@ -1846,6 +1856,8 @@
 				E01E95F716E8862700CCA143 /* frame@2x.png in Resources */,
 				E01E95F916E8862E00CCA143 /* line@2x.png in Resources */,
 				E01E95FB16E8863B00CCA143 /* twodimensional@2x.png in Resources */,
+				E002960F16E8B2F4008D8D68 /* scanning@2x.png in Resources */,
+				E002961116E8B44F008D8D68 /* beep.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

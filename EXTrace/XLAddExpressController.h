@@ -9,7 +9,7 @@
 #import "XLViewController.h"
 #import "XLScanController.h"
 
-@interface XLAddExpressController : XLViewController<UITextFieldDelegate>
+@interface XLAddExpressController : XLViewController<UITextFieldDelegate,XLScanControllerDelegate>
 
 @property (nonatomic,weak) IBOutlet UITextField *numberField;
 @property (nonatomic,weak) IBOutlet UITextField *companyField;

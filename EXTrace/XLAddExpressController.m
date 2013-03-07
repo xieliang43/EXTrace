@@ -53,6 +53,7 @@
 - (IBAction)scanBarcode:(id)sender
 {
     XLScanController *con = [[XLScanController alloc] init];
+    con.delegate = self;
     [self.navigationController pushViewController:con animated:YES];
 }
 
@@ -61,6 +62,12 @@
 {
     
     return NO;
+}
+
+#pragma mark - XLScanControllerDelegate
+- (void)didGetContent:(NSString *)content
+{
+    _numberField.text = content;
 }
 
 @end
