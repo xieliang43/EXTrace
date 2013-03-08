@@ -7,7 +7,15 @@
 //
 
 #import "XLViewController.h"
+#import "XLExpress.h"
+#import "XLCompanyService.h"
+#import "XLExpressCompany.h"
 
 @interface XLShowExpressInfoController : XLViewController
+{
+    __strong XLExpressCompany *_company;
+}
+
+@property (nonatomic,strong) XLExpress *express;
 
 @end

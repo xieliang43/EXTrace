@@ -53,7 +53,7 @@
     
     [fmdb setShouldCacheStatements:YES];
     
-    FMResultSet *rs = [fmdb executeQueryWithFormat:@"select * from express_info where cid = ",cid];
+    FMResultSet *rs = [fmdb executeQueryWithFormat:@"select * from express_info where cid = %d",cid];
     
     while ([rs next]) {
         company.cid = [rs intForColumn:@"cid"];

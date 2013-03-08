@@ -8,6 +8,7 @@
 
 #import "XLService.h"
 #import "XLExpressCompanyDao.h"
+#import "XLExpressCompany.h"
 
 @interface XLCompanyService : XLService
 {
@@ -15,5 +16,6 @@
 }
 
 - (NSArray *)getAllCompany;
+- (XLExpressCompany *)getExpressCompanyById:(NSInteger)cid;
 
 @end

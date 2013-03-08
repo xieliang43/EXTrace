@@ -14,6 +14,8 @@
 
 @implementation XLShowExpressInfoController
 
+@synthesize express = _express;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -29,6 +31,16 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    XLCompanyService *service = [[XLCompanyService alloc] init];
+    _company = [service getExpressCompanyById:_express.companyId];
+    
+    self.title = [NSString stringWithFormat:@"%@-%@",_company.name,_express.expressNo];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -39,7 +51,6 @@
 {
     [super viewWillDisappear:animated];
     
-    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end

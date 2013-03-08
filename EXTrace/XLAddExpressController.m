@@ -87,6 +87,7 @@
     if (result) {
         //查看查询结果
         XLShowExpressInfoController *showCon = [[XLShowExpressInfoController alloc] initWithNibName:@"XLShowExpressInfoController" bundle:nil];
+        showCon.express = express;
         [self.navigationController pushViewController:showCon animated:YES];
     }else{
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"

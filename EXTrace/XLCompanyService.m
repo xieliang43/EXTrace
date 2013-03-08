@@ -24,4 +24,9 @@
     return [dao findAllExpressCompany];
 }
 
+- (XLExpressCompany *)getExpressCompanyById:(NSInteger)cid
+{
+    return [dao findExpressCompanyById:cid];
+}
+
 @end
