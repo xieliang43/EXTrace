@@ -8,8 +8,13 @@
 
 #import "XLViewController.h"
 #import "XLScanController.h"
+#import "XLCompanyListController.h"
+#import "XLExpressCompany.h"
 
-@interface XLAddExpressController : XLViewController<UITextFieldDelegate,XLScanControllerDelegate>
+@interface XLAddExpressController : XLViewController<UITextFieldDelegate,XLScanControllerDelegate,XLCompanyListControllerDelegate>
+{
+    __strong XLExpressCompany *_company;
+}
 
 @property (nonatomic,weak) IBOutlet UITextField *numberField;
 @property (nonatomic,weak) IBOutlet UITextField *companyField;

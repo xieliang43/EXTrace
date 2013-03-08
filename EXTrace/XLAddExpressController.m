@@ -60,7 +60,9 @@
 #pragma mark - UITextFieldDelegate
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
-    
+    XLCompanyListController *companyCon = [[XLCompanyListController alloc] initWithNibName:@"XLCompanyListController" bundle:nil];
+    companyCon.delegate = self;
+    [self.navigationController pushViewController:companyCon animated:YES];
     return NO;
 }
 
@@ -68,6 +70,13 @@
 - (void)didGetContent:(NSString *)content
 {
     _numberField.text = content;
+}
+
+#pragma mark - XLCompanyListControllerDelegate
+- (void)didSelectCompany:(XLExpressCompany *)company
+{
+    _company = company;
+    _companyField.text = _company.name;
 }
 
 @end

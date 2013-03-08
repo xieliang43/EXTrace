@@ -11,7 +11,7 @@
 
 @interface XLDao : NSObject
 {
-    FMDatabase *fmdb;
+    __strong FMDatabase *fmdb;
 }
 
 @end
