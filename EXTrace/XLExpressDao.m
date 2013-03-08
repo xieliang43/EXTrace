@@ -18,7 +18,8 @@
     
     [fmdb setShouldCacheStatements:YES];
     
-    BOOL result = [fmdb executeUpdateWithFormat:@"insert into my_express(companyId,expressNo,infomation,description) values (%d,%@,%@,%@)",express.companyId,express.expressNo,express.infomation,express.description];
+    NSString *sqlStr = [NSString stringWithFormat:@"insert into my_express(companyId,expressNo,description) values (%d,'%@','%@')",express.companyId,express.expressNo,express.description];
+    BOOL result = [fmdb executeUpdateWithFormat:sqlStr];
     
     [fmdb close];
     

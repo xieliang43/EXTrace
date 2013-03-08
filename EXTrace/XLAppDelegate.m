@@ -18,6 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //准备数据库文件
+    [XLTools copyDbToPath];
+    
     //umeng统计
     [MobClick startWithAppkey:UMENG_KEY reportPolicy:BATCH channelId:nil];
     

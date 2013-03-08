@@ -10,6 +10,8 @@
 
 @interface XLTools : NSObject
 
++ (NSString *)documentPath;
 + (NSString *)dbPath;
++ (void)copyDbToPath;
 
 @end

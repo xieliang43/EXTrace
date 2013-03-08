@@ -10,9 +10,25 @@
 
 @implementation XLTools
 
++ (NSString *)documentPath
+{
+    return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+}
+
 + (NSString *)dbPath
 {
-    return [[NSBundle mainBundle] pathForResource:@"express" ofType:@"sqlite"];
+    return [NSString stringWithFormat:@"%@/express.sqlite",[XLTools documentPath]];
+}
+
++ (void)copyDbToPath
+{
+    NSString *rPath = [[NSBundle mainBundle] pathForResource:@"express" ofType:@"sqlite"];
+    NSString *dPath = [XLTools dbPath];
+    
+    NSFileManager *manager = [NSFileManager defaultManager];
+    if (![manager fileExistsAtPath:dPath]) {
+        [manager copyItemAtPath:rPath toPath:dPath error:nil];
+    }
 }
 
 @end

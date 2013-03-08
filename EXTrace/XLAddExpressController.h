@@ -10,10 +10,13 @@
 #import "XLScanController.h"
 #import "XLCompanyListController.h"
 #import "XLExpressCompany.h"
+#import "XLExpressService.h"
+#import "XLShowExpressInfoController.h"
 
 @interface XLAddExpressController : XLViewController<UITextFieldDelegate,XLScanControllerDelegate,XLCompanyListControllerDelegate>
 {
     __strong XLExpressCompany *_company;
+    __strong XLExpressService *_service;
 }
 
 @property (nonatomic,weak) IBOutlet UITextField *numberField;

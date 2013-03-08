@@ -71,6 +71,9 @@
 		E01E961A16E8A47400CCA143 /* XLScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = E01E961916E8A47400CCA143 /* XLScanController.m */; };
 		E024C7141663C81B007DFB0D /* XLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E024C7121663C81B007DFB0D /* XLViewController.m */; };
 		E05E81BB16E9D2F900FA3EB8 /* kuang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E05E81BA16E9D2F900FA3EB8 /* kuang@2x.png */; };
+		E05E81C016E9E01600FA3EB8 /* XLShowExpressInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = E05E81BE16E9E01600FA3EB8 /* XLShowExpressInfoController.m */; };
+		E05E81C116E9E01600FA3EB8 /* XLShowExpressInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05E81BF16E9E01600FA3EB8 /* XLShowExpressInfoController.xib */; };
+		E05E81C316E9E05600FA3EB8 /* XLShowExpressInfoController_4.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05E81C216E9E05600FA3EB8 /* XLShowExpressInfoController_4.xib */; };
 		E07DDA1416E9BC58000720B7 /* XLExpressCompanyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E07DDA1316E9BC58000720B7 /* XLExpressCompanyCell.m */; };
 		E07DDA1616E9BC6F000720B7 /* XLExpressCompanyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E07DDA1516E9BC6F000720B7 /* XLExpressCompanyCell.xib */; };
 		E07DDA1A16E9BCBA000720B7 /* XLCompanyListController.m in Sources */ = {isa = PBXBuildFile; fileRef = E07DDA1816E9BCBA000720B7 /* XLCompanyListController.m */; };
@@ -487,6 +490,10 @@
 		E024C7111663C81B007DFB0D /* XLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLViewController.h; sourceTree = "<group>"; };
 		E024C7121663C81B007DFB0D /* XLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLViewController.m; sourceTree = "<group>"; };
 		E05E81BA16E9D2F900FA3EB8 /* kuang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kuang@2x.png"; sourceTree = "<group>"; };
+		E05E81BD16E9E01600FA3EB8 /* XLShowExpressInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLShowExpressInfoController.h; sourceTree = "<group>"; };
+		E05E81BE16E9E01600FA3EB8 /* XLShowExpressInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLShowExpressInfoController.m; sourceTree = "<group>"; };
+		E05E81BF16E9E01600FA3EB8 /* XLShowExpressInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XLShowExpressInfoController.xib; sourceTree = "<group>"; };
+		E05E81C216E9E05600FA3EB8 /* XLShowExpressInfoController_4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XLShowExpressInfoController_4.xib; sourceTree = "<group>"; };
 		E07DDA1216E9BC58000720B7 /* XLExpressCompanyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLExpressCompanyCell.h; sourceTree = "<group>"; };
 		E07DDA1316E9BC58000720B7 /* XLExpressCompanyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLExpressCompanyCell.m; sourceTree = "<group>"; };
 		E07DDA1516E9BC6F000720B7 /* XLExpressCompanyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XLExpressCompanyCell.xib; sourceTree = "<group>"; };
@@ -1092,6 +1099,21 @@
 			path = zbar;
 			sourceTree = "<group>";
 		};
+		E05E81BC16E9DF9600FA3EB8 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				E00BBAAB16E70D2F006B2BBC /* XLTabBarController.h */,
+				E00BBAAC16E70D2F006B2BBC /* XLTabBarController.m */,
+				E01E961816E8A47400CCA143 /* XLScanController.h */,
+				E01E961916E8A47400CCA143 /* XLScanController.m */,
+				E05E81BD16E9E01600FA3EB8 /* XLShowExpressInfoController.h */,
+				E05E81BE16E9E01600FA3EB8 /* XLShowExpressInfoController.m */,
+				E05E81BF16E9E01600FA3EB8 /* XLShowExpressInfoController.xib */,
+				E05E81C216E9E05600FA3EB8 /* XLShowExpressInfoController_4.xib */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
 		E07DDA1E16E9C4D1000720B7 /* XLExpress */ = {
 			isa = PBXGroup;
 			children = (
@@ -1169,12 +1191,12 @@
 		E08211F71663981F00F559F2 /* EXTrace */ = {
 			isa = PBXGroup;
 			children = (
+				E0DD9D0B1663C5DB00D5C849 /* helper */,
 				E00BBA9B16E70539006B2BBC /* request */,
 				E00BBA7616E6EAF7006B2BBC /* model */,
 				E00BBA7516E6EAF1006B2BBC /* dao */,
 				E00BBA7416E6EAE9006B2BBC /* service */,
 				E00BBA7316E6EAE1006B2BBC /* view */,
-				E0DD9D0B1663C5DB00D5C849 /* com */,
 				E082147D16639BEF00F559F2 /* controller */,
 				E082141E16639AD200F559F2 /* thirdpart */,
 				E08212001663981F00F559F2 /* XLAppDelegate.h */,
@@ -1539,6 +1561,7 @@
 		E082147D16639BEF00F559F2 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				E05E81BC16E9DF9600FA3EB8 /* common */,
 				E00BBAEA16E73421006B2BBC /* site */,
 				E00BBAE216E733B7006B2BBC /* allexpress */,
 				E00BBADA16E732E2006B2BBC /* popexpress */,
@@ -1559,17 +1582,13 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
-		E0DD9D0B1663C5DB00D5C849 /* com */ = {
+		E0DD9D0B1663C5DB00D5C849 /* helper */ = {
 			isa = PBXGroup;
 			children = (
 				E0DD9D0C1663C5F500D5C849 /* XLTools.h */,
 				E0DD9D0D1663C5F500D5C849 /* XLTools.m */,
-				E00BBAAB16E70D2F006B2BBC /* XLTabBarController.h */,
-				E00BBAAC16E70D2F006B2BBC /* XLTabBarController.m */,
-				E01E961816E8A47400CCA143 /* XLScanController.h */,
-				E01E961916E8A47400CCA143 /* XLScanController.m */,
 			);
-			name = com;
+			name = helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1923,6 +1942,8 @@
 				E07DDA1B16E9BCBA000720B7 /* XLCompanyListController.xib in Resources */,
 				E07DDA1D16E9BCF1000720B7 /* XLCompanyListController_4.xib in Resources */,
 				E05E81BB16E9D2F900FA3EB8 /* kuang@2x.png in Resources */,
+				E05E81C116E9E01600FA3EB8 /* XLShowExpressInfoController.xib in Resources */,
+				E05E81C316E9E05600FA3EB8 /* XLShowExpressInfoController_4.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1976,6 +1997,7 @@
 				E07DDA2416E9C543000720B7 /* XLService.m in Sources */,
 				E07DDA2816E9C56A000720B7 /* XLCompanyService.m in Sources */,
 				E07DDA2C16E9C586000720B7 /* XLExpressService.m in Sources */,
+				E05E81C016E9E01600FA3EB8 /* XLShowExpressInfoController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

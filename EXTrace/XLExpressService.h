@@ -7,7 +7,14 @@
 //
 
 #import "XLService.h"
+#import "XLExpress.h"
+#import "XLExpressDao.h"
 
 @interface XLExpressService : XLService
+{
+    __strong XLExpressDao *dao;
+}
+
+- (BOOL)saveExpress:(XLExpress *)express;
 
 @end

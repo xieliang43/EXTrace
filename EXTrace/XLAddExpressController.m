@@ -37,6 +37,7 @@
     // Do any additional setup after loading the view from its nib.
     
     [self.numberField becomeFirstResponder];
+    _service = [[XLExpressService alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,7 +48,54 @@
 
 - (void)saveExpress:(id)sender
 {
+    if ([_numberField.text length] == 0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                        message:@"您还没有输入快递单号！"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"确定"
+                                              otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
     
+    if ([_companyField.text length] == 0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                        message:@"您还没选择快递公司！"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"确定"
+                                              otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
+    
+    if ([_descField.text length] == 0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                        message:@"为了更好的管理您的快递，请输入描述信息！"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"确定"
+                                              otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
+    
+    XLExpress *express = [[XLExpress alloc] init];
+    express.companyId = _company.cid;
+    express.expressNo = _numberField.text;
+    express.description = _descField.text;
+    
+    BOOL result = [_service saveExpress:express];
+    if (result) {
+        //查看查询结果
+        XLShowExpressInfoController *showCon = [[XLShowExpressInfoController alloc] initWithNibName:@"XLShowExpressInfoController" bundle:nil];
+        [self.navigationController pushViewController:showCon animated:YES];
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                        message:@"添加失败，请重新添加！"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"确定"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 - (IBAction)scanBarcode:(id)sender
