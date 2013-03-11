@@ -36,9 +36,7 @@
 - (void)loadView
 {
     [super loadView];
-    self.view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 460-44-46)];
-    self.view.backgroundColor = [UIColor redColor];
-    
+    self.view.frame = CGRectMake(0, 0, 320, 460-44-46);
 }
 
 - (void)viewDidLoad
