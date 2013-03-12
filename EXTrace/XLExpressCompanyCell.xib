@@ -57,7 +57,6 @@
 										<int key="NSID">2</int>
 									</object>
 								</object>
-								<float key="IBUIAlpha">0.5</float>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
 							<object class="IBUILabel" id="725211041">
@@ -98,7 +97,7 @@
 							<object class="IBUIImageView" id="224553488">
 								<reference key="NSNextResponder" ref="525984126"/>
 								<int key="NSvFlags">274</int>
-								<string key="NSFrame">{{9, 3}, {54, 54}}</string>
+								<string key="NSFrame">{{9, 2}, {54, 54}}</string>
 								<reference key="NSSuperview" ref="525984126"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="529098344"/>
@@ -113,7 +112,7 @@
 							<object class="IBUIImageView" id="529098344">
 								<reference key="NSNextResponder" ref="525984126"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{10, 4}, {52, 52}}</string>
+								<string key="NSFrame">{{10, 3}, {52, 52}}</string>
 								<reference key="NSSuperview" ref="525984126"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="725211041"/>
@@ -127,6 +126,7 @@
 								<string key="NSFrame">{{0, 59}, {320, 1}}</string>
 								<reference key="NSSuperview" ref="525984126"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>

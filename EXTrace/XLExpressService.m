@@ -24,4 +24,14 @@
     return [dao addExpress:express];
 }
 
+- (NSArray *)getAllExpress
+{
+    return [dao findAllExpress];
+}
+
+- (BOOL)deleteExpress:(XLExpress *)express
+{
+    return [dao deleteExpressById:express.eid];
+}
+
 @end

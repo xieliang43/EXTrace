@@ -16,5 +16,7 @@
 }
 
 - (BOOL)saveExpress:(XLExpress *)express;
+- (NSArray *)getAllExpress;
+- (BOOL)deleteExpress:(XLExpress *)express;
 
 @end
