@@ -12,6 +12,7 @@
 #import "XLExpress.h"
 #import "XLExpressService.h"
 #import "XLShowExpressInfoController.h"
+#import "XLExpressCell.h"
 
 @interface XLMyExpressController : XLViewController<YouMiDelegate,UITableViewDataSource,UITableViewDelegate>
 {

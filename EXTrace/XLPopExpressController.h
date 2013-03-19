@@ -7,7 +7,16 @@
 //
 
 #import "XLViewController.h"
+#import "XLCompanyService.h"
+#import "XLExpressCompany.h"
+#import "XLExpressCompanyCell.h"
 
 @interface XLPopExpressController : XLViewController
+{
+    XLCompanyService *service;
+    NSMutableArray *companys;
+}
+
+@property (nonatomic,weak) IBOutlet UITableView *tableView;
 
 @end

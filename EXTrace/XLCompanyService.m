@@ -29,4 +29,9 @@
     return [dao findExpressCompanyById:cid];
 }
 
+- (NSArray *)getPopCompany
+{
+    return [dao findPopExpressCompany];
+}
+
 @end

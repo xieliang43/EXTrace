@@ -74,6 +74,9 @@
 		E05E81C016E9E01600FA3EB8 /* XLShowExpressInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = E05E81BE16E9E01600FA3EB8 /* XLShowExpressInfoController.m */; };
 		E05E81C116E9E01600FA3EB8 /* XLShowExpressInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05E81BF16E9E01600FA3EB8 /* XLShowExpressInfoController.xib */; };
 		E05E81C316E9E05600FA3EB8 /* XLShowExpressInfoController_4.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05E81C216E9E05600FA3EB8 /* XLShowExpressInfoController_4.xib */; };
+		E069F9CA16F8A380008F6085 /* cell_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E069F9C916F8A380008F6085 /* cell_bg@2x.png */; };
+		E069F9CC16F8A7F9008F6085 /* cell_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E069F9CB16F8A7F9008F6085 /* cell_sel@2x.png */; };
+		E069F9CF16F8AD0C008F6085 /* XLExpressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E069F9CE16F8AD0C008F6085 /* XLExpressCell.m */; };
 		E07DDA1416E9BC58000720B7 /* XLExpressCompanyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E07DDA1316E9BC58000720B7 /* XLExpressCompanyCell.m */; };
 		E07DDA1616E9BC6F000720B7 /* XLExpressCompanyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E07DDA1516E9BC6F000720B7 /* XLExpressCompanyCell.xib */; };
 		E07DDA1A16E9BCBA000720B7 /* XLCompanyListController.m in Sources */ = {isa = PBXBuildFile; fileRef = E07DDA1816E9BCBA000720B7 /* XLCompanyListController.m */; };
@@ -494,6 +497,10 @@
 		E05E81BE16E9E01600FA3EB8 /* XLShowExpressInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLShowExpressInfoController.m; sourceTree = "<group>"; };
 		E05E81BF16E9E01600FA3EB8 /* XLShowExpressInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XLShowExpressInfoController.xib; sourceTree = "<group>"; };
 		E05E81C216E9E05600FA3EB8 /* XLShowExpressInfoController_4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XLShowExpressInfoController_4.xib; sourceTree = "<group>"; };
+		E069F9C916F8A380008F6085 /* cell_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_bg@2x.png"; sourceTree = "<group>"; };
+		E069F9CB16F8A7F9008F6085 /* cell_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_sel@2x.png"; sourceTree = "<group>"; };
+		E069F9CD16F8AD0C008F6085 /* XLExpressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLExpressCell.h; sourceTree = "<group>"; };
+		E069F9CE16F8AD0C008F6085 /* XLExpressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLExpressCell.m; sourceTree = "<group>"; };
 		E07DDA1216E9BC58000720B7 /* XLExpressCompanyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLExpressCompanyCell.h; sourceTree = "<group>"; };
 		E07DDA1316E9BC58000720B7 /* XLExpressCompanyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLExpressCompanyCell.m; sourceTree = "<group>"; };
 		E07DDA1516E9BC6F000720B7 /* XLExpressCompanyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XLExpressCompanyCell.xib; sourceTree = "<group>"; };
@@ -871,6 +878,8 @@
 				E07DDA1216E9BC58000720B7 /* XLExpressCompanyCell.h */,
 				E07DDA1316E9BC58000720B7 /* XLExpressCompanyCell.m */,
 				E07DDA1516E9BC6F000720B7 /* XLExpressCompanyCell.xib */,
+				E069F9CD16F8AD0C008F6085 /* XLExpressCell.h */,
+				E069F9CE16F8AD0C008F6085 /* XLExpressCell.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -978,6 +987,8 @@
 		E00BBAAE16E710A7006B2BBC /* newimage */ = {
 			isa = PBXGroup;
 			children = (
+				E069F9C916F8A380008F6085 /* cell_bg@2x.png */,
+				E069F9CB16F8A7F9008F6085 /* cell_sel@2x.png */,
 				E05E81BA16E9D2F900FA3EB8 /* kuang@2x.png */,
 				E002960E16E8B2F4008D8D68 /* scanning@2x.png */,
 				E01E95FA16E8863B00CCA143 /* twodimensional@2x.png */,
@@ -1944,6 +1955,8 @@
 				E05E81BB16E9D2F900FA3EB8 /* kuang@2x.png in Resources */,
 				E05E81C116E9E01600FA3EB8 /* XLShowExpressInfoController.xib in Resources */,
 				E05E81C316E9E05600FA3EB8 /* XLShowExpressInfoController_4.xib in Resources */,
+				E069F9CA16F8A380008F6085 /* cell_bg@2x.png in Resources */,
+				E069F9CC16F8A7F9008F6085 /* cell_sel@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1998,6 +2011,7 @@
 				E07DDA2816E9C56A000720B7 /* XLCompanyService.m in Sources */,
 				E07DDA2C16E9C586000720B7 /* XLExpressService.m in Sources */,
 				E05E81C016E9E01600FA3EB8 /* XLShowExpressInfoController.m in Sources */,
+				E069F9CF16F8AD0C008F6085 /* XLExpressCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2055,8 +2069,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: fu xunrong (2N75ALLRC5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: fu xunrong (2N75ALLRC5)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: xie liang (5B252TW82Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xie liang (5B252TW82Z)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EXTrace/EXTrace-Prefix.pch";
 				INFOPLIST_FILE = "EXTrace/EXTrace-Info.plist";
@@ -2068,8 +2082,8 @@
 					"\"$(SRCROOT)/EXTrace/thirdpart/youmi\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "04CF53C2-4EE0-452C-83FE-42B456C64CFA";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "04CF53C2-4EE0-452C-83FE-42B456C64CFA";
+				PROVISIONING_PROFILE = "5B362ECD-01CF-446F-8F83-E24835200867";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5B362ECD-01CF-446F-8F83-E24835200867";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2078,8 +2092,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: fu xunrong (2N75ALLRC5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: fu xunrong (2N75ALLRC5)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: xie liang (5B252TW82Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xie liang (5B252TW82Z)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EXTrace/EXTrace-Prefix.pch";
 				INFOPLIST_FILE = "EXTrace/EXTrace-Info.plist";
@@ -2091,8 +2105,8 @@
 					"\"$(SRCROOT)/EXTrace/thirdpart/youmi\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "04CF53C2-4EE0-452C-83FE-42B456C64CFA";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "04CF53C2-4EE0-452C-83FE-42B456C64CFA";
+				PROVISIONING_PROFILE = "5B362ECD-01CF-446F-8F83-E24835200867";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5B362ECD-01CF-446F-8F83-E24835200867";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

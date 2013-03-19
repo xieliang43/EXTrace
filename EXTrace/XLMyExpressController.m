@@ -42,6 +42,9 @@
     adView.testing = YES;
     adView.appVersion = @"1.4";
     [adView start];
+    [self.view addSubview:adView];
+    
+    self.tableView.contentInset = UIEdgeInsetsMake(5, 0, 0, 0);
     
     service = [[XLExpressService alloc] init];
 
@@ -88,8 +91,6 @@
 {
     Debug(@"success");
     
-    [self.view addSubview:adView];
-    
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.25];
     CGRect rect = self.tableView.frame;
@@ -102,6 +103,7 @@
 - (void)didFailToReceiveAd:(YouMiView *)adView  error:(NSError *)error
 {
     Debug(@"fail");
+    [adView removeFromSuperview];
 }
 
 #pragma mark - UITableViewDelegate & UITableViewDataSource
@@ -113,25 +115,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = nil;
+    XLExpressCell *cell = nil;
     static NSString *cellId = @"express_cell";
     cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
-        cell.backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 70)];
-        cell.backgroundView.backgroundColor = [UIColor whiteColor];
-        
-        cell.textLabel.font = [UIFont boldSystemFontOfSize:18];
-        cell.textLabel.textColor = GRAY_COLOR;
-        
-        cell.detailTextLabel.font = [UIFont systemFontOfSize:16];
-        cell.detailTextLabel.textColor = ORANGE_COLOR;
-        
-        cell.selectionStyle = UITableViewCellSelectionStyleGray;
-        
-        UIImageView *seperator = [[UIImageView alloc] initWithFrame:CGRectMake(0, 69, 320, 1)];
-        seperator.image = [UIImage imageNamed:@"line.png"];
-        [cell.backgroundView addSubview:seperator];
+        cell = [[XLExpressCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
     }
     
     XLExpress *exp = [myExpresses objectAtIndex:indexPath.row];
@@ -164,7 +152,7 @@
 //delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 70.0;
+    return 65.0;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
