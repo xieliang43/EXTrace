@@ -1618,7 +1618,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = XL;
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = xieliang;
 			};
 			buildConfigurationList = E08211E71663981F00F559F2 /* Build configuration list for PBXProject "EXTrace" */;
@@ -2055,7 +2055,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: fu xunrong (2N75ALLRC5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: fu xunrong (2N75ALLRC5)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2079,7 +2078,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: fu xunrong (2N75ALLRC5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: fu xunrong (2N75ALLRC5)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

@@ -34,3 +34,5 @@
 #define make_color(r,g,b,a) ([UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a])
 
 #define NAVI_COLOR make_color(207,107,60,1)
+#define GRAY_COLOR make_color(120,120,120,1)
+#define ORANGE_COLOR make_color(225, 135, 83, 1)
