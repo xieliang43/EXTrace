@@ -14,12 +14,24 @@
     #import "XLTools.h"
 #endif
 
-#define UMENG_KEY @"5136cf87527015716d000009"
-#define YOUMI_KEY @"3d6249ce799aa752"
-#define YOUMI_SECRET @"172c44c201073efc"
+//是否是免费版本
+#define FREE_VERSION
 
-#define API_URL [NSURL URLWithString:@"http://api.kuaidi100.com/api"]
+#ifdef FREE_VERSION
 
+    #define APP_URL @"https://itunes.apple.com/cn/app/extracelite/id490929726?l=en&mt=8"
+    #define YOUMI_KEY @"3d6249ce799aa752"
+    #define YOUMI_SECRET @"172c44c201073efc"
+    #define UMENG_KEY @"5149715456240b0b3b000379"
+
+#else
+
+    #define APP_URL @"https://itunes.apple.com/cn/app/extrace/id486187521?l=en&mt=8"
+    #define UMENG_KEY @"5136cf87527015716d000009"
+
+#endif
+
+//是否是调试模式
 #define _DEBUG
 #ifdef _DEBUG
 #define Debug(format, ...) NSLog(format, ##__VA_ARGS__)
@@ -27,9 +39,10 @@
 #define Debug(format, ...)
 #endif
 
-#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+//其他常量
+#define API_URL [NSURL URLWithString:@"http://api.kuaidi100.com/api"]
 
-#define FREE_VERSION
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
 
 #define make_color(r,g,b,a) ([UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a])
 

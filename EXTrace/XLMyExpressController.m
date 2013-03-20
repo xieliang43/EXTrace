@@ -36,6 +36,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+#ifdef FREE_VERSION
     YouMiView *adView = [[YouMiView alloc] initWithContentSizeIdentifier:YouMiBannerContentSizeIdentifier320x50 delegate:self];
     adView.appID = YOUMI_KEY;
     adView.appSecret = YOUMI_SECRET;
@@ -43,9 +45,9 @@
     adView.appVersion = @"1.4";
     [adView start];
     [self.view addSubview:adView];
+#endif
     
     self.tableView.contentInset = UIEdgeInsetsMake(5, 0, 0, 0);
-    
     service = [[XLExpressService alloc] init];
 
 }

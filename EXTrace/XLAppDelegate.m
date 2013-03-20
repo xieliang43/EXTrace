@@ -23,7 +23,9 @@
     
     //umeng统计
     [MobClick startWithAppkey:UMENG_KEY reportPolicy:BATCH channelId:nil];
-    
+#ifdef FREE_VERSION
+    [MobClick updateOnlineConfig];
+#endif
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     XLPopExpressController *popExpressCon = [[XLPopExpressController alloc] initWithNibName:@"XLPopExpressController" bundle:nil];
@@ -64,6 +66,7 @@
 //    
 //    [req startSynchronous];
 //    NSLog(@"%@",req.responseString);
+    
     return YES;
 }
 

@@ -43,6 +43,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)sendEmail
+{
+    
+}
+
 #pragma mark - UITableViewDelegate & UITableViewDataSource
 //datasource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -121,7 +126,19 @@
 //delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    switch (indexPath.row) {
+        case 0:
+            [self sendEmail];
+            break;
+        case 1:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:APP_URL]];
+            break;
+        case 2:
+            break;
+        default:
+            break;
+    }
 }
 
 @end
