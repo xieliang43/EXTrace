@@ -56,6 +56,9 @@
     CGRect rect = self.textLabel.frame;
     rect.origin.y -= 5;
     self.textLabel.frame = rect;
+    
+    rect = CGRectMake(5, 0, 310, 60);
+    self.contentView.frame = rect;
 }
 
 @end

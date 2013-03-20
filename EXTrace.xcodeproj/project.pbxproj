@@ -78,7 +78,6 @@
 		E069F9CC16F8A7F9008F6085 /* cell_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E069F9CB16F8A7F9008F6085 /* cell_sel@2x.png */; };
 		E069F9CF16F8AD0C008F6085 /* XLExpressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E069F9CE16F8AD0C008F6085 /* XLExpressCell.m */; };
 		E07DDA1416E9BC58000720B7 /* XLExpressCompanyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E07DDA1316E9BC58000720B7 /* XLExpressCompanyCell.m */; };
-		E07DDA1616E9BC6F000720B7 /* XLExpressCompanyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E07DDA1516E9BC6F000720B7 /* XLExpressCompanyCell.xib */; };
 		E07DDA1A16E9BCBA000720B7 /* XLCompanyListController.m in Sources */ = {isa = PBXBuildFile; fileRef = E07DDA1816E9BCBA000720B7 /* XLCompanyListController.m */; };
 		E07DDA1B16E9BCBA000720B7 /* XLCompanyListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E07DDA1916E9BCBA000720B7 /* XLCompanyListController.xib */; };
 		E07DDA1D16E9BCF1000720B7 /* XLCompanyListController_4.xib in Resources */ = {isa = PBXBuildFile; fileRef = E07DDA1C16E9BCF1000720B7 /* XLCompanyListController_4.xib */; };
@@ -503,7 +502,6 @@
 		E069F9CE16F8AD0C008F6085 /* XLExpressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLExpressCell.m; sourceTree = "<group>"; };
 		E07DDA1216E9BC58000720B7 /* XLExpressCompanyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLExpressCompanyCell.h; sourceTree = "<group>"; };
 		E07DDA1316E9BC58000720B7 /* XLExpressCompanyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLExpressCompanyCell.m; sourceTree = "<group>"; };
-		E07DDA1516E9BC6F000720B7 /* XLExpressCompanyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XLExpressCompanyCell.xib; sourceTree = "<group>"; };
 		E07DDA1716E9BCBA000720B7 /* XLCompanyListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLCompanyListController.h; sourceTree = "<group>"; };
 		E07DDA1816E9BCBA000720B7 /* XLCompanyListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLCompanyListController.m; sourceTree = "<group>"; };
 		E07DDA1916E9BCBA000720B7 /* XLCompanyListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XLCompanyListController.xib; sourceTree = "<group>"; };
@@ -877,7 +875,6 @@
 			children = (
 				E07DDA1216E9BC58000720B7 /* XLExpressCompanyCell.h */,
 				E07DDA1316E9BC58000720B7 /* XLExpressCompanyCell.m */,
-				E07DDA1516E9BC6F000720B7 /* XLExpressCompanyCell.xib */,
 				E069F9CD16F8AD0C008F6085 /* XLExpressCell.h */,
 				E069F9CE16F8AD0C008F6085 /* XLExpressCell.m */,
 			);
@@ -1949,7 +1946,6 @@
 				E01E95FB16E8863B00CCA143 /* twodimensional@2x.png in Resources */,
 				E002960F16E8B2F4008D8D68 /* scanning@2x.png in Resources */,
 				E002961116E8B44F008D8D68 /* beep.wav in Resources */,
-				E07DDA1616E9BC6F000720B7 /* XLExpressCompanyCell.xib in Resources */,
 				E07DDA1B16E9BCBA000720B7 /* XLCompanyListController.xib in Resources */,
 				E07DDA1D16E9BCF1000720B7 /* XLCompanyListController_4.xib in Resources */,
 				E05E81BB16E9D2F900FA3EB8 /* kuang@2x.png in Resources */,

@@ -10,7 +10,7 @@
 
 @interface XLExpressCompanyCell : UITableViewCell
 
-@property (nonatomic,weak) IBOutlet UIImageView *logoView;
-@property (nonatomic,weak) IBOutlet UILabel *nameLabel;
+@property (nonatomic,readonly,strong) UIImageView *bgView;
+@property (nonatomic,readonly,strong) UIImageView *logoView;
 
 @end

@@ -58,11 +58,11 @@
     cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     
     if (!cell) {
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"XLExpressCompanyCell" owner:self options:nil] lastObject];
+        cell = [[XLExpressCompanyCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
     
     XLExpressCompany *company = [companys objectAtIndex:indexPath.row];
-    cell.nameLabel.text = company.name;
+    cell.textLabel.text = company.name;
     NSString *nameStr = [NSString stringWithFormat:@"%@_s.png",company.image];
     cell.logoView.image = [UIImage imageNamed:nameStr];
     

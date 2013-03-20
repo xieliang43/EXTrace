@@ -33,12 +33,14 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.tableView.contentInset = UIEdgeInsetsMake(5, 0, 0, 0);
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+    [companys removeAllObjects];
     [companys addObjectsFromArray:[service getPopCompany]];
     [self.tableView reloadData];
 }
@@ -62,14 +64,14 @@
     static NSString *cellId = @"express_cell";
     cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (!cell) {
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"XLExpressCompanyCell" owner:self options:nil] lastObject];
+        cell = [[XLExpressCompanyCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
     
     XLExpressCompany *company = [companys objectAtIndex:indexPath.row];
     
     NSString *str = [NSString stringWithFormat:@"%@_s.png",company.image];
     cell.logoView.image = [UIImage imageNamed:str];
-    cell.nameLabel.text = company.name;
+    cell.textLabel.text = company.name;
     
     return cell;
 }
@@ -82,7 +84,7 @@
 //delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60.0;
+    return 65.0;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
