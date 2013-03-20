@@ -51,6 +51,7 @@
     XLTabBarController *tabControler = [[XLTabBarController alloc] init];
     
     tabControler.controllers = array;
+    tabControler.selectIndex = 2;
     
     self.window.rootViewController = tabControler;
     

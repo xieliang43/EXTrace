@@ -10,4 +10,6 @@
 
 @interface XLAboutController : XLViewController
 
+@property (nonatomic,weak) IBOutlet UITableView *tableView;
+
 @end
