@@ -7,7 +7,15 @@
 //
 
 #import "XLViewController.h"
+#import "XLCompanyService.h"
+#import "XLExpressCompanyCell.h"
 
 @interface XLAllExpressController : XLViewController
+{
+    XLCompanyService *service;
+    NSArray *companys;
+}
+
+@property (nonatomic,weak) IBOutlet UITableView *tableView;
 
 @end

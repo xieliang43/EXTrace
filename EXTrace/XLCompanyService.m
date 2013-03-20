@@ -34,4 +34,9 @@
     return [dao findPopExpressCompany];
 }
 
+- (BOOL)updateCompany:(XLExpressCompany *)company
+{
+    return [dao updateExpressCompany:company];
+}
+
 @end

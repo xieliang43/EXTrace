@@ -10,6 +10,7 @@
 #import "XLCompanyService.h"
 #import "XLExpressCompany.h"
 #import "XLExpressCompanyCell.h"
+#import "XLAddExpressController.h"
 
 @interface XLPopExpressController : XLViewController
 {

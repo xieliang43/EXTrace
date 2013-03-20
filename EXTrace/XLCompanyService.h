@@ -18,5 +18,6 @@
 - (NSArray *)getAllCompany;
 - (XLExpressCompany *)getExpressCompanyById:(NSInteger)cid;
 - (NSArray *)getPopCompany;
+- (BOOL)updateCompany:(XLExpressCompany *)company;
 
 @end

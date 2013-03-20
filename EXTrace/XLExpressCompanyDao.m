@@ -112,7 +112,7 @@
     
     [fmdb setShouldCacheStatements:YES];
     
-    BOOL result = [fmdb executeUpdateWithFormat:@"update express_info set is_common = %@",company.isCommon];
+    BOOL result = [fmdb executeUpdateWithFormat:@"update express_info set is_common = %@ where cid = %d",company.isCommon,company.cid];
     
     [fmdb close];
     

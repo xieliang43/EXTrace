@@ -25,8 +25,24 @@
         
         service = [[XLCompanyService alloc] init];
         companys = [[NSMutableArray alloc] init];
+        
+        UIBarButtonItem *editItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editTable:)];
+        self.navigationItem.rightBarButtonItem = editItem;
     }
     return self;
+}
+
+- (void)editTable:(UIBarButtonItem *)sender
+{
+    if (self.tableView.editing) {
+        [self.tableView setEditing:NO];
+        sender = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editTable:)];
+    }else{
+        [self.tableView setEditing:YES];
+        sender = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(editTable:)];
+    }
+    
+    self.navigationItem.rightBarButtonItem = sender;
 }
 
 - (void)viewDidLoad
@@ -64,7 +80,7 @@
     static NSString *cellId = @"express_cell";
     cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (!cell) {
-        cell = [[XLExpressCompanyCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+        cell = [[XLExpressCompanyCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
     }
     
     XLExpressCompany *company = [companys objectAtIndex:indexPath.row];
@@ -72,13 +88,29 @@
     NSString *str = [NSString stringWithFormat:@"%@_s.png",company.image];
     cell.logoView.image = [UIImage imageNamed:str];
     cell.textLabel.text = company.name;
+    cell.detailTextLabel.text = company.phone;
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    XLExpressCompany *company = [companys objectAtIndex:indexPath.row];
+    company.isCommon = @"0";
+    if ([service updateCompany:company]) {
+        [companys removeObject:company];
+        
+        [tableView beginUpdates];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationLeft];
+        [tableView endUpdates];
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                        message:@"删除常用快递失败！"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"确定"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 //delegate
@@ -90,7 +122,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
+    XLAddExpressController *addExpress = [[XLAddExpressController alloc] initWithNibName:@"XLAddExpressController" bundle:nil];
+    addExpress.company = [companys objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:addExpress animated:YES];
 }
 
 @end

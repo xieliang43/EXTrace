@@ -17,6 +17,7 @@
 @synthesize numberField = _numberField;
 @synthesize companyField = _companyField;
 @synthesize descField = _descField;
+@synthesize company = _company;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,6 +39,10 @@
     
     [self.numberField becomeFirstResponder];
     _service = [[XLExpressService alloc] init];
+    
+    if (_company) {
+        self.companyField.text = _company.name;
+    }
 }
 
 - (void)didReceiveMemoryWarning

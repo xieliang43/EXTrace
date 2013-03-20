@@ -1016,14 +1016,6 @@
 				E00BBAC816E71937006B2BBC /* XLMyExpressController.m */,
 				E00BBAC916E71937006B2BBC /* XLMyExpressController.xib */,
 				E00BBAD416E72085006B2BBC /* XLMyExpressController_4.xib */,
-				E01E95E116E859D600CCA143 /* XLAddExpressController.h */,
-				E01E95E216E859D600CCA143 /* XLAddExpressController.m */,
-				E01E95E316E859D600CCA143 /* XLAddExpressController.xib */,
-				E01E95E616E859F300CCA143 /* XLAddExpressController_4.xib */,
-				E07DDA1716E9BCBA000720B7 /* XLCompanyListController.h */,
-				E07DDA1816E9BCBA000720B7 /* XLCompanyListController.m */,
-				E07DDA1916E9BCBA000720B7 /* XLCompanyListController.xib */,
-				E07DDA1C16E9BCF1000720B7 /* XLCompanyListController_4.xib */,
 			);
 			name = myexpress;
 			sourceTree = "<group>";
@@ -1118,6 +1110,14 @@
 				E05E81BE16E9E01600FA3EB8 /* XLShowExpressInfoController.m */,
 				E05E81BF16E9E01600FA3EB8 /* XLShowExpressInfoController.xib */,
 				E05E81C216E9E05600FA3EB8 /* XLShowExpressInfoController_4.xib */,
+				E01E95E116E859D600CCA143 /* XLAddExpressController.h */,
+				E01E95E216E859D600CCA143 /* XLAddExpressController.m */,
+				E01E95E316E859D600CCA143 /* XLAddExpressController.xib */,
+				E01E95E616E859F300CCA143 /* XLAddExpressController_4.xib */,
+				E07DDA1716E9BCBA000720B7 /* XLCompanyListController.h */,
+				E07DDA1816E9BCBA000720B7 /* XLCompanyListController.m */,
+				E07DDA1916E9BCBA000720B7 /* XLCompanyListController.xib */,
+				E07DDA1C16E9BCF1000720B7 /* XLCompanyListController_4.xib */,
 			);
 			name = common;
 			sourceTree = "<group>";

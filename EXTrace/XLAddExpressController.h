@@ -22,6 +22,7 @@
 @property (nonatomic,weak) IBOutlet UITextField *numberField;
 @property (nonatomic,weak) IBOutlet UITextField *companyField;
 @property (nonatomic,weak) IBOutlet UITextField *descField;
+@property (nonatomic,strong) XLExpressCompany *company;
 
 - (IBAction)scanBarcode:(id)sender;
 

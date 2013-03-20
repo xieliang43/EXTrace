@@ -29,6 +29,8 @@
         
         self.textLabel.font = [UIFont systemFontOfSize:18];
         self.textLabel.textColor = GRAY_COLOR;
+        
+        self.detailTextLabel.textColor = ORANGE_COLOR;
     }
     return self;
 }
@@ -54,10 +56,15 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
+    
     CGRect rect = self.textLabel.frame;
     rect.origin.x += 57;
     rect.origin.y -= 2;
     self.textLabel.frame = rect;
+    
+    rect = self.detailTextLabel.frame;
+    rect.origin.x += 57;
+    self.detailTextLabel.frame = rect;
 }
 
 @end
