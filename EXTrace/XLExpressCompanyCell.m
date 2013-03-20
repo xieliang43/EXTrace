@@ -12,6 +12,7 @@
 
 @synthesize logoView = _logoView;
 @synthesize bgView = _bgView;
+@synthesize isCommon = _isCommon;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -31,6 +32,8 @@
         self.textLabel.textColor = GRAY_COLOR;
         
         self.detailTextLabel.textColor = ORANGE_COLOR;
+        
+        self.isCommon = nil;
     }
     return self;
 }
@@ -65,6 +68,24 @@
     rect = self.detailTextLabel.frame;
     rect.origin.x += 57;
     self.detailTextLabel.frame = rect;
+    
+    if (_isCommon) {
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn.frame = CGRectMake(200, 15, 70, 30);
+        [btn addTarget:self action:@selector(changeStatus:) forControlEvents:UIControlEventTouchUpInside];
+        [self.contentView addSubview:btn];
+        if ([_isCommon isEqualToString:@"0"]) {
+            [btn setTitle:@"常用" forState:UIControlStateNormal];
+        }else{
+            [btn setTitle:@"不常用" forState:UIControlStateNormal];
+        }
+    }
+    
+}
+
+- (void)changeStatus:(UIButton *)sender
+{
+    Debug(@"adfaf");
 }
 
 @end
