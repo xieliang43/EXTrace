@@ -11,6 +11,7 @@
 @implementation XLAllCompanyCell
 
 @synthesize isCommon = _isCommon;
+@synthesize delegate = _delegate;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -22,15 +23,6 @@
     }
     return self;
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 - (void)layoutSubviews
 {
@@ -53,7 +45,9 @@
 
 - (void)changeStatus:(UIButton *)sender
 {
-    Debug(@"adfaf");
+    if ([_delegate respondsToSelector:@selector(changeCompanyStatus:)]) {
+        [_delegate changeCompanyStatus:self];
+    }
 }
 
 @end

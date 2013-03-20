@@ -11,7 +11,7 @@
 #import "XLAllCompanyCell.h"
 #import "XLAddExpressController.h"
 
-@interface XLAllExpressController : XLViewController
+@interface XLAllExpressController : XLViewController<XLAllCompanyCellDelegate>
 {
     XLCompanyService *service;
     NSArray *companys;

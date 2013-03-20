@@ -63,6 +63,7 @@
     cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (!cell) {
         cell = [[XLAllCompanyCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
+        cell.delegate = self;
     }
     
     XLExpressCompany *company = [companys objectAtIndex:indexPath.row];
@@ -87,6 +88,26 @@
     XLAddExpressController *addExpress = [[XLAddExpressController alloc] initWithNibName:@"XLAddExpressController" bundle:nil];
     addExpress.company = [companys objectAtIndex:indexPath.row];
     [self.navigationController pushViewController:addExpress animated:YES];
+}
+
+#pragma mark - XLAllCompanyCellDelegate
+- (void)changeCompanyStatus:(XLAllCompanyCell *)cell
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    XLExpressCompany *company = [companys objectAtIndex:indexPath.row];
+    if ([company.isCommon isEqualToString:@"0"]) {
+        company.isCommon = @"1";
+    }else{
+        company.isCommon = @"0";
+    }
+    
+    if ([service updateCompany:company]) {
+        [self.tableView beginUpdates];
+        
+        [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
+        
+        [self.tableView endUpdates];
+    }
 }
 
 @end
