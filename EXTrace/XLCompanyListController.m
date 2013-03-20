@@ -32,6 +32,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.tableView.contentInset = UIEdgeInsetsMake(5, 0, 0, 0);
     
     service = [[XLCompanyService alloc] init];
     companys = [service getAllCompany];
