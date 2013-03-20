@@ -34,7 +34,13 @@
     
     self.tableView.contentInset = UIEdgeInsetsMake(5, 0, 0, 0);
     
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
     companys = [service getAllCompany];
+    
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,11 +58,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    XLExpressCompanyCell *cell = nil;
+    XLAllCompanyCell *cell = nil;
     static NSString *cellId = @"express_cell";
     cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (!cell) {
-        cell = [[XLExpressCompanyCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
+        cell = [[XLAllCompanyCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
     }
     
     XLExpressCompany *company = [companys objectAtIndex:indexPath.row];
@@ -64,6 +70,7 @@
     NSString *str = [NSString stringWithFormat:@"%@_s.png",company.image];
     cell.logoView.image = [UIImage imageNamed:str];
     cell.textLabel.text = company.name;
+    cell.isCommon = company.isCommon;
     
     return cell;
 }

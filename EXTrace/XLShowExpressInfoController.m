@@ -25,6 +25,9 @@
         UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(backHome)];
         
         self.navigationItem.leftBarButtonItem = leftItem;
+        
+        UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(shareInfomation)];
+        self.navigationItem.rightBarButtonItem = rightItem;
     }
     return self;
 }
@@ -32,6 +35,11 @@
 - (void)backHome
 {
     [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (void)shareInfomation
+{
+    
 }
 
 - (void)viewDidLoad

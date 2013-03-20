@@ -8,7 +8,7 @@
 
 #import "XLViewController.h"
 #import "XLCompanyService.h"
-#import "XLExpressCompanyCell.h"
+#import "XLAllCompanyCell.h"
 #import "XLAddExpressController.h"
 
 @interface XLAllExpressController : XLViewController

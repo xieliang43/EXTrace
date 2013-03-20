@@ -88,7 +88,6 @@
     NSString *str = [NSString stringWithFormat:@"%@_s.png",company.image];
     cell.logoView.image = [UIImage imageNamed:str];
     cell.textLabel.text = company.name;
-    cell.detailTextLabel.text = company.phone;
     
     return cell;
 }

@@ -12,6 +12,5 @@
 
 @property (nonatomic,readonly,strong) UIImageView *bgView;
 @property (nonatomic,readonly,strong) UIImageView *logoView;
-@property (nonatomic,strong) NSString *isCommon;
 
 @end
