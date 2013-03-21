@@ -45,7 +45,21 @@
 
 - (void)sendEmail
 {
-    
+    if ([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController *mailCon = [[MFMailComposeViewController alloc] init];
+        [mailCon setToRecipients:[NSArray arrayWithObject:@"xieliang43@gmail.com"]];
+        [mailCon setSubject:@"快递追踪意见反馈"];
+        mailCon.navigationController.navigationBar.tintColor = NAVI_COLOR;
+        mailCon.mailComposeDelegate = self;
+        [self presentModalViewController:mailCon animated:YES];
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                        message:@"请到“设置”里面配置邮箱！"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"确定"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 #pragma mark - UITableViewDelegate & UITableViewDataSource
@@ -139,6 +153,41 @@
         default:
             break;
     }
+}
+
+#pragma mark - MFMailComposeViewControllerDelegate
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    [controller dismissModalViewControllerAnimated:YES];
+    UIAlertView *alert;
+    switch (result) {
+        case MFMailComposeResultCancelled:
+            break;
+        case MFMailComposeResultSaved:
+            alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                               message:@"反馈意见保存成功！"
+                                              delegate:nil
+                                     cancelButtonTitle:@"确定"
+                                     otherButtonTitles:nil];
+            break;
+        case MFMailComposeResultSent:
+            alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                               message:@"反馈意见发送成功！"
+                                              delegate:nil
+                                     cancelButtonTitle:@"确定"
+                                     otherButtonTitles:nil];
+            break;
+        case MFMailComposeResultFailed:
+            alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                               message:@"反馈意见发送失败！"
+                                              delegate:nil
+                                     cancelButtonTitle:@"确定"
+                                     otherButtonTitles:nil];
+            break;
+        default:
+            break;
+    }
+    [alert show];
 }
 
 @end

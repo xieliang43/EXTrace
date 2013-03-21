@@ -60,13 +60,6 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-//    XLFormDataRequest *req = [XLFormDataRequest requestWithURL:API_URL];
-//    [req addPostValue:@"yunda" forKey:@"com"];
-//    [req addPostValue:@"1200638491147" forKey:@"nu"];
-//    
-//    [req startSynchronous];
-//    NSLog(@"%@",req.responseString);
-    
     return YES;
 }
 

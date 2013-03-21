@@ -7,8 +7,9 @@
 //
 
 #import "XLViewController.h"
+#import <MessageUI/MessageUI.h>
 
-@interface XLAboutController : XLViewController
+@interface XLAboutController : XLViewController<MFMailComposeViewControllerDelegate,UINavigationControllerDelegate>
 
 @property (nonatomic,weak) IBOutlet UITableView *tableView;
 

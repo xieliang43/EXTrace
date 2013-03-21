@@ -70,6 +70,7 @@
 		E01E95FB16E8863B00CCA143 /* twodimensional@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E01E95FA16E8863B00CCA143 /* twodimensional@2x.png */; };
 		E01E961A16E8A47400CCA143 /* XLScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = E01E961916E8A47400CCA143 /* XLScanController.m */; };
 		E024C7141663C81B007DFB0D /* XLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E024C7121663C81B007DFB0D /* XLViewController.m */; };
+		E03D586D16FAA20B003A4330 /* XLExpressInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E03D586C16FAA20B003A4330 /* XLExpressInfoCell.m */; };
 		E05E81BB16E9D2F900FA3EB8 /* kuang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E05E81BA16E9D2F900FA3EB8 /* kuang@2x.png */; };
 		E05E81C016E9E01600FA3EB8 /* XLShowExpressInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = E05E81BE16E9E01600FA3EB8 /* XLShowExpressInfoController.m */; };
 		E05E81C116E9E01600FA3EB8 /* XLShowExpressInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05E81BF16E9E01600FA3EB8 /* XLShowExpressInfoController.xib */; };
@@ -491,6 +492,8 @@
 		E01E961916E8A47400CCA143 /* XLScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLScanController.m; sourceTree = "<group>"; };
 		E024C7111663C81B007DFB0D /* XLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLViewController.h; sourceTree = "<group>"; };
 		E024C7121663C81B007DFB0D /* XLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLViewController.m; sourceTree = "<group>"; };
+		E03D586B16FAA20B003A4330 /* XLExpressInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLExpressInfoCell.h; sourceTree = "<group>"; };
+		E03D586C16FAA20B003A4330 /* XLExpressInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLExpressInfoCell.m; sourceTree = "<group>"; };
 		E05E81BA16E9D2F900FA3EB8 /* kuang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kuang@2x.png"; sourceTree = "<group>"; };
 		E05E81BD16E9E01600FA3EB8 /* XLShowExpressInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLShowExpressInfoController.h; sourceTree = "<group>"; };
 		E05E81BE16E9E01600FA3EB8 /* XLShowExpressInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLShowExpressInfoController.m; sourceTree = "<group>"; };
@@ -1124,6 +1127,8 @@
 				E05E81BE16E9E01600FA3EB8 /* XLShowExpressInfoController.m */,
 				E05E81BF16E9E01600FA3EB8 /* XLShowExpressInfoController.xib */,
 				E05E81C216E9E05600FA3EB8 /* XLShowExpressInfoController_4.xib */,
+				E03D586B16FAA20B003A4330 /* XLExpressInfoCell.h */,
+				E03D586C16FAA20B003A4330 /* XLExpressInfoCell.m */,
 				E01E95E116E859D600CCA143 /* XLAddExpressController.h */,
 				E01E95E216E859D600CCA143 /* XLAddExpressController.m */,
 				E01E95E316E859D600CCA143 /* XLAddExpressController.xib */,
@@ -2014,6 +2019,7 @@
 				E060FA7D16F9885000EE2407 /* XLAllCompanyCell.m in Sources */,
 				E060FA8016F9892600EE2407 /* XLSiteCell.m in Sources */,
 				E060FA8616F9902800EE2407 /* XLEditCompanyController.m in Sources */,
+				E03D586D16FAA20B003A4330 /* XLExpressInfoCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
