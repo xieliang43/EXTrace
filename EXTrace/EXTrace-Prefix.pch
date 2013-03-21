@@ -2,6 +2,9 @@
 // Prefix header for all source files of the 'EXTrace' target in the 'EXTrace' project
 //
 
+//免费版的id com.xieliang.EXTraceLite
+//收费版的id com.xieliang.EXTrace
+
 #import <Availability.h>
 
 #ifndef __IPHONE_3_0
@@ -20,14 +23,18 @@
 #ifdef FREE_VERSION
 
     #define APP_URL @"https://itunes.apple.com/cn/app/extracelite/id490929726?l=en&mt=8"
-    #define YOUMI_KEY @"3d6249ce799aa752"
-    #define YOUMI_SECRET @"172c44c201073efc"
+    #define YOUMI_KEY @"656b2ef8a5ab50a6"
+    #define YOUMI_SECRET @"d3dbb25ab29d59f5"
     #define UMENG_KEY @"5149715456240b0b3b000379"
+    #define BundleID @"com.xieliang.EXTraceLite"
 
 #else
 
     #define APP_URL @"https://itunes.apple.com/cn/app/extrace/id486187521?l=en&mt=8"
+    #define YOUMI_KEY @"f0fd5754f3d25b44"
+    #define YOUMI_SECRET @"3042bfe8bb75656f"
     #define UMENG_KEY @"5136cf87527015716d000009"
+    #define BundleID @"com.xieliang.EXTrace"
 
 #endif
 

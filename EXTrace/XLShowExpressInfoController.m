@@ -40,7 +40,19 @@
 
 - (void)shareInfomation
 {
-    
+    if ([MFMessageComposeViewController canSendText]) {
+        MFMessageComposeViewController *messageCon = [[MFMessageComposeViewController alloc] init];
+        [messageCon setBody:[[_dataArray objectAtIndex:0] objectForKey:@"context"]];
+        messageCon.messageComposeDelegate = self;
+        [self presentModalViewController:messageCon animated:YES];
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                        message:@"您的设备不能发送短信！"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"确定"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 - (void)viewDidLoad
@@ -56,6 +68,25 @@
     self.title = [NSString stringWithFormat:@"%@-%@",_company.name,_express.expressNo];
     
     [self requestData];
+#ifdef FREE_VERSION
+    [self addYoumiWall];
+#else
+    self.tableView.frame = self.view.bounds;
+#endif
+}
+
+- (void)addYoumiWall
+{
+    YouMiWall *wallNoneReward = [[YouMiWall alloc] init];
+    wallNoneReward.appID = YOUMI_KEY;
+    wallNoneReward.appSecret = YOUMI_SECRET;
+    
+    YouMiWallBanner *wallBanner = [[YouMiWallBanner alloc] initWithWall:wallNoneReward isRewarded:NO unit:@"分"];
+    wallBanner.backgroundColor = make_color(255, 255, 255, 0.5);
+    wallBanner.frame = CGRectMake(5, 5, wallBanner.frame.size.width-10, wallBanner.frame.size.height);
+    wallBanner.layer.cornerRadius = 4.0f;
+    wallBanner.layer.masksToBounds = YES;
+    [self.view addSubview:wallBanner];
 }
 
 - (void)didReceiveMemoryWarning
@@ -145,6 +176,37 @@
 {
     NSDictionary *dic = [_dataArray objectAtIndex:indexPath.row];
     return [XLExpressInfoCell calCellHeight:[dic objectForKey:@"context"]];
+}
+
+#pragma mark - MFMessageComposeViewControllerDelegate
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
+{
+    [controller dismissModalViewControllerAnimated:YES];
+    
+    UIAlertView *alert;
+    
+    switch (result) {
+        case MessageComposeResultCancelled:
+            break;
+        case MessageComposeResultSent:
+            alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                               message:@"发送成功！"
+                                              delegate:nil
+                                     cancelButtonTitle:@"确定"
+                                     otherButtonTitles:nil];
+            break;
+        case MessageComposeResultFailed:
+            alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                               message:@"发送失败！"
+                                              delegate:nil
+                                     cancelButtonTitle:@"确定"
+                                     otherButtonTitles:nil];
+            break;
+        default:
+            break;
+    }
+    
+    [alert show];
 }
 
 @end

@@ -41,7 +41,7 @@
     YouMiView *adView = [[YouMiView alloc] initWithContentSizeIdentifier:YouMiBannerContentSizeIdentifier320x50 delegate:self];
     adView.appID = YOUMI_KEY;
     adView.appSecret = YOUMI_SECRET;
-    adView.testing = YES;
+    adView.testing = NO;
     adView.appVersion = @"1.4";
     [adView start];
     [self.view addSubview:adView];

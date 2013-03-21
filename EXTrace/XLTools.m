@@ -17,12 +17,12 @@
 
 + (NSString *)dbPath
 {
-    return [NSString stringWithFormat:@"%@/express.sqlite",[XLTools documentPath]];
+    return [NSString stringWithFormat:@"%@/express-1.4.sqlite",[XLTools documentPath]];
 }
 
 + (void)copyDbToPath
 {
-    NSString *rPath = [[NSBundle mainBundle] pathForResource:@"express" ofType:@"sqlite"];
+    NSString *rPath = [[NSBundle mainBundle] pathForResource:@"express-1.4" ofType:@"sqlite"];
     NSString *dPath = [XLTools dbPath];
     
     NSFileManager *manager = [NSFileManager defaultManager];

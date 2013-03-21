@@ -7,6 +7,8 @@
 //
 
 #import "XLViewController.h"
+#import <MessageUI/MessageUI.h>
+#import <QuartzCore/QuartzCore.h>
 #import "XLExpress.h"
 #import "XLCompanyService.h"
 #import "XLExpressCompany.h"
@@ -14,8 +16,10 @@
 #import "NSString+SBJSON.h"
 #import "XLExpressInfoCell.h"
 #import "MBProgressHUD.h"
+#import "YouMiWall.h"
+#import "YouMiWallBanner.h"
 
-@interface XLShowExpressInfoController : XLViewController
+@interface XLShowExpressInfoController : XLViewController<MFMessageComposeViewControllerDelegate>
 {
     XLExpressCompany *_company;
     NSArray *_dataArray;

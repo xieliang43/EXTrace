@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "MobClick.h"
 #import "XLTabBarController.h"
+#import "iRate.h"
 
-@interface XLAppDelegate : UIResponder <UIApplicationDelegate>
+@interface XLAppDelegate : UIResponder <UIApplicationDelegate,iRateDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

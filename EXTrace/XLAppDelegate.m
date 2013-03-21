@@ -16,6 +16,16 @@
 
 @implementation XLAppDelegate
 
++ (void)initialize
+{
+    [iRate sharedInstance].applicationBundleID = BundleID;
+	[iRate sharedInstance].onlyPromptIfLatestVersion = NO;
+    
+    [iRate sharedInstance].usesUntilPrompt = 3;
+    [iRate sharedInstance].daysUntilPrompt = 0;
+    [iRate sharedInstance].remindPeriod = 0;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //准备数据库文件

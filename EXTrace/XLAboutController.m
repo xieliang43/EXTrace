@@ -140,6 +140,7 @@
 //delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     switch (indexPath.row) {
         case 0:
@@ -149,7 +150,14 @@
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:APP_URL]];
             break;
         case 2:
-            break;
+        {
+//            XLAppsController *appCon = [[XLAppsController alloc] init];
+//            [self.navigationController pushViewController:appCon animated:YES];
+            wall = [[YouMiWall alloc] initWithAppID:YOUMI_KEY withAppSecret:YOUMI_SECRET];
+            wall.delegate = self;
+            [wall requestOffers:NO];
+            [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        }
         default:
             break;
     }
@@ -187,6 +195,22 @@
         default:
             break;
     }
+    [alert show];
+}
+
+#pragma mark - YouMiWallDelegate
+- (void)didReceiveOffers:(YouMiWall *)adWall {
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    [wall showOffers:YouMiWallAnimationTransitionNone];
+}
+
+- (void)didFailToReceiveOffers:(YouMiWall *)adWall error:(NSError *)error {
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                    message:[error localizedDescription]
+                                                   delegate:nil
+                                          cancelButtonTitle:@"确定"
+                                          otherButtonTitles:nil];
     [alert show];
 }
 
