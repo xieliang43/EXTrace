@@ -18,7 +18,7 @@
 #endif
 
 //是否是免费版本
-#define FREE_VERSION
+//#define FREE_VERSION
 
 #ifdef FREE_VERSION
 
@@ -39,7 +39,7 @@
 #endif
 
 //是否是调试模式
-#define _DEBUG
+//#define _DEBUG
 #ifdef _DEBUG
 #define Debug(format, ...) NSLog(format, ##__VA_ARGS__)
 #else
