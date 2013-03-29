@@ -397,7 +397,7 @@
 		E0D5586016FF0E9F003B76F5 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E082144116639AD200F559F2 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E0D5586116FF0E9F003B76F5 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E082148016639D2D00F559F2 /* MBProgressHUD.m */; };
 		E0D5586216FF0E9F003B76F5 /* XLTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DD9D0D1663C5F500D5C849 /* XLTools.m */; };
-		E0D5586316FF0E9F003B76F5 /* XLFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DD9D101663C63700D5C849 /* XLFormDataRequest.m */; };
+		E0D5586316FF0E9F003B76F5 /* XLFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DD9D101663C63700D5C849 /* XLFormDataRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E0D5586416FF0E9F003B76F5 /* XLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E024C7121663C81B007DFB0D /* XLViewController.m */; };
 		E0D5586516FF0E9F003B76F5 /* XLExpressCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BBA7A16E6EF89006B2BBC /* XLExpressCompany.m */; };
 		E0D5586616FF0E9F003B76F5 /* XLDao.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BBA7D16E6F0D8006B2BBC /* XLDao.m */; };
@@ -2908,8 +2908,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: xie liang (5B252TW82Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xie liang (5B252TW82Z)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: fu xunrong (2N75ALLRC5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: fu xunrong (2N75ALLRC5)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EXTrace/EXTrace-Prefix.pch";
 				INFOPLIST_FILE = "EXTrace/EXTrace-Info.plist";
@@ -2921,8 +2921,8 @@
 					"\"$(SRCROOT)/EXTrace/thirdpart/youmi\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5B362ECD-01CF-446F-8F83-E24835200867";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5B362ECD-01CF-446F-8F83-E24835200867";
+				PROVISIONING_PROFILE = "6EFA3764-9DEE-42F8-8A05-78CB247F4ADF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6EFA3764-9DEE-42F8-8A05-78CB247F4ADF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2931,8 +2931,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: xie liang (5B252TW82Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xie liang (5B252TW82Z)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: fu xunrong (2N75ALLRC5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: fu xunrong (2N75ALLRC5)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EXTrace/EXTrace-Prefix.pch";
 				INFOPLIST_FILE = "EXTrace/EXTrace-Info.plist";
@@ -2944,8 +2944,8 @@
 					"\"$(SRCROOT)/EXTrace/thirdpart/youmi\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5B362ECD-01CF-446F-8F83-E24835200867";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5B362ECD-01CF-446F-8F83-E24835200867";
+				PROVISIONING_PROFILE = "6EFA3764-9DEE-42F8-8A05-78CB247F4ADF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6EFA3764-9DEE-42F8-8A05-78CB247F4ADF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -2954,8 +2954,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: xie liang (5B252TW82Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xie liang (5B252TW82Z)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: fu xunrong (2N75ALLRC5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: fu xunrong (2N75ALLRC5)";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EXTraceLite/EXTraceLite-Prefix.pch";
@@ -2968,8 +2968,8 @@
 					"\"$(SRCROOT)/EXTrace/thirdpart/youmi\"",
 				);
 				PRODUCT_NAME = EXTraceLite;
-				PROVISIONING_PROFILE = "5B362ECD-01CF-446F-8F83-E24835200867";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5B362ECD-01CF-446F-8F83-E24835200867";
+				PROVISIONING_PROFILE = "6EFA3764-9DEE-42F8-8A05-78CB247F4ADF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6EFA3764-9DEE-42F8-8A05-78CB247F4ADF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2978,8 +2978,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: xie liang (5B252TW82Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xie liang (5B252TW82Z)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: fu xunrong (2N75ALLRC5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: fu xunrong (2N75ALLRC5)";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EXTraceLite/EXTraceLite-Prefix.pch";
@@ -2992,8 +2992,8 @@
 					"\"$(SRCROOT)/EXTrace/thirdpart/youmi\"",
 				);
 				PRODUCT_NAME = EXTraceLite;
-				PROVISIONING_PROFILE = "5B362ECD-01CF-446F-8F83-E24835200867";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5B362ECD-01CF-446F-8F83-E24835200867";
+				PROVISIONING_PROFILE = "6EFA3764-9DEE-42F8-8A05-78CB247F4ADF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6EFA3764-9DEE-42F8-8A05-78CB247F4ADF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
