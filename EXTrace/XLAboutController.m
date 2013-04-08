@@ -151,12 +151,12 @@
             break;
         case 2:
         {
-//            XLAppsController *appCon = [[XLAppsController alloc] init];
-//            [self.navigationController pushViewController:appCon animated:YES];
-            wall = [[YouMiWall alloc] initWithAppID:YOUMI_KEY withAppSecret:YOUMI_SECRET];
-            wall.delegate = self;
-            [wall requestOffers:YES];
-            [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            XLAppsController *appCon = [[XLAppsController alloc] init];
+            [self.navigationController pushViewController:appCon animated:YES];
+//            wall = [[YouMiWall alloc] initWithAppID:YOUMI_KEY withAppSecret:YOUMI_SECRET];
+//            wall.delegate = self;
+//            [wall requestOffers:YES];
+//            [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         }
         default:
             break;

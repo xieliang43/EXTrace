@@ -8,11 +8,14 @@
 
 #import "XLViewController.h"
 #import "YouMiWall.h"
+#import "YouMiWallAppModel.h"
 #import "MBProgressHUD.h"
 
-@interface XLAppsController : XLViewController<YouMiWallDelegate>
+@interface XLAppsController : XLViewController<YouMiWallDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     YouMiWall *wall;
+    UITableView *_tableView;
+    NSMutableArray *_apps;
 }
 
 @end
