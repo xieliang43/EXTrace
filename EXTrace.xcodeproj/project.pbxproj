@@ -70,6 +70,8 @@
 		E01E95FB16E8863B00CCA143 /* twodimensional@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E01E95FA16E8863B00CCA143 /* twodimensional@2x.png */; };
 		E01E961A16E8A47400CCA143 /* XLScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = E01E961916E8A47400CCA143 /* XLScanController.m */; };
 		E024C7141663C81B007DFB0D /* XLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E024C7121663C81B007DFB0D /* XLViewController.m */; };
+		E0398DFB1712BA0000A5F5D0 /* XLAppsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E0398DFA1712BA0000A5F5D0 /* XLAppsCell.m */; };
+		E0398DFC1712BA5C00A5F5D0 /* XLAppsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E0398DFA1712BA0000A5F5D0 /* XLAppsCell.m */; };
 		E03D586D16FAA20B003A4330 /* XLExpressInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E03D586C16FAA20B003A4330 /* XLExpressInfoCell.m */; };
 		E03D587016FAD31B003A4330 /* XLAppsController.m in Sources */ = {isa = PBXBuildFile; fileRef = E03D586F16FAD31B003A4330 /* XLAppsController.m */; };
 		E03D587516FADBB3003A4330 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E03D587216FADBB3003A4330 /* iRate.bundle */; };
@@ -875,6 +877,8 @@
 		E01E961916E8A47400CCA143 /* XLScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLScanController.m; sourceTree = "<group>"; };
 		E024C7111663C81B007DFB0D /* XLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLViewController.h; sourceTree = "<group>"; };
 		E024C7121663C81B007DFB0D /* XLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLViewController.m; sourceTree = "<group>"; };
+		E0398DF91712BA0000A5F5D0 /* XLAppsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLAppsCell.h; sourceTree = "<group>"; };
+		E0398DFA1712BA0000A5F5D0 /* XLAppsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLAppsCell.m; sourceTree = "<group>"; };
 		E03D586B16FAA20B003A4330 /* XLExpressInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLExpressInfoCell.h; sourceTree = "<group>"; };
 		E03D586C16FAA20B003A4330 /* XLExpressInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLExpressInfoCell.m; sourceTree = "<group>"; };
 		E03D586E16FAD31B003A4330 /* XLAppsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLAppsController.h; sourceTree = "<group>"; };
@@ -1466,6 +1470,8 @@
 				E00BBAD616E7213C006B2BBC /* XLAboutController_4.xib */,
 				E03D586E16FAD31B003A4330 /* XLAppsController.h */,
 				E03D586F16FAD31B003A4330 /* XLAppsController.m */,
+				E0398DF91712BA0000A5F5D0 /* XLAppsCell.h */,
+				E0398DFA1712BA0000A5F5D0 /* XLAppsCell.m */,
 			);
 			name = about;
 			sourceTree = "<group>";
@@ -2816,6 +2822,7 @@
 				E03D587616FADBB3003A4330 /* iRate.m in Sources */,
 				E0DB9E7217129D7C0012F4CA /* XLConfig.m in Sources */,
 				E0DB9E781712B1B80012F4CA /* OpenUDID.m in Sources */,
+				E0398DFB1712BA0000A5F5D0 /* XLAppsCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2876,6 +2883,7 @@
 				E0D5588316FF0E9F003B76F5 /* iRate.m in Sources */,
 				E0DB9E7317129D850012F4CA /* XLConfig.m in Sources */,
 				E0DB9E791712B1B80012F4CA /* OpenUDID.m in Sources */,
+				E0398DFC1712BA5C00A5F5D0 /* XLAppsCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
