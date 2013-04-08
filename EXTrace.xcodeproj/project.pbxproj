@@ -756,6 +756,10 @@
 		E0D559D216FF1393003B76F5 /* EXTraceLite-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0D559D116FF1393003B76F5 /* EXTraceLite-Info.plist */; };
 		E0D559D516FF1BAD003B76F5 /* iconlite.png in Resources */ = {isa = PBXBuildFile; fileRef = E0D559D416FF1BAD003B76F5 /* iconlite.png */; };
 		E0D559D716FF1BB9003B76F5 /* iconlite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0D559D616FF1BB9003B76F5 /* iconlite@2x.png */; };
+		E0DB9E7217129D7C0012F4CA /* XLConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DB9E7117129D7B0012F4CA /* XLConfig.m */; };
+		E0DB9E7317129D850012F4CA /* XLConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DB9E7117129D7B0012F4CA /* XLConfig.m */; };
+		E0DB9E781712B1B80012F4CA /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DB9E761712B1B80012F4CA /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E0DB9E791712B1B80012F4CA /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DB9E761712B1B80012F4CA /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E0DD9D0E1663C5F500D5C849 /* XLTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DD9D0D1663C5F500D5C849 /* XLTools.m */; };
 		E0DD9D111663C63700D5C849 /* XLFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DD9D101663C63700D5C849 /* XLFormDataRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
@@ -1222,6 +1226,10 @@
 		E0D559D316FF13C0003B76F5 /* EXTraceLite-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXTraceLite-Prefix.pch"; sourceTree = "<group>"; };
 		E0D559D416FF1BAD003B76F5 /* iconlite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconlite.png; sourceTree = "<group>"; };
 		E0D559D616FF1BB9003B76F5 /* iconlite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconlite@2x.png"; sourceTree = "<group>"; };
+		E0DB9E7017129D7B0012F4CA /* XLConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLConfig.h; sourceTree = "<group>"; };
+		E0DB9E7117129D7B0012F4CA /* XLConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLConfig.m; sourceTree = "<group>"; };
+		E0DB9E751712B1B80012F4CA /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
+		E0DB9E761712B1B80012F4CA /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
 		E0DD9D0C1663C5F500D5C849 /* XLTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLTools.h; sourceTree = "<group>"; };
 		E0DD9D0D1663C5F500D5C849 /* XLTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLTools.m; sourceTree = "<group>"; };
 		E0DD9D0F1663C63700D5C849 /* XLFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLFormDataRequest.h; sourceTree = "<group>"; };
@@ -1954,6 +1962,7 @@
 		E082141E16639AD200F559F2 /* thirdpart */ = {
 			isa = PBXGroup;
 			children = (
+				E0DB9E741712B1B80012F4CA /* openudid */,
 				E03D587116FADBB3003A4330 /* iRate */,
 				E01E95FC16E893D300CCA143 /* ZBarSDK */,
 				E00BBAA016E70855006B2BBC /* youmi */,
@@ -2046,11 +2055,23 @@
 			path = EXTraceLite;
 			sourceTree = "<group>";
 		};
+		E0DB9E741712B1B80012F4CA /* openudid */ = {
+			isa = PBXGroup;
+			children = (
+				E0DB9E751712B1B80012F4CA /* OpenUDID.h */,
+				E0DB9E761712B1B80012F4CA /* OpenUDID.m */,
+			);
+			name = openudid;
+			path = "OpenUDID-master";
+			sourceTree = "<group>";
+		};
 		E0DD9D0B1663C5DB00D5C849 /* helper */ = {
 			isa = PBXGroup;
 			children = (
 				E0DD9D0C1663C5F500D5C849 /* XLTools.h */,
 				E0DD9D0D1663C5F500D5C849 /* XLTools.m */,
+				E0DB9E7017129D7B0012F4CA /* XLConfig.h */,
+				E0DB9E7117129D7B0012F4CA /* XLConfig.m */,
 			);
 			name = helper;
 			sourceTree = "<group>";
@@ -2793,6 +2814,8 @@
 				E03D586D16FAA20B003A4330 /* XLExpressInfoCell.m in Sources */,
 				E03D587016FAD31B003A4330 /* XLAppsController.m in Sources */,
 				E03D587616FADBB3003A4330 /* iRate.m in Sources */,
+				E0DB9E7217129D7C0012F4CA /* XLConfig.m in Sources */,
+				E0DB9E781712B1B80012F4CA /* OpenUDID.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2851,6 +2874,8 @@
 				E0D5588116FF0E9F003B76F5 /* XLExpressInfoCell.m in Sources */,
 				E0D5588216FF0E9F003B76F5 /* XLAppsController.m in Sources */,
 				E0D5588316FF0E9F003B76F5 /* iRate.m in Sources */,
+				E0DB9E7317129D850012F4CA /* XLConfig.m in Sources */,
+				E0DB9E791712B1B80012F4CA /* OpenUDID.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2979,7 +3004,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: xie liang (5B252TW82Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: fu xunrong (2N75ALLRC5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xie liang (5B252TW82Z)";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EXTraceLite/EXTraceLite-Prefix.pch";
@@ -2993,7 +3018,7 @@
 				);
 				PRODUCT_NAME = EXTraceLite;
 				PROVISIONING_PROFILE = "B88D4A13-F312-4172-AEA7-76B4D35A4A10";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6EFA3764-9DEE-42F8-8A05-78CB247F4ADF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9BD2BD6E-B886-4541-983A-E48840E21745";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

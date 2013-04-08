@@ -142,6 +142,9 @@
 {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section == 0) {
+        return;
+    }
     switch (indexPath.row) {
         case 0:
             [self sendEmail];

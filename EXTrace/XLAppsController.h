@@ -10,6 +10,7 @@
 #import "YouMiWall.h"
 #import "YouMiWallAppModel.h"
 #import "MBProgressHUD.h"
+#import "OpenUDID.h"
 
 @interface XLAppsController : XLViewController<YouMiWallDelegate,UITableViewDataSource,UITableViewDelegate>
 {

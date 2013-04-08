@@ -70,6 +70,7 @@
 - (void)addYoumiWall
 {
     YouMiWall *wallReward = [[YouMiWall alloc] init];
+    wallReward.userID = [OpenUDID value];
     wallReward.appID = YOUMI_KEY;
     wallReward.appSecret = YOUMI_SECRET;
     

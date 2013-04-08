@@ -31,4 +31,22 @@
     }
 }
 
++ (void)saveConfig:(XLConfig *)config
+{
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    [def setObject:config forKey:@"config"];
+    [def synchronize];
+}
+
++ (XLConfig *)getConfig
+{
+    XLConfig *conf = [[NSUserDefaults standardUserDefaults] objectForKey:@"config"];
+    if (!conf) {
+        conf = [[XLConfig alloc] init];
+        conf.isCount = NO;
+    }
+    return conf;
+}
+
+
 @end

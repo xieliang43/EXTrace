@@ -30,6 +30,7 @@
     _apps = [[NSMutableArray alloc] init];
     
     wall = [[YouMiWall alloc] initWithAppID:YOUMI_KEY withAppSecret:YOUMI_SECRET];
+    wall.userID = [OpenUDID value];
     wall.delegate = self;
     [wall requestOffersAppData:YES pageCount:10];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -70,12 +71,12 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
     YouMiWallAppModel *model = [_apps objectAtIndex:indexPath.row];
     cell.textLabel.text = model.name;
-    cell.detailTextLabel.text = model.desc;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%d",model.points];
     cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.smallIconURL]]];
     
     return cell;
@@ -84,7 +85,7 @@
 #pragma mark - Table view delegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 80.0;
+    return 50.0;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

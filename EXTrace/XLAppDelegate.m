@@ -37,7 +37,10 @@
     [MobClick startWithAppkey:UMENG_KEY reportPolicy:BATCH channelId:nil];
 #ifdef FREE_VERSION
     [MobClick updateOnlineConfig];
+    
     _wall = [[YouMiWall alloc] initWithAppID:YOUMI_KEY withAppSecret:YOUMI_SECRET];
+    _wall.userID = [OpenUDID value];
+    Debug(@"%@",[OpenUDID value]);
     _wall.delegate = self;
     [_wall requestFeaturedApp:YES];
 #endif

@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "XLConfig.h"
 
 @interface XLTools : NSObject
 
 + (NSString *)documentPath;
 + (NSString *)dbPath;
 + (void)copyDbToPath;
++ (void)saveConfig:(XLConfig *)config;
++ (XLConfig *)getConfig;
 
 @end

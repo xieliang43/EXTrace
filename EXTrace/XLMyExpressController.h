@@ -13,6 +13,7 @@
 #import "XLExpressService.h"
 #import "XLShowExpressInfoController.h"
 #import "XLExpressCell.h"
+#import "OpenUDID.h"
 
 @interface XLMyExpressController : XLViewController<YouMiWallDelegate,UITableViewDataSource,UITableViewDelegate>
 {

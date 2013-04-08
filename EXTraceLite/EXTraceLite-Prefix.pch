@@ -28,7 +28,7 @@
 
 
 //是否是调试模式
-//#define _DEBUG
+#define _DEBUG
 #ifdef _DEBUG
 #define Debug(format, ...) NSLog(format, ##__VA_ARGS__)
 #else
