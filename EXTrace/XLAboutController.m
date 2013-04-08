@@ -155,7 +155,7 @@
 //            [self.navigationController pushViewController:appCon animated:YES];
             wall = [[YouMiWall alloc] initWithAppID:YOUMI_KEY withAppSecret:YOUMI_SECRET];
             wall.delegate = self;
-            [wall requestOffers:NO];
+            [wall requestOffers:YES];
             [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         }
         default:

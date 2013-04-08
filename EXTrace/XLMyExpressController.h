@@ -8,16 +8,17 @@
 
 #import "XLViewController.h"
 #import "XLAddExpressController.h"
-#import "YouMiView.h"
+#import "YouMiWall.h"
 #import "XLExpress.h"
 #import "XLExpressService.h"
 #import "XLShowExpressInfoController.h"
 #import "XLExpressCell.h"
 
-@interface XLMyExpressController : XLViewController<YouMiDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface XLMyExpressController : XLViewController<YouMiWallDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     __strong NSMutableArray *myExpresses;
     __strong XLExpressService *service;
+    __strong YouMiWallBanner *wallBanner;
 }
 
 @property (nonatomic,assign) IBOutlet UITableView *tableView;

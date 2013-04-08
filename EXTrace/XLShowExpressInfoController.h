@@ -16,10 +16,10 @@
 #import "NSString+SBJSON.h"
 #import "XLExpressInfoCell.h"
 #import "MBProgressHUD.h"
-#import "YouMiWall.h"
+#import "YouMiView.h"
 #import "YouMiWallBanner.h"
 
-@interface XLShowExpressInfoController : XLViewController<MFMessageComposeViewControllerDelegate>
+@interface XLShowExpressInfoController : XLViewController<MFMessageComposeViewControllerDelegate,YouMiDelegate>
 {
     XLExpressCompany *_company;
     NSArray *_dataArray;

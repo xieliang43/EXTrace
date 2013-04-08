@@ -38,14 +38,13 @@
     // Do any additional setup after loading the view from its nib.
     
 #ifdef FREE_VERSION
-    YouMiView *adView = [[YouMiView alloc] initWithContentSizeIdentifier:YouMiBannerContentSizeIdentifier320x50 delegate:self];
-    adView.appID = YOUMI_KEY;
-    adView.appSecret = YOUMI_SECRET;
-    adView.testing = NO;
-    adView.appVersion = @"1.4";
-    [adView start];
-    [self.view addSubview:adView];
+    [self addYoumiWall];
 #endif
+    
+    CGRect rect = self.tableView.frame;
+    rect.origin.y += wallBanner.frame.size.height;
+    rect.size.height -= wallBanner.frame.size.height;
+    self.tableView.frame = rect;
     
     self.tableView.contentInset = UIEdgeInsetsMake(5, 0, 0, 0);
     service = [[XLExpressService alloc] init];
@@ -68,6 +67,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)addYoumiWall
+{
+    YouMiWall *wallReward = [[YouMiWall alloc] init];
+    wallReward.appID = YOUMI_KEY;
+    wallReward.appSecret = YOUMI_SECRET;
+    
+    wallBanner = [[YouMiWallBanner alloc] initWithWall:wallReward isRewarded:YES unit:@"分"];
+    wallBanner.backgroundColor = make_color(255, 255, 255, 1);
+    wallBanner.frame = CGRectMake(0, 0, wallBanner.frame.size.width, wallBanner.frame.size.height);
+    wallBanner.layer.cornerRadius = 4.0f;
+    wallBanner.layer.masksToBounds = YES;
+    [self.view addSubview:wallBanner];
+}
+
 - (void)addMyExpress:(id)sender
 {
     XLAddExpressController *addExpress = [[XLAddExpressController alloc] initWithNibName:@"XLAddExpressController" bundle:nil];
@@ -86,26 +99,6 @@
     }
     
     self.navigationItem.leftBarButtonItem = leftItem;
-}
-
-#pragma mark - YouMiDelegate
-- (void)didReceiveAd:(YouMiView *)adView
-{
-    Debug(@"success");
-    
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:0.25];
-    CGRect rect = self.tableView.frame;
-    rect.origin.y += 50;
-    rect.size.height -= 50;
-    self.tableView.frame = rect;
-    [UIView commitAnimations];
-}
-
-- (void)didFailToReceiveAd:(YouMiView *)adView  error:(NSError *)error
-{
-    Debug(@"fail");
-    [adView removeFromSuperview];
 }
 
 #pragma mark - UITableViewDelegate & UITableViewDataSource

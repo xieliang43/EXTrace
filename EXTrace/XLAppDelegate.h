@@ -10,9 +10,11 @@
 #import "MobClick.h"
 #import "XLTabBarController.h"
 #import "iRate.h"
+#import "YouMiWall.h"
 
-@interface XLAppDelegate : UIResponder <UIApplicationDelegate,iRateDelegate>
+@interface XLAppDelegate : UIResponder <UIApplicationDelegate,iRateDelegate,YouMiWallDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) YouMiWall *wall;
 
 @end

@@ -2954,8 +2954,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: xie liang";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: xie liang";
+				CODE_SIGN_IDENTITY = "iPhone Developer: xie liang (5B252TW82Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xie liang (5B252TW82Z)";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EXTraceLite/EXTraceLite-Prefix.pch";
@@ -2968,8 +2968,8 @@
 					"\"$(SRCROOT)/EXTrace/thirdpart/youmi\"",
 				);
 				PRODUCT_NAME = EXTraceLite;
-				PROVISIONING_PROFILE = "3416E042-AE0D-4D94-948A-64DB67959D61";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3416E042-AE0D-4D94-948A-64DB67959D61";
+				PROVISIONING_PROFILE = "B88D4A13-F312-4172-AEA7-76B4D35A4A10";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9BD2BD6E-B886-4541-983A-E48840E21745";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2978,8 +2978,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: xie liang";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: xie liang";
+				CODE_SIGN_IDENTITY = "iPhone Developer: xie liang (5B252TW82Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: fu xunrong (2N75ALLRC5)";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EXTraceLite/EXTraceLite-Prefix.pch";
@@ -2992,8 +2992,8 @@
 					"\"$(SRCROOT)/EXTrace/thirdpart/youmi\"",
 				);
 				PRODUCT_NAME = EXTraceLite;
-				PROVISIONING_PROFILE = "3416E042-AE0D-4D94-948A-64DB67959D61";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3416E042-AE0D-4D94-948A-64DB67959D61";
+				PROVISIONING_PROFILE = "B88D4A13-F312-4172-AEA7-76B4D35A4A10";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6EFA3764-9DEE-42F8-8A05-78CB247F4ADF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

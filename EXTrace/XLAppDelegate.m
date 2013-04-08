@@ -16,6 +16,8 @@
 
 @implementation XLAppDelegate
 
+@synthesize wall = _wall;
+
 + (void)initialize
 {
     [iRate sharedInstance].applicationBundleID = BundleID;
@@ -35,6 +37,9 @@
     [MobClick startWithAppkey:UMENG_KEY reportPolicy:BATCH channelId:nil];
 #ifdef FREE_VERSION
     [MobClick updateOnlineConfig];
+    _wall = [[YouMiWall alloc] initWithAppID:YOUMI_KEY withAppSecret:YOUMI_SECRET];
+    _wall.delegate = self;
+    [_wall requestFeaturedApp:YES];
 #endif
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
@@ -98,6 +103,18 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - YouMiWall delegate
+
+- (void)didReceiveFeaturedApp:(YouMiWall *)adWall {
+    
+    [adWall showFeaturedApp];
+     
+}
+
+- (void)didFailToReceiveFeaturedApp:(YouMiWall *)adWall error:(NSError *)error {
+    
 }
 
 @end

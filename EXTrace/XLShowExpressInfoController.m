@@ -77,16 +77,15 @@
 
 - (void)addYoumiWall
 {
-    YouMiWall *wallNoneReward = [[YouMiWall alloc] init];
-    wallNoneReward.appID = YOUMI_KEY;
-    wallNoneReward.appSecret = YOUMI_SECRET;
+    YouMiView *adView = [[YouMiView alloc] initWithContentSizeIdentifier:YouMiBannerContentSizeIdentifier320x50 delegate:self];
     
-    YouMiWallBanner *wallBanner = [[YouMiWallBanner alloc] initWithWall:wallNoneReward isRewarded:NO unit:@"分"];
-    wallBanner.backgroundColor = make_color(255, 255, 255, 0.5);
-    wallBanner.frame = CGRectMake(5, 5, wallBanner.frame.size.width-10, wallBanner.frame.size.height);
-    wallBanner.layer.cornerRadius = 4.0f;
-    wallBanner.layer.masksToBounds = YES;
-    [self.view addSubview:wallBanner];
+    adView.appID = YOUMI_KEY;
+    adView.appSecret = YOUMI_SECRET;
+    adView.testing = NO;
+    adView.appVersion = @"1.4";
+    [adView start];
+    
+    [self.view addSubview:adView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -207,6 +206,27 @@
     }
     
     [alert show];
+}
+
+#pragma mark - YouMiDelegate
+- (void)didReceiveAd:(YouMiView *)adView
+{
+    Debug(@"success");
+    
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.25];
+    CGRect rect = self.tableView.frame;
+    rect.origin.y += 50;
+    rect.size.height -= 50;
+    self.tableView.frame = rect;
+    [UIView commitAnimations];
+}
+
+- (void)didFailToReceiveAd:(YouMiView *)adView  error:(NSError *)error
+{
+    Debug(@"fail");
+    
+    [adView removeFromSuperview];
 }
 
 @end
