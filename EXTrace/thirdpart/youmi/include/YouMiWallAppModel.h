@@ -11,7 +11,6 @@
 @interface YouMiWallAppModel : NSObject <NSCoding, NSCopying> {
  @private
     id _internal;
-    
 }
 
 @property(nonatomic, readonly)    NSString    *storeID;           // 该开放源应用的标示

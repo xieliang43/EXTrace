@@ -29,8 +29,7 @@
 	// Do any additional setup after loading the view.
     _apps = [[NSMutableArray alloc] init];
     
-    wall = [[YouMiWall alloc] initWithAppID:YOUMI_KEY withAppSecret:YOUMI_SECRET];
-    wall.userID = [OpenUDID value];
+    wall = [[YouMiWall alloc] init];
     wall.delegate = self;
     [wall requestOffersAppData:YES pageCount:10];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -84,7 +83,6 @@
 }
 
 #pragma mark - Table view delegate
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 65.0;
 }

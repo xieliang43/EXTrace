@@ -11,6 +11,7 @@
 #import "XLTabBarController.h"
 #import "iRate.h"
 #import "YouMiWall.h"
+#import "YouMiConfig.h"
 #import "OpenUDID.h"
 
 @interface XLAppDelegate : UIResponder <UIApplicationDelegate,iRateDelegate,YouMiWallDelegate>

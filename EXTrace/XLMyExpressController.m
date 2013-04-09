@@ -69,12 +69,7 @@
 
 - (void)addYoumiWall
 {
-    YouMiWall *wallReward = [[YouMiWall alloc] init];
-    wallReward.userID = [OpenUDID value];
-    wallReward.appID = YOUMI_KEY;
-    wallReward.appSecret = YOUMI_SECRET;
-    
-    wallBanner = [[YouMiWallBanner alloc] initWithWall:wallReward isRewarded:YES unit:@"分"];
+    wallBanner = [[YouMiWallBanner alloc] initRewarded:YES unit:@"分"];
     wallBanner.backgroundColor = make_color(255, 255, 255, 1);
     wallBanner.frame = CGRectMake(0, 0, wallBanner.frame.size.width, wallBanner.frame.size.height);
     wallBanner.layer.cornerRadius = 4.0f;

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "YouMiDelegateProtocol.h"
+#import "YouMiConfig.h"
 
 
 typedef enum {
@@ -26,75 +27,18 @@ typedef enum {
 
 @interface YouMiView : UIView
 
-// AppID
-// visit YouMi website: http://www.youmi.net/, register a develope account 
-// and sign with an application, to get a corresponding ID
++ (YouMiView *)adViewWithContentSizeIdentifier:(YouMiBannerContentSizeIdentifier)contentSizeIdentifier delegate:(id<YouMiDelegate>)delegate;
+
+- (id)initWithContentSizeIdentifier:(YouMiBannerContentSizeIdentifier)contentSizeIdentifier delegate:(id<YouMiDelegate>)delegate;
+
+// Start requesting banner ad
+// 开始请求广告
 //
-// 开发者应用ID
-// 
 // 详解:
-//      前往有米主页:http://www.youmi.net/ 注册一个开发者帐户，同时注册一个应用，获取对应应用的ID
-// 
-@property(nonatomic, copy)                      NSString    *appID;
-
-// AppSecret
-// visit YouMi website: http://www.youmi.net/, register a developer account and sign with an application, to get a corresponding ID
-// 
-// 开发者的安全密钥
-// 
-// 详解:
-//      前往有米主页:http://www.youmi.net/ 注册一个开发者帐户，同时注册一个应用，获取对应应用的安全密钥
-// 
-@property(nonatomic, copy)                      NSString    *appSecret;
-
-// App Version  
-// @"Bundle version"
-// p.s. the returned version number shall adopt the float like 1.0 or 1.2. 
-// at present the server doesn's support version forms like 1.1.1, but forms like 1.12 are accepted
+//      若想停用定位请求
+//      则在开始广告请求前请先调用 YouMiConfig 的 + (void)setShouldGetLocation:(BOOL)flag 
 //
-// 应用的版本信息
-// Default:
-//      @"Bundle version"
-// 详解:
-//      返回开发者自己应用的版本信息
-// 补充:
-//      返回的版本号需要使用浮点的类型,比如版本为1.0或者1.2等，目前服务器不支持1.1.1等版本的形式，有效低位版本只有一位，可以为1.12等
-//
-@property(nonatomic, copy)                      NSString    *appVersion;
-
-
-// Channel ID 
-// @1
-// channel ID is used for application promotion
-// p.s. channel ID can be 1 -> 255
-// 
-// 应用发布的渠道号
-// Defatut:
-//      @1
-// 详解:
-//      该参数主要给先推广该应用的时候，打包的渠道号
-// 补充:
-//      可以渠道号 1 -> 255
-// 
-@property(nonatomic, assign)                    NSInteger   channelID;
-
-// request mode of banner ad
-// ads request mode [No: normal  YES: test]
-// normal: normal request, recording display and click results
-// test: request under test mode, without recording display and click results
-// p.s. By default, Simulator is under testing and the real device is under normal mode; 
-// and developer can't set the normal mode on Stimulator
-// 
-// 广告条请求模式
-// 模拟器@YES 真机器@NO
-// 详解:
-//      广告请求的模式 [NO:正常模式 YES:测试模式] 
-//      正常模式:按正常广告请求，记录展示和点击结果
-//      测试模式:开始测试情况下请求，不记录展示和点击结果
-// 备注:
-//      默认是模拟器是测试模式,真机是正常模式，若开发者在模拟器上面使用的时候，无法设置为正常模式
-// 
-@property(nonatomic, assign, getter=isTesting)  BOOL        testing;
+- (void)start;
 
 // The size of banner
 // @YouMiBannerContentSizeIdentifierUnknow
@@ -163,7 +107,7 @@ typedef enum {
 // 
 // 背景颜色
 // 详解:
-//      主要是文字广告的时候，广告条的背景颜色
+//      文字广告广告条的背景颜色
 // 
 @property(nonatomic, retain) UIColor *indicateBackgroundColor;
 
@@ -172,7 +116,7 @@ typedef enum {
 //
 // 主标题颜色
 // 详解:
-//      主要是文字广告的时候，主标题的颜色
+//      文字广告主标题的颜色
 // 
 @property(nonatomic, retain) UIColor *textColor;
 
@@ -181,59 +125,9 @@ typedef enum {
 //
 // 副标题颜色
 // 详解:
-//      主要是文字广告的时候，副标题的颜色
+//      文字广告的副标题的颜色
 // 
 @property(nonatomic, retain) UIColor *subTextColor;
-
-
-// SDK Version
-// 
-+ (NSString *)sdkVersion;
-
-
-// Set should get the location of the user
-// @YES
-// When YES the app will use GPS to get the location of the user
-// and support accurate targeting of advertising
-// 
-// 统计定位请求
-// Default:
-//      @YES
-// 详解:
-//      返回是否允许使用GPS定位用户所在的坐标，主要是为了帮助开发者了解自己应用的分布情况，同时帮助精准投放广告需要
-//      [默认定位以帮助开发者了解自己软件精确投放广告]
-// 
-+ (void)setShouldGetLocation:(BOOL)flag;
-
-// Whether to allowing using sqlite3 to save pics downloaded from the Internet, in order to save traffic
-// help user to save traffic, and raise the ad display speed at the same time
-// 
-// 是否允许使用sqlite3来替用户保存一些下载的图片，以便节省用户的流量
-// Default:
-//      @YES
-// 详解:
-//      帮助用户节省流量，同时加快广告显示速度
-// 
-+ (void)setShouldCacheImage:(BOOL)flag;
-
-// Hide all full screen ads shown by youmi sdk including YouMiWall
-//
-// 隐藏有米显示的所有全屏广告
-+ (void)hideFullScreenAds;
-
-
-+ (YouMiView *)adViewWithContentSizeIdentifier:(YouMiBannerContentSizeIdentifier)contentSizeIdentifier delegate:(id<YouMiDelegate>)delegate;
-- (id)initWithContentSizeIdentifier:(YouMiBannerContentSizeIdentifier)contentSizeIdentifier delegate:(id<YouMiDelegate>)delegate;
-
-// Start to request banner ad
-// 
-// 开始请求广告
-// 
-// 详解:
-//      若想停用定位请求，或者图片缓存，
-//      则在开始广告请求前请先调用+ (void)setShouldGetLocation:(BOOL)flag 和 + (void)setShouldCacheImage:(BOOL)flag
-//
-- (void)start;
 
 // Key words
 // to match with ad data, encourge users to review ads
@@ -241,7 +135,7 @@ typedef enum {
 // 添加关键字
 // 
 // 详解:
-//      主要是用于精准匹配广告数据，增强用户点击广告的概念
+//      用于精准匹配广告数据，增强用户点击广告的概念
 // 
 - (void)addKeyword:(NSString *)keyword;
 
