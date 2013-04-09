@@ -43,7 +43,7 @@
     
     wall = [[YouMiWall alloc] init];
     wall.delegate = self;
-    [wall requestOffersAppData:YES pageCount:10];
+    [wall requestOffersAppData:YES];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
@@ -77,6 +77,11 @@
     [_tableView reloadData];
 }
 
+- (void)didDismissWallView:(YouMiWall *)adWall
+{
+    Debug(@"请求积分");
+}
+
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -98,7 +103,6 @@
     cell.textLabel.text = model.name;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%d",model.points];
     [cell.logoView setImageURL:[NSURL URLWithString:model.smallIconURL]];
-    
     return cell;
 }
 
@@ -110,6 +114,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // deselect cell
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [wall userInstallFeaturedApp:[_apps objectAtIndex:indexPath.row]];
 }
 
 @end

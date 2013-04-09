@@ -45,13 +45,17 @@
     
     //umeng统计
     [MobClick startWithAppkey:UMENG_KEY reportPolicy:BATCH channelId:nil];
-#ifdef FREE_VERSION
-    [MobClick updateOnlineConfig];
     
+    //youmi广告配置
     [YouMiConfig setAppID:YOUMI_KEY];
     [YouMiConfig setAppSecret:YOUMI_SECRET];
     [YouMiConfig setUserID:[OpenUDID value]];
-    [YouMiConfig setUseInAppStore:YES];
+    [YouMiConfig setUseInAppStore:NO];
+    [YouMiConfig setIsTesting:NO];
+    [YouMiConfig setVersion:1.4];
+    
+#ifdef FREE_VERSION
+    [MobClick updateOnlineConfig];
     
     _wall = [[YouMiWall alloc] init];
     _wall.delegate = self;

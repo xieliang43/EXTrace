@@ -381,11 +381,11 @@
 		E082148116639D2D00F559F2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E082148016639D2D00F559F2 /* MBProgressHUD.m */; };
 		E0B614601714331C00070655 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B6145F1714331C00070655 /* EGOCache.m */; };
 		E0B614611714331C00070655 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B6145F1714331C00070655 /* EGOCache.m */; };
-		E0B614661714387C00070655 /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B614631714387C00070655 /* EGOImageLoadConnection.m */; };
+		E0B614661714387C00070655 /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B614631714387C00070655 /* EGOImageLoadConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E0B614671714387C00070655 /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B614631714387C00070655 /* EGOImageLoadConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E0B614681714387C00070655 /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B614651714387C00070655 /* EGOImageLoader.m */; };
+		E0B614681714387C00070655 /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B614651714387C00070655 /* EGOImageLoader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E0B614691714387C00070655 /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B614651714387C00070655 /* EGOImageLoader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E0B6146C1714389000070655 /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B6146B1714389000070655 /* EGOImageView.m */; };
+		E0B6146C1714389000070655 /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B6146B1714389000070655 /* EGOImageView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E0B6146D1714389000070655 /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B6146B1714389000070655 /* EGOImageView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E0D5584A16FF0511003B76F5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E0D5584916FF0511003B76F5 /* icon.png */; };
 		E0D5584C16FF0517003B76F5 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0D5584B16FF0517003B76F5 /* icon@2x.png */; };
@@ -3041,8 +3041,8 @@
 					"\"$(SRCROOT)/EXTrace/thirdpart/youmi\"",
 				);
 				PRODUCT_NAME = EXTraceLite;
-				PROVISIONING_PROFILE = "B88D4A13-F312-4172-AEA7-76B4D35A4A10";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9BD2BD6E-B886-4541-983A-E48840E21745";
+				PROVISIONING_PROFILE = "13CA1A93-AA7A-4B72-AD2A-43898F14AB71";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "13CA1A93-AA7A-4B72-AD2A-43898F14AB71";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3065,8 +3065,8 @@
 					"\"$(SRCROOT)/EXTrace/thirdpart/youmi\"",
 				);
 				PRODUCT_NAME = EXTraceLite;
-				PROVISIONING_PROFILE = "B88D4A13-F312-4172-AEA7-76B4D35A4A10";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9BD2BD6E-B886-4541-983A-E48840E21745";
+				PROVISIONING_PROFILE = "13CA1A93-AA7A-4B72-AD2A-43898F14AB71";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "13CA1A93-AA7A-4B72-AD2A-43898F14AB71";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
