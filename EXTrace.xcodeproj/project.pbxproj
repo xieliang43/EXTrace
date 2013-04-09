@@ -382,11 +382,11 @@
 		E0B614601714331C00070655 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B6145F1714331C00070655 /* EGOCache.m */; };
 		E0B614611714331C00070655 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B6145F1714331C00070655 /* EGOCache.m */; };
 		E0B614661714387C00070655 /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B614631714387C00070655 /* EGOImageLoadConnection.m */; };
-		E0B614671714387C00070655 /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B614631714387C00070655 /* EGOImageLoadConnection.m */; };
+		E0B614671714387C00070655 /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B614631714387C00070655 /* EGOImageLoadConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E0B614681714387C00070655 /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B614651714387C00070655 /* EGOImageLoader.m */; };
-		E0B614691714387C00070655 /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B614651714387C00070655 /* EGOImageLoader.m */; };
+		E0B614691714387C00070655 /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B614651714387C00070655 /* EGOImageLoader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E0B6146C1714389000070655 /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B6146B1714389000070655 /* EGOImageView.m */; };
-		E0B6146D1714389000070655 /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B6146B1714389000070655 /* EGOImageView.m */; };
+		E0B6146D1714389000070655 /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B6146B1714389000070655 /* EGOImageView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E0D5584A16FF0511003B76F5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E0D5584916FF0511003B76F5 /* icon.png */; };
 		E0D5584C16FF0517003B76F5 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0D5584B16FF0517003B76F5 /* icon@2x.png */; };
 		E0D5585116FF0E9F003B76F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E08211FD1663981F00F559F2 /* main.m */; };

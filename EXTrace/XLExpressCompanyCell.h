@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EGOImageView.h"
 
 @interface XLExpressCompanyCell : UITableViewCell
 
 @property (nonatomic,readonly,strong) UIImageView *bgView;
-@property (nonatomic,readonly,strong) UIImageView *logoView;
+@property (nonatomic,readonly,strong) EGOImageView *logoView;
 
 @end

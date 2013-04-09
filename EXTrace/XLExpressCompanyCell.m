@@ -22,7 +22,7 @@
         _bgView.image = [[UIImage imageNamed:@"cell_bg.png"] stretchableImageWithLeftCapWidth:10 topCapHeight:10];
         [self insertSubview:_bgView belowSubview:self.contentView];
         
-        _logoView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 4, 52, 52)];
+        _logoView = [[EGOImageView alloc] initWithFrame:CGRectMake(10, 4, 52, 52)];
         [self.contentView addSubview:_logoView];
         
         self.selectionStyle = UITableViewCellSelectionStyleNone;

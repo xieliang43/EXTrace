@@ -76,8 +76,7 @@
     YouMiWallAppModel *model = [_apps objectAtIndex:indexPath.row];
     cell.textLabel.text = model.name;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%d",model.points];
-    Debug(@"%@",model.smallIconURL);
-    cell.logoView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.smallIconURL]]];
+    [cell.logoView setImageURL:[NSURL URLWithString:model.smallIconURL]];
     
     return cell;
 }
