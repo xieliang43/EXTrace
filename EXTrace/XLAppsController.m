@@ -19,8 +19,20 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+#ifdef FREE_VERSION
+        self.title = @"获取积分";
+#else
+        self.title = @"应用推荐";
+#endif
+        UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancleBtn)];
+        self.navigationItem.leftBarButtonItem = leftItem;
     }
     return self;
+}
+
+- (void)cancleBtn
+{
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 - (void)viewDidLoad
@@ -34,11 +46,15 @@
     [wall requestOffersAppData:YES pageCount:10];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
-    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    CGRect rect = self.view.bounds;
+    rect.size.height -= 44 + 45;
+    _tableView.frame = rect;
+    _tableView.contentInset = UIEdgeInsetsMake(5, 0, 0, 0);
     [self.view addSubview:_tableView];
 }
 
@@ -46,6 +62,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
 }
 
 #pragma mark - YouMiWallDelegate

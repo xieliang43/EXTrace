@@ -1484,10 +1484,6 @@
 				E00BBACE16E719B1006B2BBC /* XLAboutController.m */,
 				E00BBACF16E719B1006B2BBC /* XLAboutController.xib */,
 				E00BBAD616E7213C006B2BBC /* XLAboutController_4.xib */,
-				E03D586E16FAD31B003A4330 /* XLAppsController.h */,
-				E03D586F16FAD31B003A4330 /* XLAppsController.m */,
-				E0398DF91712BA0000A5F5D0 /* XLAppsCell.h */,
-				E0398DFA1712BA0000A5F5D0 /* XLAppsCell.m */,
 			);
 			name = about;
 			sourceTree = "<group>";
@@ -1599,6 +1595,10 @@
 				E07DDA1816E9BCBA000720B7 /* XLCompanyListController.m */,
 				E07DDA1916E9BCBA000720B7 /* XLCompanyListController.xib */,
 				E07DDA1C16E9BCF1000720B7 /* XLCompanyListController_4.xib */,
+				E03D586E16FAD31B003A4330 /* XLAppsController.h */,
+				E03D586F16FAD31B003A4330 /* XLAppsController.m */,
+				E0398DF91712BA0000A5F5D0 /* XLAppsCell.h */,
+				E0398DFA1712BA0000A5F5D0 /* XLAppsCell.m */,
 			);
 			name = common;
 			sourceTree = "<group>";

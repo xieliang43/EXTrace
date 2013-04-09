@@ -155,11 +155,9 @@
         case 2:
         {
             XLAppsController *appCon = [[XLAppsController alloc] init];
-            [self.navigationController pushViewController:appCon animated:YES];
-//            wall = [[YouMiWall alloc] initWithAppID:YOUMI_KEY withAppSecret:YOUMI_SECRET];
-//            wall.delegate = self;
-//            [wall requestOffers:YES];
-//            [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            UINavigationController *navCon = [[UINavigationController alloc] initWithRootViewController:appCon];
+            navCon.navigationBar.tintColor = NAVI_COLOR;
+            [self presentModalViewController:navCon animated:YES];
         }
         default:
             break;
@@ -198,22 +196,6 @@
         default:
             break;
     }
-    [alert show];
-}
-
-#pragma mark - YouMiWallDelegate
-- (void)didReceiveOffers:(YouMiWall *)adWall {
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-    [wall showOffers:YouMiWallAnimationTransitionNone];
-}
-
-- (void)didFailToReceiveOffers:(YouMiWall *)adWall error:(NSError *)error {
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
-                                                    message:[error localizedDescription]
-                                                   delegate:nil
-                                          cancelButtonTitle:@"确定"
-                                          otherButtonTitles:nil];
     [alert show];
 }
 
