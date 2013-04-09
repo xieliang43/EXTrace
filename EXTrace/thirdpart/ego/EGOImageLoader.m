@@ -230,7 +230,6 @@ inline static NSString* keyForURL(NSURL* url, NSString* style) {
 
 #pragma mark -
 #pragma mark URL Connection delegate methods
-
 - (void)imageLoadConnectionDidFinishLoading:(EGOImageLoadConnection *)connection {
 	UIImage* anImage = [UIImage imageWithData:connection.responseData];
 	
