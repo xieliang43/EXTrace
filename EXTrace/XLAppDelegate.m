@@ -123,6 +123,7 @@
     if (!dao) {
         dao = [[XLSystemInfoDao alloc] init];
     }
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(requestPointSuccess:) name:YOUMI_EARNED_POINTS_RESPONSE_NOTIFICATION object:nil];
     timer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(queryPoints) userInfo:nil repeats:999];
 #endif
 }
@@ -145,13 +146,19 @@
     
 }
 
-- (void)didReceiveEarnedPoints:(YouMiWall *)adWall info:(NSArray *)info;{
-    for (NSDictionary *record in info) {
-        NSInteger earnedPoint = [(NSNumber *)[record objectForKey:kOneAccountRecordPoinstsOpenKey] integerValue];
-        NSLog(@"%d",earnedPoint);
-        earnedPoint += [dao findScore];
-        [dao updateScore:earnedPoint];
+- (void)requestPointSuccess:(NSNotification *)note {
+    NSLog(@"--*-6--[Rewarded]requestPointSuccess:-*--");
+    int point = 0;
+    NSDictionary *info = [note userInfo];
+    NSArray *records = [info valueForKey:YOUMI_WALL_NOTIFICATION_USER_INFO_EARNED_POINTS_KEY];
+    for (NSDictionary *oneRecord in records) {
+        NSInteger earnedPoint = [(NSNumber *)[oneRecord objectForKey:kOneAccountRecordPoinstsOpenKey] integerValue];
+        
+        point += earnedPoint;
     }
+    NSLog(@"%d",point);
+    point += [dao findScore];
+    [dao updateScore:point];
 }
 
 @end
