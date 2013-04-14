@@ -10,10 +10,8 @@
 		E002960F16E8B2F4008D8D68 /* scanning@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E002960E16E8B2F4008D8D68 /* scanning@2x.png */; };
 		E002961116E8B44F008D8D68 /* beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = E002961016E8B44F008D8D68 /* beep.wav */; };
 		E002961316E8B570008D8D68 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E002961216E8B570008D8D68 /* AudioToolbox.framework */; };
-		E002FBD7171A92A90080955A /* XLSystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E002FBD6171A92A90080955A /* XLSystemInfo.m */; };
 		E002FBDA171A92C60080955A /* XLSystemInfoDao.m in Sources */ = {isa = PBXBuildFile; fileRef = E002FBD9171A92C60080955A /* XLSystemInfoDao.m */; };
-		E002FBDE171A92F90080955A /* XLSystemInfoService.m in Sources */ = {isa = PBXBuildFile; fileRef = E002FBDD171A92F90080955A /* XLSystemInfoService.m */; };
-		E00BBA7816E6EE95006B2BBC /* express-1.4.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = E00BBA7716E6EE95006B2BBC /* express-1.4.sqlite */; };
+		E00BBA7816E6EE95006B2BBC /* express.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = E00BBA7716E6EE95006B2BBC /* express.sqlite */; };
 		E00BBA7B16E6EF89006B2BBC /* XLExpressCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BBA7A16E6EF89006B2BBC /* XLExpressCompany.m */; };
 		E00BBA7E16E6F0D8006B2BBC /* XLDao.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BBA7D16E6F0D8006B2BBC /* XLDao.m */; };
 		E00BBA8A16E6F12F006B2BBC /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BBA8116E6F12F006B2BBC /* FMDatabase.m */; };
@@ -718,7 +716,7 @@
 		E0D5599616FF0E9F003B76F5 /* zhongyouwuliu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E082133A16639A1F00F559F2 /* zhongyouwuliu@2x.png */; };
 		E0D5599716FF0E9F003B76F5 /* zhongyouwuliu_s.png in Resources */ = {isa = PBXBuildFile; fileRef = E082133B16639A1F00F559F2 /* zhongyouwuliu_s.png */; };
 		E0D5599816FF0E9F003B76F5 /* zhongyouwuliu_s@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E082133C16639A1F00F559F2 /* zhongyouwuliu_s@2x.png */; };
-		E0D5599916FF0E9F003B76F5 /* express-1.4.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = E00BBA7716E6EE95006B2BBC /* express-1.4.sqlite */; };
+		E0D5599916FF0E9F003B76F5 /* express.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = E00BBA7716E6EE95006B2BBC /* express.sqlite */; };
 		E0D5599A16FF0E9F003B76F5 /* bottom_about_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E00BBAAF16E710B9006B2BBC /* bottom_about_nor@2x.png */; };
 		E0D5599B16FF0E9F003B76F5 /* bottom_about_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E00BBAB016E710B9006B2BBC /* bottom_about_sel@2x.png */; };
 		E0D5599C16FF0E9F003B76F5 /* bottom_all_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E00BBAB116E710B9006B2BBC /* bottom_all_nor@2x.png */; };
@@ -769,8 +767,6 @@
 		E0D559D216FF1393003B76F5 /* EXTraceLite-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0D559D116FF1393003B76F5 /* EXTraceLite-Info.plist */; };
 		E0D559D516FF1BAD003B76F5 /* iconlite.png in Resources */ = {isa = PBXBuildFile; fileRef = E0D559D416FF1BAD003B76F5 /* iconlite.png */; };
 		E0D559D716FF1BB9003B76F5 /* iconlite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0D559D616FF1BB9003B76F5 /* iconlite@2x.png */; };
-		E0DB9E7217129D7C0012F4CA /* XLConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DB9E7117129D7B0012F4CA /* XLConfig.m */; };
-		E0DB9E7317129D850012F4CA /* XLConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DB9E7117129D7B0012F4CA /* XLConfig.m */; };
 		E0DB9E781712B1B80012F4CA /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DB9E761712B1B80012F4CA /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E0DB9E791712B1B80012F4CA /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DB9E761712B1B80012F4CA /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E0DD9D0E1663C5F500D5C849 /* XLTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DD9D0D1663C5F500D5C849 /* XLTools.m */; };
@@ -781,13 +777,9 @@
 		E002960E16E8B2F4008D8D68 /* scanning@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scanning@2x.png"; sourceTree = "<group>"; };
 		E002961016E8B44F008D8D68 /* beep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = beep.wav; sourceTree = "<group>"; };
 		E002961216E8B570008D8D68 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		E002FBD5171A92A90080955A /* XLSystemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLSystemInfo.h; sourceTree = "<group>"; };
-		E002FBD6171A92A90080955A /* XLSystemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLSystemInfo.m; sourceTree = "<group>"; };
 		E002FBD8171A92C60080955A /* XLSystemInfoDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLSystemInfoDao.h; sourceTree = "<group>"; };
 		E002FBD9171A92C60080955A /* XLSystemInfoDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLSystemInfoDao.m; sourceTree = "<group>"; };
-		E002FBDC171A92F90080955A /* XLSystemInfoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLSystemInfoService.h; sourceTree = "<group>"; };
-		E002FBDD171A92F90080955A /* XLSystemInfoService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLSystemInfoService.m; sourceTree = "<group>"; };
-		E00BBA7716E6EE95006B2BBC /* express-1.4.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "express-1.4.sqlite"; sourceTree = "<group>"; };
+		E00BBA7716E6EE95006B2BBC /* express.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = express.sqlite; sourceTree = "<group>"; };
 		E00BBA7916E6EF89006B2BBC /* XLExpressCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLExpressCompany.h; sourceTree = "<group>"; };
 		E00BBA7A16E6EF89006B2BBC /* XLExpressCompany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLExpressCompany.m; sourceTree = "<group>"; };
 		E00BBA7C16E6F0D8006B2BBC /* XLDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLDao.h; sourceTree = "<group>"; };
@@ -1255,8 +1247,6 @@
 		E0D559D316FF13C0003B76F5 /* EXTraceLite-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXTraceLite-Prefix.pch"; sourceTree = "<group>"; };
 		E0D559D416FF1BAD003B76F5 /* iconlite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconlite.png; sourceTree = "<group>"; };
 		E0D559D616FF1BB9003B76F5 /* iconlite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconlite@2x.png"; sourceTree = "<group>"; };
-		E0DB9E7017129D7B0012F4CA /* XLConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLConfig.h; sourceTree = "<group>"; };
-		E0DB9E7117129D7B0012F4CA /* XLConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLConfig.m; sourceTree = "<group>"; };
 		E0DB9E751712B1B80012F4CA /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
 		E0DB9E761712B1B80012F4CA /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
 		E0DD9D0C1663C5F500D5C849 /* XLTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLTools.h; sourceTree = "<group>"; };
@@ -1342,15 +1332,6 @@
 			name = System;
 			sourceTree = "<group>";
 		};
-		E002FBDB171A92D80080955A /* System */ = {
-			isa = PBXGroup;
-			children = (
-				E002FBDC171A92F90080955A /* XLSystemInfoService.h */,
-				E002FBDD171A92F90080955A /* XLSystemInfoService.m */,
-			);
-			name = System;
-			sourceTree = "<group>";
-		};
 		E00BBA7316E6EAE1006B2BBC /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -1365,7 +1346,6 @@
 		E00BBA7416E6EAE9006B2BBC /* service */ = {
 			isa = PBXGroup;
 			children = (
-				E002FBDB171A92D80080955A /* System */,
 				E07DDA2916E9C56E000720B7 /* XLExpress */,
 				E07DDA2516E9C549000720B7 /* XLCompany */,
 				E07DDA2216E9C543000720B7 /* XLService.h */,
@@ -1393,8 +1373,6 @@
 				E00BBA7A16E6EF89006B2BBC /* XLExpressCompany.m */,
 				E00BBA9316E6FE8A006B2BBC /* XLExpress.h */,
 				E00BBA9416E6FE8A006B2BBC /* XLExpress.m */,
-				E002FBD5171A92A90080955A /* XLSystemInfo.h */,
-				E002FBD6171A92A90080955A /* XLSystemInfo.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -1741,7 +1719,7 @@
 				E08211F91663981F00F559F2 /* EXTrace-Info.plist */,
 				E08211FD1663981F00F559F2 /* main.m */,
 				E08211FF1663981F00F559F2 /* EXTrace-Prefix.pch */,
-				E00BBA7716E6EE95006B2BBC /* express-1.4.sqlite */,
+				E00BBA7716E6EE95006B2BBC /* express.sqlite */,
 				E08212031663981F00F559F2 /* Default.png */,
 				E08212051663982000F559F2 /* Default@2x.png */,
 				E08212071663982000F559F2 /* Default-568h@2x.png */,
@@ -2139,8 +2117,6 @@
 			children = (
 				E0DD9D0C1663C5F500D5C849 /* XLTools.h */,
 				E0DD9D0D1663C5F500D5C849 /* XLTools.m */,
-				E0DB9E7017129D7B0012F4CA /* XLConfig.h */,
-				E0DB9E7117129D7B0012F4CA /* XLConfig.m */,
 			);
 			name = helper;
 			sourceTree = "<group>";
@@ -2466,7 +2442,7 @@
 				E082141616639A2000F559F2 /* zhongyouwuliu@2x.png in Resources */,
 				E082141716639A2000F559F2 /* zhongyouwuliu_s.png in Resources */,
 				E082141816639A2000F559F2 /* zhongyouwuliu_s@2x.png in Resources */,
-				E00BBA7816E6EE95006B2BBC /* express-1.4.sqlite in Resources */,
+				E00BBA7816E6EE95006B2BBC /* express.sqlite in Resources */,
 				E00BBAB916E710B9006B2BBC /* bottom_about_nor@2x.png in Resources */,
 				E00BBABA16E710B9006B2BBC /* bottom_about_sel@2x.png in Resources */,
 				E00BBABB16E710B9006B2BBC /* bottom_all_nor@2x.png in Resources */,
@@ -2771,7 +2747,7 @@
 				E0D5599616FF0E9F003B76F5 /* zhongyouwuliu@2x.png in Resources */,
 				E0D5599716FF0E9F003B76F5 /* zhongyouwuliu_s.png in Resources */,
 				E0D5599816FF0E9F003B76F5 /* zhongyouwuliu_s@2x.png in Resources */,
-				E0D5599916FF0E9F003B76F5 /* express-1.4.sqlite in Resources */,
+				E0D5599916FF0E9F003B76F5 /* express.sqlite in Resources */,
 				E0D5599A16FF0E9F003B76F5 /* bottom_about_nor@2x.png in Resources */,
 				E0D5599B16FF0E9F003B76F5 /* bottom_about_sel@2x.png in Resources */,
 				E0D5599C16FF0E9F003B76F5 /* bottom_all_nor@2x.png in Resources */,
@@ -2883,16 +2859,13 @@
 				E03D586D16FAA20B003A4330 /* XLExpressInfoCell.m in Sources */,
 				E03D587016FAD31B003A4330 /* XLAppsController.m in Sources */,
 				E03D587616FADBB3003A4330 /* iRate.m in Sources */,
-				E0DB9E7217129D7C0012F4CA /* XLConfig.m in Sources */,
 				E0DB9E781712B1B80012F4CA /* OpenUDID.m in Sources */,
 				E0398DFB1712BA0000A5F5D0 /* XLAppsCell.m in Sources */,
 				E0B614601714331C00070655 /* EGOCache.m in Sources */,
 				E0B614661714387C00070655 /* EGOImageLoadConnection.m in Sources */,
 				E0B614681714387C00070655 /* EGOImageLoader.m in Sources */,
 				E0B6146C1714389000070655 /* EGOImageView.m in Sources */,
-				E002FBD7171A92A90080955A /* XLSystemInfo.m in Sources */,
 				E002FBDA171A92C60080955A /* XLSystemInfoDao.m in Sources */,
-				E002FBDE171A92F90080955A /* XLSystemInfoService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2951,7 +2924,6 @@
 				E0D5588116FF0E9F003B76F5 /* XLExpressInfoCell.m in Sources */,
 				E0D5588216FF0E9F003B76F5 /* XLAppsController.m in Sources */,
 				E0D5588316FF0E9F003B76F5 /* iRate.m in Sources */,
-				E0DB9E7317129D850012F4CA /* XLConfig.m in Sources */,
 				E0DB9E791712B1B80012F4CA /* OpenUDID.m in Sources */,
 				E0398DFC1712BA5C00A5F5D0 /* XLAppsCell.m in Sources */,
 				E0B614611714331C00070655 /* EGOCache.m in Sources */,

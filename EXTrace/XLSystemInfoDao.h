@@ -10,4 +10,6 @@
 
 @interface XLSystemInfoDao : XLDao
 
+- (NSDictionary*)findAllSystemInfo;
+
 @end

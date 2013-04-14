@@ -17,36 +17,24 @@
 
 + (NSString *)dbPath
 {
-    return [NSString stringWithFormat:@"%@/express-1.4.sqlite",[XLTools documentPath]];
+    return [NSString stringWithFormat:@"%@/express.sqlite",[XLTools documentPath]];
 }
 
 + (void)copyDbToPath
 {
-    NSString *rPath = [[NSBundle mainBundle] pathForResource:@"express-1.4" ofType:@"sqlite"];
+    NSString *rPath = [[NSBundle mainBundle] pathForResource:@"express" ofType:@"sqlite"];
     NSString *dPath = [XLTools dbPath];
     
     NSFileManager *manager = [NSFileManager defaultManager];
     if (![manager fileExistsAtPath:dPath]) {
         [manager copyItemAtPath:rPath toPath:dPath error:nil];
+    }else{
+        NSString *version = [[[[XLSystemInfoDao alloc] init] findAllSystemInfo] objectForKey:@"version"];
+        if (![version isEqualToString:@"1.4.1"]) {
+            [manager removeItemAtPath:dPath error:nil];
+            [manager copyItemAtPath:rPath toPath:dPath error:nil];
+        }
     }
 }
-
-+ (void)saveConfig:(XLConfig *)config
-{
-    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
-    [def setObject:config forKey:@"config"];
-    [def synchronize];
-}
-
-+ (XLConfig *)getConfig
-{
-    XLConfig *conf = [[NSUserDefaults standardUserDefaults] objectForKey:@"config"];
-    if (!conf) {
-        conf = [[XLConfig alloc] init];
-        conf.isCount = NO;
-    }
-    return conf;
-}
-
 
 @end
