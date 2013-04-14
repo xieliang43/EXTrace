@@ -108,23 +108,23 @@
 #ifdef FREE_VERSION
     //判断积分是否够
     NSInteger score = [_dao findScore];
-    if (score < 60) {
-        NSString *meg = [NSString stringWithFormat:@"您当前的积分为%d，还能继续使用%d次查询，积分到账有一定的延时，请提前获取足够的积分！",score,score/10];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
-                                                        message:meg
-                                                       delegate:self
-                                              cancelButtonTitle:@"更多积分"
-                                              otherButtonTitles:@"购买积分",@"确定",nil];
-        [alert show];
-    }else if (score < 10){
+    if (score < 10){
         NSString *meg = [NSString stringWithFormat:@"您当前的积分为%d，已经不足使用1次了！",score];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
                                                         message:meg
                                                        delegate:self
-                                              cancelButtonTitle:@"更多积分"
-                                              otherButtonTitles:@"购买积分",nil];
+                                              cancelButtonTitle:@"确定"
+                                              otherButtonTitles:@"免费积分",@"购买积分",nil];
         [alert show];
         return;
+    }else if (score < 60) {
+        NSString *meg = [NSString stringWithFormat:@"您当前的积分为%d，还能继续使用%d次查询，积分到账有一定的延时，请提前获取足够的积分！",score,score/10];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                        message:meg
+                                                       delegate:self
+                                              cancelButtonTitle:@"确定"
+                                              otherButtonTitles:@"免费积分",@"购买积分",nil];
+        [alert show];
     }
 #endif
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];

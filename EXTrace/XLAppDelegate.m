@@ -156,9 +156,13 @@
         
         point += earnedPoint;
     }
-    NSLog(@"%d",point);
-    point += [dao findScore];
-    [dao updateScore:point];
+    
+    if (point > 0) {
+        NSLog(@"%d",point);
+        point += [dao findScore];
+        [dao updateScore:point];
+    }
+    
 }
 
 @end

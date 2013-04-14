@@ -65,7 +65,8 @@
     
     [fmdb setShouldCacheStatements:YES];
     
-    BOOL result = [fmdb executeUpdate:@"update system_info set value = '%d' where key = 'score' ",score];
+    NSString *sql = [NSString stringWithFormat:@"update system_info set value = '%d' where key = 'score'",score];
+    BOOL result = [fmdb executeUpdate:sql];
     
     return result;
 }
