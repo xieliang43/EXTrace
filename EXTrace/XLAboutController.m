@@ -127,7 +127,11 @@
                 break;
             case 2:
                 cell.imageView.image = [UIImage imageNamed:@"apps.png"];
+#ifdef FREE_VERSION
+                cell.textLabel.text = @"获取积分";
+#else
                 cell.textLabel.text = @"更多应用";
+#endif
                 break;
             default:
                 break;

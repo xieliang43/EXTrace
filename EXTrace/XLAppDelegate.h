@@ -13,8 +13,13 @@
 #import "YouMiWall.h"
 #import "YouMiConfig.h"
 #import "OpenUDID.h"
+#import "XLSystemInfoDao.h"
 
 @interface XLAppDelegate : UIResponder <UIApplicationDelegate,iRateDelegate,YouMiWallDelegate>
+{
+    NSTimer *timer;
+    XLSystemInfoDao *dao;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) YouMiWall *wall;

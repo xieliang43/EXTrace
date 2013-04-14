@@ -39,10 +39,6 @@
     //准备数据库文件
     [XLTools copyDbToPath];
     
-    // 关于积分查询观察者
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissFullScreen:) name:YOUMI_WALL_VIEW_CLOSED_NOTIFICATION object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(requestPointSuccess:) name:YOUMI_EARNED_POINTS_RESPONSE_NOTIFICATION object:nil];
-    
     //umeng统计
     [MobClick startWithAppkey:UMENG_KEY reportPolicy:BATCH channelId:nil];
     
@@ -52,7 +48,6 @@
     [YouMiConfig setUserID:[OpenUDID value]];
     [YouMiConfig setUseInAppStore:NO];
     [YouMiConfig setIsTesting:NO];
-    [YouMiConfig setVersion:1.4];
     
 #ifdef FREE_VERSION
     [MobClick updateOnlineConfig];
@@ -60,7 +55,6 @@
     _wall = [[YouMiWall alloc] init];
     _wall.delegate = self;
     [_wall requestFeaturedApp:YES];
-    [self queryPoints];
 #endif
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
@@ -109,6 +103,12 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+#ifdef FREE_VERSION
+    if ([timer isValid]) {
+        [timer invalidate];
+        timer = nil;
+    }
+#endif
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -119,6 +119,12 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+#ifdef FREE_VERSION
+    if (!dao) {
+        dao = [[XLSystemInfoDao alloc] init];
+    }
+    timer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(queryPoints) userInfo:nil repeats:999];
+#endif
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -127,7 +133,7 @@
 }
 
 - (void)queryPoints {
-    [_wall requestEarnedPointsWithTimeInterval:10.0 repeatCount:10];
+    [_wall requestEarnedPoints];
 }
 
 #pragma mark - YouMiWall delegate
@@ -139,31 +145,13 @@
     
 }
 
-- (void)dismissFullScreen:(NSNotification *)note {
-    NSLog(@"--*-5--[Rewarded]dismissFullScreen:-*--");
-    
-    // 查询积分
-    [self queryPoints];
-}
-
-- (void)requestPointSuccess:(NSNotification *)note {
-    NSLog(@"--*-6--[Rewarded]requestPointSuccess:-*--");
-    
-    NSDictionary *info = [note userInfo];
-    NSArray *records = [info valueForKey:YOUMI_WALL_NOTIFICATION_USER_INFO_EARNED_POINTS_KEY];
-    for (NSDictionary *oneRecord in records) {
-        NSString *userID = (NSString *)[oneRecord objectForKey:kOneAccountRecordUserIDOpenKey];
-        NSString *name = (NSString *)[oneRecord objectForKey:kOneAccountRecordNameOpenKey];
-        NSInteger earnedPoint = [(NSNumber *)[oneRecord objectForKey:kOneAccountRecordPoinstsOpenKey] integerValue];
-        
-        
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%@ 新增积分:%d", userID, earnedPoint] message:[NSString stringWithFormat:@"来源于安装了应用[%@]", name] delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil];
-        
-        [alert show];
+- (void)didReceiveEarnedPoints:(YouMiWall *)adWall info:(NSArray *)info;{
+    for (NSDictionary *record in info) {
+        NSInteger earnedPoint = [(NSNumber *)[record objectForKey:kOneAccountRecordPoinstsOpenKey] integerValue];
+        NSLog(@"%d",earnedPoint);
+        earnedPoint += [dao findScore];
+        [dao updateScore:earnedPoint];
     }
-    
-    
-    
 }
 
 @end

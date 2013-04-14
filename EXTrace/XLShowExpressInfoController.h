@@ -18,11 +18,14 @@
 #import "MBProgressHUD.h"
 #import "YouMiView.h"
 #import "YouMiWallBanner.h"
+#import "XLSystemInfoDao.h"
+#import "XLAppsController.h"
 
-@interface XLShowExpressInfoController : XLViewController<MFMessageComposeViewControllerDelegate,YouMiDelegate>
+@interface XLShowExpressInfoController : XLViewController<MFMessageComposeViewControllerDelegate,YouMiDelegate,UIAlertViewDelegate>
 {
     XLExpressCompany *_company;
     NSArray *_dataArray;
+    XLSystemInfoDao *_dao;
 }
 
 @property (nonatomic,strong) XLExpress *express;

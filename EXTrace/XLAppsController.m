@@ -101,7 +101,7 @@
     
     YouMiWallAppModel *model = [_apps objectAtIndex:indexPath.row];
     cell.textLabel.text = model.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%d",model.points];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"下载安装可获得%d分",model.points];
     [cell.logoView setImageURL:[NSURL URLWithString:model.smallIconURL]];
     return cell;
 }

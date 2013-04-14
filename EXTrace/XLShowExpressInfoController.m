@@ -27,8 +27,11 @@
         
         self.navigationItem.leftBarButtonItem = leftItem;
         
-        UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(shareInfomation)];
+        UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshInfo)];
+        
         self.navigationItem.rightBarButtonItem = rightItem;
+        
+        _dao = [[XLSystemInfoDao alloc] init];
     }
     return self;
 }
@@ -67,7 +70,6 @@
     
     self.title = [NSString stringWithFormat:@"%@-%@",_company.name,_express.expressNo];
     
-    [self requestData];
 #ifdef FREE_VERSION
     [self addYoumiWall];
 #else
@@ -89,14 +91,42 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewWillDisappear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillDisappear:animated];
-    
+    [super viewWillAppear:animated];
+    [self requestData];
+}
+
+- (void)refreshInfo
+{
+    [self requestData];
 }
 
 - (void)requestData
 {
+    
+#ifdef FREE_VERSION
+    //判断积分是否够
+    NSInteger score = [_dao findScore];
+    if (score < 50) {
+        NSString *meg = [NSString stringWithFormat:@"您当前的积分为%d，已经不足使用5次了！",score];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                        message:meg
+                                                       delegate:self
+                                              cancelButtonTitle:@"更多积分"
+                                              otherButtonTitles:@"确定",nil];
+        [alert show];
+    }else if (score < 10){
+        NSString *meg = [NSString stringWithFormat:@"您当前的积分为%d，已经不足使用1次了！",score];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                        message:meg
+                                                       delegate:self
+                                              cancelButtonTitle:@"更多积分"
+                                              otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
+#endif
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     __weak XLFormDataRequest *req = [XLFormDataRequest requestWithURL:API_URL];
     [req addPostValue:_company.code forKey:@"com"];
@@ -114,6 +144,12 @@
                                                   otherButtonTitles:nil];
             [alert show];
         }else{
+#ifdef FREE_VERSION
+            //更新积分
+            int score = [_dao findScore];
+            score -= 10;
+            [_dao updateScore:score];
+#endif
             _dataArray = [resultDic objectForKey:@"data"];
             [_tableView reloadData];
             
@@ -201,6 +237,15 @@
     }
     
     [alert show];
+}
+
+#pragma mark - UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        XLAppsController *appsCon = [[XLAppsController alloc] init];
+        [self presentModalViewController:appsCon animated:YES];
+    }
 }
 
 #pragma mark - YouMiDelegate

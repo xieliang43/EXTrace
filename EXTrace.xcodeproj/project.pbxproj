@@ -11,6 +11,7 @@
 		E002961116E8B44F008D8D68 /* beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = E002961016E8B44F008D8D68 /* beep.wav */; };
 		E002961316E8B570008D8D68 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E002961216E8B570008D8D68 /* AudioToolbox.framework */; };
 		E002FBDA171A92C60080955A /* XLSystemInfoDao.m in Sources */ = {isa = PBXBuildFile; fileRef = E002FBD9171A92C60080955A /* XLSystemInfoDao.m */; };
+		E002FBDF171A98FC0080955A /* XLSystemInfoDao.m in Sources */ = {isa = PBXBuildFile; fileRef = E002FBD9171A92C60080955A /* XLSystemInfoDao.m */; };
 		E00BBA7816E6EE95006B2BBC /* express.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = E00BBA7716E6EE95006B2BBC /* express.sqlite */; };
 		E00BBA7B16E6EF89006B2BBC /* XLExpressCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BBA7A16E6EF89006B2BBC /* XLExpressCompany.m */; };
 		E00BBA7E16E6F0D8006B2BBC /* XLDao.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BBA7D16E6F0D8006B2BBC /* XLDao.m */; };
@@ -2930,6 +2931,7 @@
 				E0B614671714387C00070655 /* EGOImageLoadConnection.m in Sources */,
 				E0B614691714387C00070655 /* EGOImageLoader.m in Sources */,
 				E0B6146D1714389000070655 /* EGOImageView.m in Sources */,
+				E002FBDF171A98FC0080955A /* XLSystemInfoDao.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3047,8 +3049,6 @@
 					"\"$(SRCROOT)/EXTrace/thirdpart/youmi\"",
 				);
 				PRODUCT_NAME = EXTraceLite;
-				PROVISIONING_PROFILE = "13CA1A93-AA7A-4B72-AD2A-43898F14AB71";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "13CA1A93-AA7A-4B72-AD2A-43898F14AB71";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3071,8 +3071,6 @@
 					"\"$(SRCROOT)/EXTrace/thirdpart/youmi\"",
 				);
 				PRODUCT_NAME = EXTraceLite;
-				PROVISIONING_PROFILE = "13CA1A93-AA7A-4B72-AD2A-43898F14AB71";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "13CA1A93-AA7A-4B72-AD2A-43898F14AB71";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

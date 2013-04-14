@@ -11,5 +11,7 @@
 @interface XLSystemInfoDao : XLDao
 
 - (NSDictionary*)findAllSystemInfo;
+- (int)findScore;
+- (BOOL)updateScore:(int)score;
 
 @end
