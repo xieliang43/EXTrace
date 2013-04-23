@@ -46,11 +46,19 @@
     [YouMiConfig setAppID:YOUMI_KEY];
     [YouMiConfig setAppSecret:YOUMI_SECRET];
     [YouMiConfig setUserID:[OpenUDID value]];
-    [YouMiConfig setUseInAppStore:NO];
+    [YouMiConfig setUseInAppStore:YES];
     [YouMiConfig setIsTesting:NO];
+    
+    [YouMiConfig launchWithAppID:YOUMI_KEY appSecret:YOUMI_SECRET];
     
 #ifdef FREE_VERSION
     [MobClick updateOnlineConfig];
+    
+    if (!dao) {
+        dao = [[XLSystemInfoDao alloc] init];
+    }
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(requestPointSuccess:) name:YOUMI_EARNED_POINTS_RESPONSE_NOTIFICATION object:nil];
+    timer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(queryPoints) userInfo:nil repeats:999];
     
     _wall = [[YouMiWall alloc] init];
     _wall.delegate = self;
@@ -103,12 +111,6 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-#ifdef FREE_VERSION
-    if ([timer isValid]) {
-        [timer invalidate];
-        timer = nil;
-    }
-#endif
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -119,13 +121,6 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-#ifdef FREE_VERSION
-    if (!dao) {
-        dao = [[XLSystemInfoDao alloc] init];
-    }
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(requestPointSuccess:) name:YOUMI_EARNED_POINTS_RESPONSE_NOTIFICATION object:nil];
-    timer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(queryPoints) userInfo:nil repeats:999];
-#endif
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -162,7 +157,6 @@
         point += [dao findScore];
         [dao updateScore:point];
     }
-    
 }
 
 @end
