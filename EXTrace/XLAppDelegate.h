@@ -12,6 +12,7 @@
 #import "iRate.h"
 #import "OpenUDID.h"
 #import "XLSystemInfoDao.h"
+#import "AdsMogoIntegralWall.h"
 
 @interface XLAppDelegate : UIResponder <UIApplicationDelegate,iRateDelegate>
 {
@@ -20,5 +21,6 @@
 }
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) AdsMogoIntegralWall *mogoWall;
 
 @end

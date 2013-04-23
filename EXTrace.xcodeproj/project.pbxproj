@@ -389,6 +389,8 @@
 		E083D0B41726A556009D0AAE /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E083D0B21726A556009D0AAE /* EventKit.framework */; };
 		E083D0B51726A556009D0AAE /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E083D0B31726A556009D0AAE /* EventKitUI.framework */; };
 		E083D0B71726A596009D0AAE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E083D0B61726A596009D0AAE /* Security.framework */; };
+		E083D0B91726AF9F009D0AAE /* 6470f366767341eca787ad75a11dfc90.config in Resources */ = {isa = PBXBuildFile; fileRef = E083D0B81726AF9F009D0AAE /* 6470f366767341eca787ad75a11dfc90.config */; };
+		E083D0BA1726AF9F009D0AAE /* 6470f366767341eca787ad75a11dfc90.config in Resources */ = {isa = PBXBuildFile; fileRef = E083D0B81726AF9F009D0AAE /* 6470f366767341eca787ad75a11dfc90.config */; };
 		E0B614601714331C00070655 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B6145F1714331C00070655 /* EGOCache.m */; };
 		E0B614611714331C00070655 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B6145F1714331C00070655 /* EGOCache.m */; };
 		E0B614661714387C00070655 /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B614631714387C00070655 /* EGOImageLoadConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -1255,6 +1257,7 @@
 		E083D0B21726A556009D0AAE /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		E083D0B31726A556009D0AAE /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		E083D0B61726A596009D0AAE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E083D0B81726AF9F009D0AAE /* 6470f366767341eca787ad75a11dfc90.config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 6470f366767341eca787ad75a11dfc90.config; sourceTree = "<group>"; };
 		E0B6145E1714331C00070655 /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
 		E0B6145F1714331C00070655 /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
 		E0B614621714387C00070655 /* EGOImageLoadConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageLoadConnection.h; sourceTree = "<group>"; };
@@ -1720,6 +1723,7 @@
 		E08211F81663981F00F559F2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E083D0B81726AF9F009D0AAE /* 6470f366767341eca787ad75a11dfc90.config */,
 				E002961016E8B44F008D8D68 /* beep.wav */,
 				E082121216639A1400F559F2 /* image */,
 				E082126016639A1F00F559F2 /* eximage */,
@@ -2623,6 +2627,7 @@
 				E03D587516FADBB3003A4330 /* iRate.bundle in Resources */,
 				E0D5584A16FF0511003B76F5 /* icon.png in Resources */,
 				E0D5584C16FF0517003B76F5 /* icon@2x.png in Resources */,
+				E083D0B91726AF9F009D0AAE /* 6470f366767341eca787ad75a11dfc90.config in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2932,6 +2937,7 @@
 				E0D559D516FF1BAD003B76F5 /* iconlite.png in Resources */,
 				E0D559D716FF1BB9003B76F5 /* iconlite@2x.png in Resources */,
 				E083D09B17269D62009D0AAE /* DomobOfferWallBundle.bundle in Resources */,
+				E083D0BA1726AF9F009D0AAE /* 6470f366767341eca787ad75a11dfc90.config in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

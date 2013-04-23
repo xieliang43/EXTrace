@@ -26,7 +26,7 @@
     self = [super initWithNibName:nilName bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-       
+        appDelegate = (XLAppDelegate *)[UIApplication sharedApplication].delegate;
     }
     return self;
 }

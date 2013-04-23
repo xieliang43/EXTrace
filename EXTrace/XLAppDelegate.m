@@ -16,6 +16,8 @@
 
 @implementation XLAppDelegate
 
+@synthesize mogoWall = _mogoWall;
+
 + (void)initialize
 {
     [iRate sharedInstance].applicationBundleID = BundleID;
@@ -31,15 +33,14 @@
     //准备数据库文件
     [XLTools copyDbToPath];
     
+    //积分墙
+    _mogoWall = [[AdsMogoIntegralWall alloc] initWallWithDelegate:self AndAppId:MOGO_KEY];
+    
     //umeng统计
     [MobClick startWithAppkey:UMENG_KEY reportPolicy:BATCH channelId:nil];
     
 #ifdef FREE_VERSION
     [MobClick updateOnlineConfig];
-    
-    if (!dao) {
-        dao = [[XLSystemInfoDao alloc] init];
-    }
 #endif
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
@@ -103,6 +104,47 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - AdsMogoIntegralWallDelegate
+//您需要将一个viewcontroller作为返回值
+-(id)adsWallNeedController{
+    return [[UIViewController alloc] init];
+}
+
+//取积分操作回调，返回总积分
+-(void)didGetThePoint:(int)aPoint{
+    NSLog(@"%s",__FUNCTION__);
+}
+
+//刷新积分操作回调，返回总积分
+-(void)didRefreshThePoint:(int)aPoint{
+    NSLog(@"%s,aPoint-->%d",__FUNCTION__,aPoint);
+}
+
+//加减积分的回调，aPoint返回总积分 aCpoint是改变的积分数(加10分返回的aCpoint就是10,减10分返回的就是-10)
+-(void)didChangedThePoint:(int)aPoint andChangedPoint:(int)aCpoint{
+    NSLog(@"%s",__FUNCTION__);
+}
+
+//获取用户在mogo的配置完成
+-(void)didReceiveMogoWallConfig{
+    [[UIApplication sharedApplication]setNetworkActivityIndicatorVisible:NO];
+}
+
+//后台配置按顺序展示的时候，当您调用showWall时回调，返回一个数组，数组成员是每个平台的信息字典
+-(void)showWallByPriority:(NSArray *)configs{
+    
+}
+
+//当无法从网上获取配置信息的时候回调，失败展示积分墙
+-(void)didFailedGetWall:(NSString *)error{
+    
+}
+
+//展示积分墙回调，成功展示积分墙
+-(void)didSuccessOpenWall:(NSDictionary *)config{
+    
 }
 
 @end

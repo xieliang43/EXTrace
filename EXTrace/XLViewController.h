@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XLAppDelegate.h"
 
 @interface XLViewController : UIViewController
+{
+    XLAppDelegate *appDelegate;
+}
 
 @end

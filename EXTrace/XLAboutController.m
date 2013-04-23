@@ -158,7 +158,7 @@
             break;
         case 2:
         {
-            
+            [appDelegate.mogoWall showWall];
         }
         default:
             break;
