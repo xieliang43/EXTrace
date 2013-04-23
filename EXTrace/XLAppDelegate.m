@@ -16,14 +16,6 @@
 
 @implementation XLAppDelegate
 
-@synthesize wall = _wall;
-
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:YOUMI_WALL_VIEW_CLOSED_NOTIFICATION object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:YOUMI_EARNED_POINTS_RESPONSE_NOTIFICATION object:nil];
-}
-
 + (void)initialize
 {
     [iRate sharedInstance].applicationBundleID = BundleID;
@@ -42,27 +34,12 @@
     //umeng统计
     [MobClick startWithAppkey:UMENG_KEY reportPolicy:BATCH channelId:nil];
     
-    //youmi广告配置
-    [YouMiConfig setAppID:YOUMI_KEY];
-    [YouMiConfig setAppSecret:YOUMI_SECRET];
-    [YouMiConfig setUserID:[OpenUDID value]];
-    [YouMiConfig setUseInAppStore:YES];
-    [YouMiConfig setIsTesting:NO];
-    
-    [YouMiConfig launchWithAppID:YOUMI_KEY appSecret:YOUMI_SECRET];
-    
 #ifdef FREE_VERSION
     [MobClick updateOnlineConfig];
     
     if (!dao) {
         dao = [[XLSystemInfoDao alloc] init];
     }
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(requestPointSuccess:) name:YOUMI_EARNED_POINTS_RESPONSE_NOTIFICATION object:nil];
-    timer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(queryPoints) userInfo:nil repeats:999];
-    
-    _wall = [[YouMiWall alloc] init];
-    _wall.delegate = self;
-    [_wall requestFeaturedApp:YES];
 #endif
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
@@ -126,37 +103,6 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
-- (void)queryPoints {
-    [_wall requestEarnedPoints];
-}
-
-#pragma mark - YouMiWall delegate
-- (void)didReceiveFeaturedApp:(YouMiWall *)adWall {
-    [adWall showFeaturedApp];
-}
-
-- (void)didFailToReceiveFeaturedApp:(YouMiWall *)adWall error:(NSError *)error {
-    
-}
-
-- (void)requestPointSuccess:(NSNotification *)note {
-    NSLog(@"--*-6--[Rewarded]requestPointSuccess:-*--");
-    int point = 0;
-    NSDictionary *info = [note userInfo];
-    NSArray *records = [info valueForKey:YOUMI_WALL_NOTIFICATION_USER_INFO_EARNED_POINTS_KEY];
-    for (NSDictionary *oneRecord in records) {
-        NSInteger earnedPoint = [(NSNumber *)[oneRecord objectForKey:kOneAccountRecordPoinstsOpenKey] integerValue];
-        
-        point += earnedPoint;
-    }
-    
-    if (point > 0) {
-        NSLog(@"%d",point);
-        point += [dao findScore];
-        [dao updateScore:point];
-    }
 }
 
 @end

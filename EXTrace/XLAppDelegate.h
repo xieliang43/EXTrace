@@ -10,18 +10,15 @@
 #import "MobClick.h"
 #import "XLTabBarController.h"
 #import "iRate.h"
-#import "YouMiWall.h"
-#import "YouMiConfig.h"
 #import "OpenUDID.h"
 #import "XLSystemInfoDao.h"
 
-@interface XLAppDelegate : UIResponder <UIApplicationDelegate,iRateDelegate,YouMiWallDelegate>
+@interface XLAppDelegate : UIResponder <UIApplicationDelegate,iRateDelegate>
 {
     NSTimer *timer;
     XLSystemInfoDao *dao;
 }
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) YouMiWall *wall;
 
 @end

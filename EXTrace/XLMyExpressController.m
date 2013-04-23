@@ -36,19 +36,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-#ifdef FREE_VERSION
-    [self addYoumiWall];
-#endif
-    
-    CGRect rect = self.tableView.frame;
-    rect.origin.y += wallBanner.frame.size.height;
-    rect.size.height -= wallBanner.frame.size.height;
-    self.tableView.frame = rect;
-    
     self.tableView.contentInset = UIEdgeInsetsMake(5, 0, 0, 0);
     service = [[XLExpressService alloc] init];
-
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -65,16 +54,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)addYoumiWall
-{
-    wallBanner = [[YouMiWallBanner alloc] initRewarded:YES unit:@"分"];
-    wallBanner.backgroundColor = make_color(255, 255, 255, 1);
-    wallBanner.frame = CGRectMake(0, 0, wallBanner.frame.size.width, wallBanner.frame.size.height);
-    wallBanner.layer.cornerRadius = 4.0f;
-    wallBanner.layer.masksToBounds = YES;
-    [self.view addSubview:wallBanner];
 }
 
 - (void)addMyExpress:(id)sender

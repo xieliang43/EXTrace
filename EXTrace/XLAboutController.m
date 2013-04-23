@@ -158,10 +158,7 @@
             break;
         case 2:
         {
-            XLAppsController *appCon = [[XLAppsController alloc] init];
-            UINavigationController *navCon = [[UINavigationController alloc] initWithRootViewController:appCon];
-            navCon.navigationBar.tintColor = NAVI_COLOR;
-            [self presentModalViewController:navCon animated:YES];
+            
         }
         default:
             break;

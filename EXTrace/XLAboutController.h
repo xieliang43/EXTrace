@@ -8,13 +8,11 @@
 
 #import "XLViewController.h"
 #import <MessageUI/MessageUI.h>
-#import "XLAppsController.h"
-#import "YouMiWall.h"
 #import "MBProgressHUD.h"
 
-@interface XLAboutController : XLViewController<MFMailComposeViewControllerDelegate,UINavigationControllerDelegate,YouMiWallDelegate>
+@interface XLAboutController : XLViewController<MFMailComposeViewControllerDelegate,UINavigationControllerDelegate>
 {
-    YouMiWall *wall;
+    
 }
 
 @property (nonatomic,weak) IBOutlet UITableView *tableView;

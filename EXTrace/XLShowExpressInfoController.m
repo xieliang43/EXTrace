@@ -69,20 +69,7 @@
     _company = [service getExpressCompanyById:_express.companyId];
     
     self.title = [NSString stringWithFormat:@"%@-%@",_company.name,_express.expressNo];
-    
-#ifdef FREE_VERSION
-    [self addYoumiWall];
-#else
     self.tableView.frame = self.view.bounds;
-#endif
-}
-
-- (void)addYoumiWall
-{
-    YouMiView *adView = [[YouMiView alloc] initWithContentSizeIdentifier:YouMiBannerContentSizeIdentifier320x50 delegate:self];
-    [adView start];
-    
-    [self.view addSubview:adView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -146,9 +133,7 @@
         }else{
 #ifdef FREE_VERSION
             //更新积分
-            int score = [_dao findScore];
-            score -= 10;
-            [_dao updateScore:score];
+
 #endif
             _dataArray = [resultDic objectForKey:@"data"];
             [_tableView reloadData];
@@ -243,32 +228,10 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 0) {
-        XLAppsController *appsCon = [[XLAppsController alloc] init];
-        [self presentModalViewController:appsCon animated:YES];
+        
     }else if (buttonIndex == 1){
         //开启内购功能
     }
-}
-
-#pragma mark - YouMiDelegate
-- (void)didReceiveAd:(YouMiView *)adView
-{
-    Debug(@"success");
-    
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:0.25];
-    CGRect rect = self.tableView.frame;
-    rect.origin.y += 50;
-    rect.size.height -= 50;
-    self.tableView.frame = rect;
-    [UIView commitAnimations];
-}
-
-- (void)didFailToReceiveAd:(YouMiView *)adView  error:(NSError *)error
-{
-    Debug(@"fail");
-    
-    [adView removeFromSuperview];
 }
 
 @end
